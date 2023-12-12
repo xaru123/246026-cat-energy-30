@@ -11,8 +11,8 @@
 <body class="page__body">
 <header class="page__header main-header">
   <div class="main-header__logo logo">
-    <img class="logo__image logo__image--icon" src="#" alt="Кэт энерджи">
-    <img class="logo__image logo__image--text" src="#" alt="Кэт энерджи">
+    <img class="logo__image logo__image--icon" src="#" alt="Кэт энерджи" width="70" height="59">
+    <img class="logo__image logo__image--text" src="#" alt="Кэт энерджи" width="118" height="21">
   </div>
 
   <nav class="main-header__nav">
@@ -40,93 +40,94 @@
     <div class="form__row">
       <div class="form__column">
         <div class="form__control form-control">
-          <label class="form-control__label">Имя:*</label>
-          <input class="form-control__input" type="text" name="cat-name" placeholder="Барсик"/>
+          <label class="form-control__label" for="cat-name">Имя:*</label>
+          <input class="form-control__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик"/>
         </div>
 
         <div class="form__control form-control">
-          <label class="form-control__label">Вес (кг):*</label>
-          <input class="form-control__input" type="text" name="cat-wgt" placeholder="7"/>
+          <label class="form-control__label" for="cat-wgt">Вес (кг):*</label>
+          <input class="form-control__input" type="text" name="cat-wgt" id="cat-wgt" placeholder="7"/>
         </div>
 
         <div class="form__control form-control">
-          <label class="form-control__label">Возраст (лет):</label>
-          <input class="form-control__input" type="text" name="cat-age" placeholder="7"/>
+          <label class="form-control__label" for="cat-age">Возраст (лет):</label>
+          <input class="form-control__input" type="text" name="cat-age" id="cat-age" placeholder="7"/>
         </div>
       </div>
 
       <div class="form__column">
         <div class="form__control form__control--border">
           <div class="form-control">
-            <input class="form-control__input" type="radio" name="goal" value="loss">
-            <label class="form-control__label">Похудение</label>
+            <input class="form-control__input" type="radio" name="goal" id="loss" value="loss">
+            <label class="form-control__label" for="loss">Похудение</label>
           </div>
 
           <div class="form-control">
-            <input class="form-control__input" type="radio" name="goal" value="add">
-            <label class="form-control__label">Набор массы</label>
+            <input class="form-control__input" type="radio" name="goal" id="add" value="add">
+            <label class="form-control__label" for="add">Набор массы</label>
           </div>
 
           <div class="form-control">
-            <input class="form-control__input" type="radio" name="goal" value="nevermind">
-            <label class="form-control__label">Не знаю (Нужен ваш совет)</label>
+            <input class="form-control__input" type="radio" name="goal" id="nevermind" value="nevermind">
+            <label class="form-control__label" for="nevermind">Не знаю (Нужен ваш совет)</label>
           </div>
         </div>
       </div>
     </div>
 
     <div class="form__row">
-      <h2 clss="form__head">Контактные данные (владельца кота)</h2>
+      <h2 class="form__head">Контактные данные (владельца кота)</h2>
 
       <div class="form__column">
         <div class="form__control form-control">
-          <label class="form-control__label">E-mail:*</label>
-          <input class="form-control__input" type="email" name="email" placeholder="кuklachev@gmail.com"/>
+          <label class="form-control__label" for="email">E-mail:*</label>
+          <input class="form-control__input" type="email" name="email" id="email" placeholder="кuklachev@gmail.com"/>
         </div>
       </div>
 
       <div class="form__column">
         <div class="form__control form-control">
-          <label class="form-control__label">Телефон:*</label>
-          <input class="form-control__input" type="tel" name="tel" placeholder="8 (960) 900-60-90"/>
+          <label class="form-control__label" for="tel">Телефон:*</label>
+          <input class="form-control__input" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90"/>
         </div>
       </div>
     </div>
 
     <div class="form__row">
-      <h2 clss="form__head">Комментарий</h2>
+      <h2 class="form__head">Комментарий</h2>
 
       <div class="form-control">
-        <textarea class="form-control__input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <textarea class="form-control__input" name="comment" id="comment"
+                  placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
     </div>
 
     <div class="form__row">
-      <h2 clss="form__head">Дополнительно</h2>
+      <h2 class="form__head">Дополнительно</h2>
 
       <div class="form-control">
-        <input class="form-control__input" type="checkbox" name="shuga" checked>
-        <label class="form-control__label">Cахарозаменитель</label>
+        <input class="form-control__input" type="checkbox" name="shuga" id="shuga" checked>
+        <label class="form-control__label" for="shuga">Cахарозаменитель</label>
       </div>
 
       <div class="form-control">
-        <input class="form-control__input" type="checkbox" name="water">
-        <label class="form-control__label">Питьевая вода</label>
+        <input class="form-control__input" type="checkbox" name="water" id="water">
+        <label class="form-control__label" for="water">Питьевая вода</label>
       </div>
 
       <div class="form-control">
-        <input class="form-control__input" type="checkbox" name="milk">
-        <label class="form-control__label">Молоко</label>
+        <input class="form-control__input" type="checkbox" name="milk" id="milk">
+        <label class="form-control__label" for="milk">Молоко</label>
       </div>
 
       <div class="form-control">
-        <input class="form-control__input" type="checkbox" name="vit">
-        <label class="form-control__label">Витамины</label>
+        <input class="form-control__input" type="checkbox" name="vit" id="vit">
+        <label class="form-control__label" for="vit">Витамины</label>
       </div>
     </div>
 
     <footer class="form__footer form-footer">
-      <button class="form-footer button">Отправить заявку</button>
+      <button class="form-footer button" type="button">Отправить заявку</button>
 
       <span class="form-footer button">* — Обязательные поля</span>
     </footer>
@@ -135,7 +136,9 @@
 
 <footer class="page__footer main-footer">
   <section class="main-footer__location location">
-    <img class="location__map" src="#" alt="Карта">
+    <h2 class="main-footer__head main-footer__head--invisible">Карта</h2>
+
+    <img class="location__map" src="#" alt="Карта" width="1440" height="400">
 
     <div class="location__info location-info">
       <p class="location-info__invitation">Приглашаем к сотрудничеству дилеров!</p>
@@ -148,7 +151,7 @@
   </section>
 
   <div class="main-footer__logo logo">
-    <img class="logo__image logo__image--text" src="#" alt="Кэт энерджи">
+    <img class="logo__image logo__image--text" src="#" alt="Кэт энерджи" width="128" height="24">
   </div>
 
   <div class="main-footer__social">
@@ -169,7 +172,7 @@
 
   <div class="main-footer__copyright copyright">
     <span class="copyright__name">HTML Academy</span>
-    <img class="copyright__icon" src="#" alt="Логотип HTML Academy">
+    <img class="copyright__icon" src="#" alt="Логотип HTML Academy" width="27" height="34">
   </div>
 </footer>
 </body>
