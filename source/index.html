@@ -5,14 +5,21 @@
   <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
 <header class="page__header main-header">
   <div class="main-header__logo logo">
-    <img class="logo__image logo__image--icon" src="#" alt="Кэт энерджи" width="70" height="59">
-    <img class="logo__image logo__image--text" src="#" alt="Кэт энерджи" width="118" height="21">
+    <picture>
+      <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59" >
+      <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50" >
+      <img class="logo__img" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
+    </picture>
   </div>
 
   <nav class="main-header__nav">
@@ -152,7 +159,11 @@
   <section class="main-footer__location location">
     <h2 class="main-footer__head main-footer__head--invisible">Карта</h2>
 
-    <img class="location__map" src="#" alt="Карта" width="1440" height="400">
+    <picture>
+      <source type="image/png" media="(min-width: 1440px)" srcset="images/location@1x.png 1x, images/location@2x.png 2x" width="1400" height="400" >
+      <source type="image/png" media="(min-width: 768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x" width="768" height="400" >
+      <img class="location__map" src="images/location-mobile@1x.png" srcset="images/location-mobile@2x.png 2x" width="320" height="362" alt="Карта">
+    </picture>
 
     <div class="location__info location-info">
       <p class="location-info__invitation">Приглашаем к сотрудничеству дилеров!</p>
