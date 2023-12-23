@@ -1,0 +1,15 @@
+.location-info__invitation {
+  @include set-typography(16px, 20px, $color-text-600);
+
+  @media (min-width: $width-table) {
+    @include set-typography(20px, 26px, $color-text-600);
+  }
+}
+
+.location-info__address {
+  @include set-typography(14px, 20px, $color-text-400, $font-secondary);
+
+  @media (min-width: $width-table) {
+    @include set-typography(14px, 20px, $color-text-400, $font-secondary);
+  }
+}

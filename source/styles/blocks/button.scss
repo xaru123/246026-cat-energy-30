@@ -1,0 +1,19 @@
+.button {
+  display: inline-flex;
+  padding: 10px 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: $color-primary;
+
+  @include set-typography(20px, 26xpx, $color-white);
+  border: 0;
+
+  @media (min-width: $width-table) {
+    padding: 14px 26px;
+  }
+}
+
+.button:hover {
+  background: $color-primary-hover;
+}

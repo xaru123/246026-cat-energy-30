@@ -1,1 +1,26 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+body {
+  font-family: $font-primary;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+}
+
+ul,
+ p,
+ li,
+ span,
+ i,
+ h1,
+ h2,
+ h3,
+ dd,
+ dt {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,21 @@
+.stages-item {
+  list-style: none;
+}
+
+.stages-item__number {
+  visibility: hidden;
+
+  @media (min-width: $width-table) {
+    visibility: visible;
+
+    @include set-typography(280px, 280px, $color-text-200);
+  }
+}
+
+.stages-item__text {
+  @include set-typography(14px, 18px, $color-text-400, $font-secondary);
+
+  @media (min-width: $width-table) {
+    @include set-typography(16px, 24px, $color-black, $font-secondary);
+  }
+}
