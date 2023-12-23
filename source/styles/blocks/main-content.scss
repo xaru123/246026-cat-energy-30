@@ -1,0 +1,19 @@
+.main-content__header {
+  @include set-typography(36px, 36px);
+
+  @media (min-width: $width-table) {
+    @include set-typography(60px, 60px);
+  }
+}
+
+.main-content__sub-header {
+  padding-right: 20px;
+
+  @include set-typography(24px, 26px);
+
+  @media (min-width: $width-table) {
+    padding: 40px;
+
+    @include set-typography(36px, 36px);
+  }
+}

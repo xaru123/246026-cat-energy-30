@@ -1,0 +1,12 @@
+.main-nav {
+  list-style: none;
+}
+
+.main-nav__link {
+  @include set-typography();
+
+  @media (min-width: $width-desktop) {
+    color: $color-white;
+  }
+}
+

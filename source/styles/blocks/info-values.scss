@@ -1,0 +1,15 @@
+.info-values__title {
+  @include set-typography(24px, 24px);
+
+  @media (min-width: $width-table) {
+    @include set-typography(30px, 37px);
+  }
+}
+
+.info-values__definition {
+  @include set-typography(12px, 12px, $color-text-400, $font-secondary);
+
+  @media (min-width: $width-table) {
+    @include set-typography(14px, 14px, $color-text-400, $font-secondary);
+  }
+}

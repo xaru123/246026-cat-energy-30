@@ -22,44 +22,52 @@
     </picture>
   </div>
 
+  <button class="main-header__toggler" type="button">
+    <span class="element-hidden">Открыть меню.</span>
+  </button>
+
   <nav class="main-header__nav">
     <ul class="main-nav">
       <li class="main-nav__item main-nav__item--active">
-        <a href="./index.html">Главная</a></li>
+        <a class="main-nav__link" href="./index.html">Главная</a></li>
       </li>
 
       <li class="main-nav__item">
-        <a href="./catalog.html">Каталог продукции</a></li>
+        <a class="main-nav__link" href="./catalog.html">Каталог продукции</a></li>
       </li>
 
       <li class="main-nav__item">
-        <a href="./form.html">Подбор программы</a></li>
+        <a class="main-nav__link" href="./form.html">Подбор программы</a></li>
     </ul>
   </nav>
 </header>
 
-<main class="page__main main-wrap">
-  <section class="main-wrap__preview preview">
-    <div class="preview__main-info main-info">
-      <h1 class="main-info__head">Функциональное питание для котов</h1>
+<main class="page__main main-content container">
+  <section class="main-content__preview preview">
+    <div class="preview__info preview-info">
+      <h1 class="preview-info__header main-content__header">Функциональное питание для котов</h1>
 
-      <p class="main-info__text">Занялся собой? Займись котом!</p>
+      <p class="preview-info__text">Занялся собой? Займись котом!</p>
 
-      <button class="main-info__button button" type="button">Подобрать программу</button>
+      <button class="preview__button button" type="button">Подобрать программу</button>
     </div>
 
     <div class="preview__wrapper"></div>
 
     <div class="preview__product product">
-      <img class="product__image" src="#" alt="Продукт" width="709" height="609">
+      <picture>
+        <source type="image/png" media="(min-width: 1440px)" srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x" width="552" height="499" >
+        <source type="image/png" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x" width="709" height="609" >
+        <img class="product__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Банка>">
+      </picture>
     </div>
   </section>
 
-  <section class="main-wrap__feature feature">
-    <h2 class="feature__head feature__head--invisible">Возможности</h2>
+  <section class="main-content__feature feature">
+    <h2 class="feature__head element-hidden">Возможности</h2>
 
     <article class="feature__item">
-      <h2 class="feature__head">Похудение</h2>
+      <h3 class="feature__header">Похудение</h3>
 
       <p class="feature__text">
         Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
@@ -70,7 +78,7 @@
     </article>
 
     <article class="feature__item">
-      <h4 class="feature__head">Набор массы</h4>
+      <h3 class="feature__header">Набор массы</h3>
 
       <p class="feature__text">
         Заработать авторитет среди дворовых котов и даже собак?
@@ -81,50 +89,48 @@
     </article>
   </section>
 
-  <section class="main-wrap__stages stages">
-    <h3 class="stages__head">Как это работает</h3>
+  <section class="main-content__stages stages">
+    <h3 class="main-content__header stages__head">Как это работает</h3>
 
-    <div class="stages__list stages-list">
-      <div class="stages-list__item stages-item">
+    <ul class="stages__list stages-list">
+      <li class="stages-list__item stages-item">
         <i class="stages-item__icon stages-item__icon-leaf"></i>
 
         <span class="stages-item__number">1</span>
 
         <span class="stages-item__text">Функциональное питание содержит только полезные питательные вещества.</span>
-      </div>
+      </li>
 
-      <div class="stages-list__item stages-item">
+      <li class="stages-list__item stages-item">
         <i class="stages-item__icon stages-item__icon--water"></i>
 
         <span class="stages-item__number">2</span>
 
         <span class="stages-item__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span>
-      </div>
+      </li>
 
-      <div class="stages-list__item stages-item">
+      <li class="stages-list__item stages-item">
         <i class="stages-item__icon stages-item__icon--device"></i>
 
         <span class="stages-item__number">3</span>
 
         <span class="stages-item__text">Замените один-два приема обычной еды на наше функциональное питание.</span>
-      </div>
+      </li>
 
-      <div class="stages-list__item stages-item">
+      <li class="stages-list__item stages-item">
         <i class="stages-item__icon stages-item__icon--watch"></i>
 
         <span class="stages-item__number">4</span>
 
         <span class="stages-item__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</span>
-      </div>
-    </div>
+      </li>
+    </ul>
   </section>
 
-  <section class="main-wrap__example example">
-    <h2 class="example__head example__head--invisible">Нет заголовка</h2>
+  <section class="main-content__example example">
+    <h3 class="main-content__header example__head">Живой пример</h3>
 
     <div class="example__info example-info">
-      <h3 class="example-info__head">Живой пример</h3>
-
       <p class="example-info__text">
         Борис сбросил 5 кг за 2 месяца, просто заменив свой
         обычный корм на Cat Energy Slim. Отличный результат
@@ -143,8 +149,8 @@
       </dl>
 
       <dl class="example-info__total info-total">
-        <dt class="info-total__title">Затраты на питание:</dt>
-        <dd class="info-total__definition">15 000 РУБ.</dd>
+        <dt class="info-total__text">Затраты на питание:</dt>
+        <dd class="info-total__text">15 000 РУБ.</dd>
       </dl>
     </div>
 
@@ -157,12 +163,12 @@
 
 <footer class="page__footer main-footer">
   <section class="main-footer__location location">
-    <h2 class="main-footer__head main-footer__head--invisible">Карта</h2>
+    <h2 class="main-footer__header element-hidden">Карта</h2>
 
     <picture>
       <source type="image/png" media="(min-width: 1440px)" srcset="images/location@1x.png 1x, images/location@2x.png 2x" width="1400" height="400" >
       <source type="image/png" media="(min-width: 768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x" width="768" height="400" >
-      <img class="location__map" src="images/location-mobile@1x.png" srcset="images/location-mobile@2x.png 2x" width="320" height="362" alt="Карта">
+      <img class="location__map" src="images/location@1x.png" srcset="images/location@2x.png 2x" width="320" height="362" alt="Карта">
     </picture>
 
     <div class="location__info location-info">

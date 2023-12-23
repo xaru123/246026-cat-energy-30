@@ -1,0 +1,13 @@
+.container {
+  width: $width-mobile;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $width-table) {
+    width: $width-table;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: $width-desktop;
+  }
+}

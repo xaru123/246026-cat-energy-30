@@ -1,0 +1,15 @@
+.form-control__input {
+  @include set-typography(16px, 20px, $color-text-400);
+
+  @media (min-width: $width-table) {
+    @include set-typography(20px, normal);
+  }
+}
+
+.form-control__label {
+  @include set-typography(16px, 18px, $color-text-400);
+
+  @media (min-width: $width-table) {
+    @include set-typography(20px, normal);
+  }
+}

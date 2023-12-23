@@ -1,0 +1,5 @@
+.page {
+  @include set-typography(16px, 24px, $color-text-400);
+  background-color: $color-white;
+  font-weight: 400;
+}

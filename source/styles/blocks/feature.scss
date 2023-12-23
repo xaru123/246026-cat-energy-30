@@ -1,0 +1,23 @@
+.feature__header {
+  @include set-typography(24px, 37px);
+
+  @media (min-width: $width-table) {
+    @include set-typography(36px, 36px);
+  }
+}
+
+.feature__text {
+  @include set-typography(14px, 18px, $color-text-400, $font-secondary);
+
+  @media (min-width: $width-table) {
+    @include set-typography(16px, 24px, $color-black, $font-secondary);
+  }
+}
+
+.feature__link {
+  @include set-typography(16px, 16px);
+
+  @media (min-width: $width-table) {
+    @include set-typography(20 pxpx, normal);
+  }
+}

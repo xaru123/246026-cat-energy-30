@@ -1,0 +1,19 @@
+.additional-item {
+  list-style: none;
+}
+
+.additional-item__head {
+  @include set-typography(16px, 16px, $color-text-800);
+
+  @media (min-width: $width-table) {
+    @include set-typography(20px, 20px, $color-text-800);
+  }
+}
+
+.additional-item__text {
+  @include set-typography(14px, 14px, $color-text-400, $font-secondary);
+
+  @media (min-width: $width-table) {
+    @include set-typography(16px, 20px, $color-text-400, $font-secondary);
+  }
+}

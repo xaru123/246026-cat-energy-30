@@ -18,35 +18,39 @@
     </picture>
   </div>
 
+  <button class="main-header__toggler" type="button">
+    <span class="element-hidden">Открыть меню.</span>
+  </button>
+
   <nav class="main-header__nav">
     <ul class="main-nav">
-      <li class="main-nav__item">
-        <a href="./index.html">Главная</a></li>
-      </li>
-
       <li class="main-nav__item main-nav__item--active">
-        <a href="./catalog.html">Каталог продукции</a></li>
+        <a class="main-nav__link" href="./index.html">Главная</a></li>
       </li>
 
       <li class="main-nav__item">
-        <a href="./form.html">Подбор программы</a></li>
+        <a class="main-nav__link" href="./catalog.html">Каталог продукции</a></li>
+      </li>
+
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="./form.html">Подбор программы</a></li>
     </ul>
   </nav>
 </header>
 
-<main class="page__main main-wrap">
-  <section class="main-wrap__catalog catalog">
-    <h1 class="main-wrap__head">Товары</h1>
+<main class="page__main main-content container">
+  <h1 class="main-content__header">Товары</h1>
 
-    <div class="catalog__item catalog-item">
+  <ul class="main-content__catalog catalog">
+    <li class="catalog__item catalog-item">
       <picture>
         <source type="image/png" media="(min-width: 768px)" srcset="images/can-chicken-500@1x.png 1x, images/can-chicken-500@2x.png 2x" width="160" height="170" >
         <img class="catalog-item__image" src="images/can-chicken-500-mobile@1x.png" srcset="images/can-chicken-500-mobile@2x.png 2x" width="80" height="90" alt="Cat Energy PRO с курицей 500 г">
       </picture>
 
-      <p class="catalog-item__text catalog-item__text--name">Cat Energy PRO</p>
+      <p class="catalog-item__name">Cat Energy PRO</p>
 
-      <p class="catalog-item__text catalog-item__text--weight">500 г</p>
+      <p class="catalog-item__weight">500 г</p>
 
       <dl class="catalog-item__values values">
         <dt class="values__title">Масса</dt>
@@ -63,17 +67,17 @@
       </dl>
 
       <button class="catalog-item__button button" type="button">Заказать</button>
-    </div>
+    </li>
 
-    <div class="catalog__item catalog-item">
+    <li class="catalog__item catalog-item">
       <picture>
         <source type="image/png" media="(min-width: 768px)" srcset="images/can-chicken-1000@1x.png 1x, images/can-chicken-1000@2x.png 2x" width="160" height="170" >
         <img class="catalog-item__image" src="images/can-chicken-1000-mobile@1x.png" srcset="images/can-chicken-1000-mobile@2x.png 2x" width="80" height="90" alt="Cat Energy PRO с курицей 1000 г">
       </picture>
 
-      <p class="catalog-item__text catalog-item__text--name">Cat Energy PRO</p>
+      <p class="catalog-item__name">Cat Energy PRO</p>
 
-      <p class="catalog-item__text catalog-item__text--weight">1000 г</p>
+      <p class="catalog-item__weight">1000 г</p>
 
       <dl class="catalog-item__values values">
         <dt class="values__title">Масса</dt>
@@ -90,17 +94,17 @@
       </dl>
 
       <button class="catalog-item__button button" type="button">Заказать</button>
-    </div>
+    </li>
 
-    <div class="catalog__item catalog-item">
+    <li class="catalog__item catalog-item">
       <picture>
         <source type="image/png" media="(min-width: 768px)" srcset="images/can-fish-500@1x.png 1x, images/can-fish-500@2x.png 2x" width="160" height="170" >
         <img class="catalog-item__image" src="images/can-fish-500-mobile@1x.png" srcset="images/can-fish-500-mobile@2x.png 2x" width="80" height="90" alt="Cat Energy PRO с рыбой 500 г">
       </picture>
 
-      <p class="catalog-item__text catalog-item__text--name">Cat Energy PRO</p>
+      <p class="catalog-item__name">Cat Energy PRO</p>
 
-      <p class="catalog-item__text catalog-item__text--weight">500 г</p>
+      <p class="catalog-item__weight">500 г</p>
 
       <dl class="catalog-item__values values">
         <dt class="values__title">Масса</dt>
@@ -117,17 +121,17 @@
       </dl>
 
       <button class="catalog-item__button button" type="button">Заказать</button>
-    </div>
+    </li>
 
-    <div class="catalog__item catalog-item">
+    <li class="catalog__item catalog-item">
       <picture>
         <source type="image/png" media="(min-width: 768px)" srcset="images/can-fish-1000@1x.png 1x, images/can-fish-1000@2x.png 2x" width="160" height="170" >
         <img class="catalog-item__image" src="images/can-fish-1000-mobile@1x.png" srcset="images/can-fish-1000-mobile@2x.png 2x" width="80" height="90" alt="Cat Energy PRO с рыбой 1000 г">
       </picture>
 
-      <p class="catalog-item__text catalog-item__text--name">Cat Energy PRO</p>
+      <p class="catalog-item__name">Cat Energy PRO</p>
 
-      <p class="catalog-item__text catalog-item__text--weight">1000 г</p>
+      <p class="catalog-item__weight">1000 г</p>
 
       <dl class="catalog-item__values values">
         <dt class="values__title">Масса</dt>
@@ -144,17 +148,17 @@
       </dl>
 
       <button class="catalog-item__button button" type="button">Заказать</button>
-    </div>
+    </li>
 
-    <div class="catalog__item catalog-item">
+    <li class="catalog__item catalog-item">
       <picture>
         <source type="image/png" media="(min-width: 768px)" srcset="images/can-slim-500@1x.png 1x, images/can-slim-500@2x.png 2x" width="160" height="170" >
         <img class="catalog-item__image" src="images/can-slim-500-mobile@1x.png" srcset="images/can-slim-500-mobile@2x.png 2x" width="80" height="90" alt="Cat Energy SLIM с гречкой 500 г">
       </picture>
 
-      <p class="catalog-item__text catalog-item__text--name">Cat Energy SLIM</p>
+      <p class="catalog-item__name">Cat Energy SLIM</p>
 
-      <p class="catalog-item__text catalog-item__text--weight">500 г</p>
+      <p class="catalog-item__weight">500 г</p>
 
       <dl class="catalog-item__values values">
         <dt class="values__title">Масса</dt>
@@ -171,17 +175,17 @@
       </dl>
 
       <button class="catalog-item__button button" type="button">Заказать</button>
-    </div>
+    </li>
 
-    <div class="catalog__item catalog-item">
+    <li class="catalog__item catalog-item">
       <picture>
         <source type="image/png" media="(min-width: 768px)" srcset="images/can-slim-1000@1x.png 1x, images/can-slim-1000@2x.png 2x" width="160" height="170" >
         <img class="catalog-item__image" src="images/can-slim-1000-mobile@1x.png" srcset="images/can-slim-1000-mobile@2x.png 2x" width="80" height="90" alt="Cat Energy SLIM с гречкой 1000 г">
       </picture>
 
-      <p class="catalog-item__text catalog-item__text--name">Cat Energy SLIM</p>
+      <p class="catalog-item__name">Cat Energy SLIM</p>
 
-      <p class="catalog-item__text catalog-item__text--weight">1000 г</p>
+      <p class="catalog-item__weight">1000 г</p>
 
       <dl class="catalog-item__values values">
         <dt class="values__title">Масса</dt>
@@ -198,17 +202,17 @@
       </dl>
 
       <button class="catalog-item__button button" type="button">Заказать</button>
-    </div>
+    </li>
 
-    <div class="catalog__item catalog-item">
+    <li class="catalog__item catalog-item">
       <picture>
         <source type="image/png" media="(min-width: 768px)" srcset="images/can-rice-500@1x.png 1x, images/can-rice-500@2x.png 2x" width="160" height="170" >
         <img class="catalog-item__image" src="images/can-rice-500-mobile@1x.png" srcset="images/can-rice-500-mobile@2x.png 2x" width="80" height="90" alt="Cat Energy SLIM с рисом 500 г">
       </picture>
 
-      <p class="catalog-item__text catalog-item__text--name">Cat Energy SLIM</p>
+      <p class="catalog-item__name">Cat Energy SLIM</p>
 
-      <p class="catalog-item__text catalog-item__text--weight">500 г</p>
+      <p class="catalog-item__weight">500 г</p>
 
       <dl class="catalog-item__values values">
         <dt class="values__title">Масса</dt>
@@ -225,33 +229,53 @@
       </dl>
 
       <button class="catalog-item__button button" type="button">Заказать</button>
-    </div>
+    </li>
 
-    <div class="catalog__item catalog-item catalog-item--default">
+    <li class="catalog__item catalog-item catalog-item--default">
       <img class="catalog-item__image" src="#" alt="+" width="50" height="50">
 
-      <p class="catalog-item__text catalog-item__text--name">Показать еще 100500 товаров</p>
+      <p class="catalog-item__name catalog-item__name--new">Показать еще 100500 товаров</p>
 
-      <p class="catalog-item__description">На самом деле вкусов гораздо больше!</p>
+      <p class="catalog-item__weight">На самом деле вкусов гораздо больше!</p>
 
       <button class="catalog-item__button button button--default" type="button">Показать все</button>
-    </div>
-  </section>
+    </li>
+  </ul>
 
-  <section class="main-wrap__additional additional">
-    <h2 class="additional__heading">Дополнительные товары</h2>
+  <section class="main-content__additional additional">
+    <h2 class="main-content__sub-header additional__header">Дополнительные товары</h2>
 
-    <div class="additional__catalog additional-catalog">
-      <div class="additional-catalog__item additional-item">
-        <p class="additional-item__text additional-item__text--head">Сахарозаменитель</p>
+    <ul class="additional__catalog additional-catalog">
+      <li class="additional-catalog__item additional-item">
+        <p class="additional-item__head">Сахарозаменитель</p>
 
         <p class="additional-item__text">1 упаковка (100 г)</p>
 
         <p class="additional-item__text">200 ₽</p>
 
         <button class="additional-item__button button" type="button">Заказать</button>
-      </div>
-    </div>
+      </li>
+
+      <li class="additional-catalog__item additional-item">
+        <p class="additional-item__head">Молоко</p>
+
+        <p class="additional-item__text">1 литр</p>
+
+        <p class="additional-item__text">100 ₽</p>
+
+        <button class="additional-item__button button" type="button">Заказать</button>
+      </li>
+
+      <li class="additional-catalog__item additional-item">
+        <p class="additional-item__head">Витамины</p>
+
+        <p class="additional-item__text">1 упаковка (30 г)</p>
+
+        <p class="additional-item__text">300 ₽</p>
+
+        <button class="additional-item__button button" type="button">Заказать</button>
+      </li>
+    </ul>
 
     <div class="additional__present present">
       <picture>
@@ -267,12 +291,12 @@
 
 <footer class="page__footer main-footer">
   <section class="main-footer__location location">
-    <h2 class="main-footer__head main-footer__head--invisible">Карта</h2>
+    <h2 class="main-footer__header element-hidden">Карта</h2>
 
     <picture>
       <source type="image/png" media="(min-width: 1440px)" srcset="images/location@1x.png 1x, images/location@2x.png 2x" width="1400" height="400" >
       <source type="image/png" media="(min-width: 768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x" width="768" height="400" >
-      <img class="location__map" src="images/location-mobile@1x.png" srcset="images/location-mobile@2x.png 2x" width="320" height="362" alt="Карта">
+      <img class="location__map" src="images/location@1x.png" srcset="images/location@2x.png 2x" width="320" height="362" alt="Карта">
     </picture>
 
     <div class="location__info location-info">

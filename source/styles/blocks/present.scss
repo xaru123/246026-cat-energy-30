@@ -1,0 +1,3 @@
+.present__text {
+  @include set-typography(16px, 20px, $color-white, $font-secondary);
+}

@@ -1,0 +1,12 @@
+.preview-info__header {
+  color: $color-white;
+
+  @media (min-width: $width-table) {
+    color: $color-black;
+  }
+}
+
+.preview-info__text {
+  @include set-typography();
+  @include set-typography-additional();
+}
