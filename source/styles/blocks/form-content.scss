@@ -1,0 +1,7 @@
+.form-content__text {
+  @include set-typography(14px, 18px);
+
+  @media (min-width: $width-table) {
+    @include set-typography(20px, 30px);
+  }
+}

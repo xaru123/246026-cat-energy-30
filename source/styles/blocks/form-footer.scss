@@ -1,0 +1,7 @@
+.form-footer__text {
+  @include set-typography(14px, 16px);
+
+  @media (min-width: $width-table) {
+    @include set-typography(16px, 16px);
+  }
+}
