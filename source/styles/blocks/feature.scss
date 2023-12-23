@@ -1,4 +1,4 @@
-.feature__head {
+.feature__header {
   @include set-typography(24px, 37px);
 
   @media (min-width: $width-table) {
