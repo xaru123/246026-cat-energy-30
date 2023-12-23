@@ -17,3 +17,8 @@
     @include set-typography(16px, 20px, $color-text-400, $font-secondary);
   }
 }
+
+
+.catalog-item__name--new {
+color: $color-text-600;
+}

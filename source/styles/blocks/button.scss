@@ -17,3 +17,11 @@
 .button:hover {
   background: $color-primary-hover;
 }
+
+.button--default {
+  background: $color-text-200;
+}
+
+.button--default:hover {
+  background: $color-text-400;
+}
