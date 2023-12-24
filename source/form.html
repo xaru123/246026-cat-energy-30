@@ -12,29 +12,30 @@
 <header class="page__header main-header">
   <div class="main-header__logo logo">
     <picture>
-      <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59" >
-      <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50" >
+      <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59">
+      <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50">
       <img class="logo__img" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
     </picture>
+
+    <img class="logo__text logo__text--header" src="images/footer-logo.svg" width="101" height="85" alt="Cat Energy">
   </div>
 
-  <button class="main-header__toggler" type="button">
+  <button class="main-header__toggle" type="button">
     <span class="element-hidden">Открыть меню.</span>
   </button>
 
   <nav class="main-header__nav">
     <ul class="main-nav">
       <li class="main-nav__item main-nav__item--active">
-        <a class="main-nav__link" href="./index.html">Главная</a>
+        <a class="main-nav__link" href="./index.html">Главная</a></li>
       </li>
 
       <li class="main-nav__item">
-        <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>
+        <a class="main-nav__link" href="./catalog.html">Каталог продукции</a></li>
       </li>
 
       <li class="main-nav__item">
-        <a class="main-nav__link" href="./form.html">Подбор программы</a>
-      </li>
+        <a class="main-nav__link" href="./form.html">Подбор программы</a></li>
     </ul>
   </nav>
 </header>
@@ -107,7 +108,8 @@
 
           <input class="form-control__input" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90"/>
 
-          <svg class="form-control__icon" width="20" height="20" fill="none" stroke="black" viewBox="0 0 20 20" aria-hidden="true">
+          <svg class="form-control__icon" width="20" height="20" fill="none" stroke="black" viewBox="0 0 20 20"
+               aria-hidden="true">
             <use href="./images/icons/stack.svg#phone"></use>
           </svg>
         </div>
@@ -160,9 +162,12 @@
     <h2 class="main-footer__header element-hidden">Карта</h2>
 
     <picture>
-      <source type="image/png" media="(min-width: 1440px)" srcset="images/location@1x.png 1x, images/location@2x.png 2x" width="1400" height="400" >
-      <source type="image/png" media="(min-width: 768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x" width="768" height="400" >
-      <img class="location__map" src="images/location@1x.png" srcset="images/location@2x.png 2x" width="320" height="362" alt="Карта">
+      <source type="image/png" media="(min-width: 1440px)" srcset="images/location@1x.png 1x, images/location@2x.png 2x"
+              width="1400" height="400">
+      <source type="image/png" media="(min-width: 768px)"
+              srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x" width="768" height="400">
+      <img class="location__map" src="images/location@1x.png" srcset="images/location@2x.png 2x" width="320"
+           height="362" alt="Карта">
     </picture>
 
     <div class="location__info location-info">
@@ -176,28 +181,45 @@
   </section>
 
   <div class="main-footer__logo logo">
-    <img class="logo__image logo__image--text" src="#" alt="Кэт энерджи" width="128" height="24">
+    <img class="logo__text" src="images/footer-logo.svg" width="101" height="85" alt="Cat Energy">
   </div>
 
-  <div class="main-footer__social">
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="#">ВК</a>
+  <div class="main-footer__network socials">
+    <ul class="socials__list container">
+      <li class="socials__item">
+        <a class="socials__link socials__link--vk" href="#">
+          <span class="element-hidden">Вк</span>
+          <svg width="28" height="22" viewBox="0 0 28 22">
+            <use href="./images/icons/stack.svg#vk"></use>
+          </svg>
+        </a>
       </li>
 
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="#">YouTube</a>
+      <li class="socials__item">
+        <a class="socials__link socials__link--youtube" href="#">
+          <span class="element-hidden">Youtube</span>
+          <svg width="28" height="22" viewBox="0 0 28 22">
+            <use href="./images/icons/stack.svg#youtube"></use>
+          </svg>
+        </a>
       </li>
 
-      <li class="social__item">
-        <a class="social__link social__link--tg" href="#">Telegram</a>
+      <li class="socials__item">
+        <a class="socials__link socials__link--tg" href="#">
+          <span class="element-hidden">Телеграм</span>
+          <svg width="28" height="22" viewBox="0 0 28 22">
+            <use href="./images/icons/stack.svg#telegram"></use>
+          </svg>
+        </a>
       </li>
     </ul>
   </div>
 
   <div class="main-footer__copyright copyright">
     <span class="copyright__name">HTML Academy</span>
-    <img class="copyright__icon" src="#" alt="Логотип HTML Academy" width="27" height="34">
+    <svg alt="Логотип HTML Academy" width="27" height="34" viewBox="0 0 27 34">
+      <use href="./images/icons/stack.svg#html-academy"></use>
+    </svg>
   </div>
 </footer>
 </body>
