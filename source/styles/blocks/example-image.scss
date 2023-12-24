@@ -1,0 +1,7 @@
+.example-image__bar {
+  width: 40px;
+  height: 40px;
+
+  @include set-svg-sprite("thumb", 40px, 40px);
+  @include set-background-svg-options();
+}

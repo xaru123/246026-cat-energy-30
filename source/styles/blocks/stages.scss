@@ -1,18 +1,59 @@
-.stages-item {
-  list-style: none;
+.stages__list {
+  counter-reset: numbers;
 }
 
-.stages-item__number {
-  visibility: hidden;
+.stages__item {
+  list-style: none;
+  position: relative;
 
-  @media (min-width: $width-table) {
-    visibility: visible;
+  &::before {
+    content: " ";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $color-primary;
 
-    @include set-typography(280px, 280px, $color-text-200);
+    @include set-background-svg-options();
+
+    @media (min-width: $width-table) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--leaf::before {
+    @include set-svg-sprite("leaf", 30px, 32px);
+  }
+
+  &--water::before {
+    @include set-svg-sprite("water", 26px, 29px);
+  }
+
+  &--eat::before {
+    @include set-svg-sprite("water", 25px, 30px);
+  }
+
+  &--time::before {
+    @include set-svg-sprite("time", 26px, 31px);
+  }
+
+  &::after {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    counter-increment: numbers;
+    content: counter(numbers);
+    visibility: hidden;
+
+    @media (min-width: $width-table) {
+      visibility: visible;
+
+      @include set-typography(280px, 280px, $color-text-200);
+    }
   }
 }
 
-.stages-item__text {
+.stages__text {
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
 
   @media (min-width: $width-table) {

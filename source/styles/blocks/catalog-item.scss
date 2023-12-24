@@ -18,6 +18,12 @@
   }
 }
 
+.catalog-item__image {
+  @media (min-width: $width-table) {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 .catalog-item__name--new {
   color: $color-text-600;
