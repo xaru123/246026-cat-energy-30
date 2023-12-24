@@ -20,3 +20,13 @@
   font-weight: $weight;
   text-transform: $text-transform;
 }
+
+@mixin set-svg-sprite($id-svg:arrow, $width: 20px, $height: 20px) {
+  background-image: url("../../images/icons/stack.svg##{$id-svg}");
+  background-size: $width $height;
+}
+
+@mixin set-background-svg-options($x: 50%, $y: 50%, $repeat: no-repeat) {
+  background-position: $x $y;
+  background-repeat: no-repeat;
+}

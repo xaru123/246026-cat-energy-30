@@ -1,9 +1,6 @@
 .form-control__input {
+  position: relative;
   @include set-typography(16px, 20px, $color-text-400);
-
-  @media (min-width: $width-table) {
-    @include set-typography(20px, normal);
-  }
 }
 
 .form-control__label {

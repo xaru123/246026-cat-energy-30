@@ -1,4 +1,50 @@
-.feature__header {
+.feature__item {
+  position: relative;
+
+  &::before {
+    content: " ";
+    display: block;
+    width: 70px;
+    height: 55px;
+    @include set-background-svg-options();
+
+    @media (min-width: $width-table) {
+      width: 268px;
+      height: 211px;
+    }
+
+    @media (min-width: $width-desktop) {
+      width: 134px;
+      height: 110px;
+    }
+  }
+
+  &--slim::before {
+    @include set-svg-sprite("cat-back", 50px, 53px);
+
+    @media (min-width: $width-table) {
+      background-size: 200px 211px;
+    }
+
+    @media (min-width: $width-desktop) {
+      background-size: 100px 106px;
+    }
+  }
+
+  &--mass::before {
+    @include set-svg-sprite("cat-back-2", 67px, 50px);
+
+    @media (min-width: $width-table) {
+      background-size: 268px 200px;
+    }
+
+    @media (min-width: $width-desktop) {
+      background-size: 134px 100px;
+    }
+  }
+}
+
+.feature__name {
   @include set-typography(24px, 37px);
 
   @media (min-width: $width-table) {
@@ -16,6 +62,17 @@
 
 .feature__link {
   @include set-typography(16px, 16px);
+
+  &::after {
+    content: " ";
+    padding-right: 25px;
+    width: 32px;
+    height: 10px;
+    display: inline-flex;
+
+    @include set-svg-sprite("arrow", 32px, 10px);
+    @include set-background-svg-options();
+  }
 
   @media (min-width: $width-table) {
     @include set-typography(20 pxpx, normal);
