@@ -35,3 +35,12 @@
   background-position: $x $y;
   background-repeat: no-repeat;
 }
+
+@mixin flexbox($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin debugger-outline($color: gray, $type:solid, $width:1px) {
+  outline: $width $type $color;
+}

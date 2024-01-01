@@ -1,11 +1,18 @@
 .main-nav {
+  @include flexbox();
+  justify-content: end;
+  gap: 33px;
   list-style: none;
 }
 
 .main-nav__link {
   @include set-typography();
 
+  @media (min-width: $width-table) {
+    @include set-typography(18px, 24px, $color-black);
+  }
+
   @media (min-width: $width-desktop) {
-    color: $color-white;
+    @include set-typography(20px, normal, $color-white);
   }
 }
