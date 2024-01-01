@@ -1,3 +1,19 @@
+.copyright {
+  @include set-flexbox();
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid $color-border;
+
+  @media (min-width: $width-table) {
+    border-top: 0;
+    padding-top: 0px;
+    justify-content: flex-end;
+    gap: 23px;
+  }
+}
+
 .copyright__name {
   @include set-typography(16px, 20px, $color-text-400, $font-secondary);
 }

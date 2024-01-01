@@ -1,5 +1,5 @@
 .main-header {
-  @include flexbox();
+  @include set-flexbox();
   justify-content: space-between;
   align-items: center;
   padding: 13px 20px;

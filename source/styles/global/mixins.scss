@@ -36,11 +36,16 @@
   background-repeat: no-repeat;
 }
 
-@mixin flexbox($direction: row) {
+@mixin debugger-outline($color: gray, $type:solid, $width:1px) {
+  outline: $width $type $color;
+}
+
+@mixin set-flexbox($direction: row) {
   display: flex;
   flex-direction: $direction;
 }
 
-@mixin debugger-outline($color: gray, $type:solid, $width:1px) {
-  outline: $width $type $color;
+@mixin set-grid($direction: row) {
+  display: grid;
 }
+

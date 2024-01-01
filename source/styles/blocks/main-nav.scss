@@ -1,6 +1,6 @@
 .main-nav {
-  @include flexbox();
-  justify-content: end;
+  @include set-flexbox();
+  justify-content: flex-end;
   gap: 33px;
   list-style: none;
 }
