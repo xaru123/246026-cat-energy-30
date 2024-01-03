@@ -1,10 +1,40 @@
 .stages__list {
   counter-reset: numbers;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $width-table) {
+    grid-template-columns: 230px 230px;
+    grid-template-rows: 280px 280px;
+    row-gap: 77px;
+    column-gap: 154px;
+  }
+
+  @media (min-width: $width-desktop) {
+    grid-template-columns: repeat(4, 230px);
+    grid-template-rows: 1fr;
+    row-gap: 94px;
+  }
 }
 
 .stages__item {
   list-style: none;
   position: relative;
+  padding-bottom: 53px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+
+  @media (min-width: $width-table) {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 204px;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 69px;
+  }
 
   &::before {
     content: " ";
@@ -12,7 +42,7 @@
     width: 60px;
     height: 60px;
     background-color: $color-primary;
-
+    z-index: 2;
     @include set-background-svg-options();
 
     @media (min-width: $width-table) {
@@ -39,21 +69,24 @@
 
   &::after {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    left: 115px;
+    top: -40px;
     counter-increment: numbers;
     content: counter(numbers);
     visibility: hidden;
+    z-index: 1;
+
 
     @media (min-width: $width-table) {
       visibility: visible;
-
       @include set-typography(280px, 280px, $color-text-200);
     }
   }
+
 }
 
 .stages__text {
+  z-index: 3;
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
 
   @media (min-width: $width-table) {

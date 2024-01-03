@@ -5,6 +5,7 @@
 
   @media (min-width: $width-desktop) {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 80px;
   }
 }

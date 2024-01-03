@@ -5,6 +5,7 @@
 
 .main-content__header {
   @include set-typography(36px, 36px);
+  padding-bottom: 40px;
 
   @media (min-width: $width-table) {
     @include set-typography(60px, 60px);
