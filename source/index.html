@@ -125,43 +125,46 @@
   <section class="main-content__example example">
     <h3 class="main-content__header example__head">Живой пример</h3>
 
-    <div class="example__info example-info">
-      <p class="example-info__text">
+    <div class="example__container">
+
+      <p class="example__text">
         Борис сбросил 5 кг за 2 месяца, просто заменив свой
         обычный корм на Cat Energy Slim. Отличный результат
         без изнуряющих тренировок! При этом он не менял своих
         привычек и по-прежнему спит по 16 часов в день.
       </p>
 
-      <dl class="example-info__values info-values">
-        <dt class="info-values__title">Снижение веса</dt>
+      <div class="example__list">
+        <dl class="example__values">
+          <div class="example__item">
+            <dd class="example__definition">5 КГ</dd>
+            <dt class="example__title">снижение веса</dt>
+          </div>
 
-        <dd class="info-values__definition">5 КГ</dd>
+          <div class="example__item">
+            <dd class="example__definition">60 ДНЕЙ</dd>
+            <dt class="example__title">затрачено времени</dt>
+          </div>
+        </dl>
 
-        <dt class="info-values__title">Затрачено времени</dt>
+        <dl class="example__values-total">
+          <dt class="example__total">Затраты на питание:</dt>
+          <dd class="example__total">15 000 РУБ.</dd>
+        </dl>
+      </div>
 
-        <dd class="info-values__definition">60 ДНЕЙ</dd>
-      </dl>
+      <div class="example__image example-image">
+        <img class="example-image__image example-image__image--before" src="images/cat-before@1x.png"
+             srcset="images/cat-before@2x.png"
+             width="280" height="280" alt="До">
 
-      <dl class="example-info__total info-total">
-        <dt class="info-total__text">Затраты на питание:</dt>
-        <dd class="info-total__text">15 000 РУБ.</dd>
-      </dl>
+        <img class="example-image__image example-image__image--after" src="images/cat-after@1x.png"
+             srcset="images/cat-after@2x.png"
+             width="280" height="280" alt="После">
+
+        <div class="example-image__bar"></div>
+      </div>
     </div>
-
-    <div class="example__image example-image">
-      <img class="example-image__image example-image__image--before" src="images/cat-before@1x.png"
-           srcset="images/cat-before@2x.png"
-           width="280" height="280" alt="До">
-
-      <img class="example-image__image example-image__image--after" src="images/cat-after@1x.png"
-           srcset="images/cat-after@2x.png"
-           width="280" height="280" alt="После">
-
-      <div class="example-image__bar"></div>
-    </div>
-
-
   </section>
 </main>
 

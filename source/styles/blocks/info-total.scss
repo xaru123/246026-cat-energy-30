@@ -1,7 +1,0 @@
-.info-total__text {
-  @include set-typography(14px, 20px);
-
-  @media (min-width: $width-table) {
-    @include set-typography(20px, 20px);
-  }
-}
