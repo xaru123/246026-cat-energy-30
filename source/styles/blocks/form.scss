@@ -1,1 +1,16 @@
-//.form {}
+.form__list {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding-bottom: 25px;
+}
+
+.form__list--border {
+  &::after {
+    content: '';
+    position: relative;
+    width: $width-desktop * 2;
+    left: -100%;
+    border-bottom: 1px solid $color-border;
+  }
+}

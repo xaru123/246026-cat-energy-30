@@ -13,13 +13,34 @@
 }
 
 .main-content__sub-header {
-  padding-right: 20px;
+  position: relative;
+  z-index: 2;
+  max-width: 187px;
 
-  @include set-typography(24px, 26px);
+  h2 {
+    padding-right: 20px;
+    position: relative;
+    width: fit-content;
+    background: white;
+    z-index: 2;
+    @include set-typography(24px, 26px);
 
-  @media (min-width: $width-table) {
-    padding: 40px;
+    @media (min-width: $width-table) {
+      padding: 40px;
 
-    @include set-typography(36px, 36px);
+      @include set-typography(36px, 36px);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    display: flex;
+    width: 20000px;
+    height: 2px;
+    background: $color-primary;
+    z-index: 1;
   }
 }

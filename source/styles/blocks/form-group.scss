@@ -1,0 +1,55 @@
+.form-group {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 13px;
+  align-items: baseline;
+  position: relative;
+}
+
+.form-group__field {
+  position: relative;
+  @include set-typography-additional();
+  @include set-typography(16px, 18px, $color-text-400);
+  padding: 14px 15px;
+  width: -webkit-fill-available;
+
+  &::placeholder {
+    color: #212529;
+    opacity: 0.4;
+  }
+
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  }
+}
+
+.form-group__label {
+  @include set-typography(16px, 18px, $color-text-400);
+  @include set-typography-additional();
+
+  @media (min-width: $width-table) {
+    @include set-typography(20px, normal);
+  }
+}
+
+.form-group__wrapper {
+  position: relative;
+}
+
+.form-group__icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transition: color 0.15s ease-in-out;
+
+  .form-group__field:hover + & {
+    color: red;
+  }
+}
+
+
+

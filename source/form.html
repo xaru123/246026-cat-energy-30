@@ -47,108 +47,113 @@
   <p class="form-content__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
   <form class="form-content__form form" action="https://echo.htmlacademy.ru">
-    <div class="form__row">
-      <div class="form__column">
-        <div class="form__control form-control">
-          <label class="form-control__label" for="cat-name">Имя:*</label>
-          <input class="form-control__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик"/>
+    <div class="form__container">
+      <div class="form__list form__list--border">
+        <div class="form__group form-group">
+          <label class="form-group__label" for="cat-name">Имя:*</label>
+          <input class="form-group__field" type="text" name="cat-name" id="cat-name" placeholder="Барсик"/>
         </div>
 
-        <div class="form__control form-control">
-          <label class="form-control__label" for="cat-wgt">Вес (кг):*</label>
-          <input class="form-control__input" type="text" name="cat-wgt" id="cat-wgt" placeholder="7"/>
+        <div class="form__group form-group">
+          <label class="form-group__label" for="cat-wgt">Вес (кг):*</label>
+          <input class="form-group__field" type="text" name="cat-wgt" id="cat-wgt" placeholder="7"/>
         </div>
 
-        <div class="form__control form-control">
-          <label class="form-control__label" for="cat-age">Возраст (лет):</label>
-          <input class="form-control__input" type="text" name="cat-age" id="cat-age" placeholder="7"/>
+        <div class="form__group form-group">
+          <label class="form-group__label" for="cat-age">Возраст (лет):</label>
+          <input class="form-group__field" type="text" name="cat-age" id="cat-age" placeholder="7"/>
         </div>
       </div>
 
-      <div class="form__column">
-        <div class="form__control form__control--border">
-          <div class="form-control">
-            <input class="form-control__input" type="radio" name="goal" id="loss" value="loss">
-            <label class="form-control__label" for="loss">Похудение</label>
+      <div class="form__list form__list--border">
+        <div class="form__group form-group">
+          <input class="form-group__field" type="radio" name="goal" id="loss" value="loss">
+          <label class="form-group__label" for="loss">Похудение</label>
+        </div>
+
+        <div class="form__group form-group">
+          <input class="form-group__field" type="radio" name="goal" id="add" value="add">
+          <label class="form-group__label" for="add">Набор массы</label>
+        </div>
+
+        <div class="form__group form-group">
+          <input class="form-group__field" type="radio" name="goal" id="nevermind" value="nevermind">
+          <label class="form-group__label" for="nevermind">Не знаю (Нужен ваш совет)</label>
+        </div>
+      </div>
+
+      <div class="form__list">
+        <div class="main-content__sub-header">
+          <h2 class=" form__header">Контактные данные (владельца кота)</h2>
+        </div>
+
+        <div class="form__group form-group">
+          <label class="form-group__label" for="email">E-mail:*</label>
+
+          <div class="form-group__wrapper">
+            <input class="form-group__field" type="email" name="email" id="email" placeholder="кuklachev@gmail.com"/>
+
+            <svg class="form-group__icon" width="20" height="20"
+                 fill="none" stroke="black"
+                 viewBox="0 0 20 20"
+                 aria-hidden="true"
+            >
+              <use href="./images/icons/stack.svg#mail"></use>
+            </svg>
           </div>
+        </div>
 
-          <div class="form-control">
-            <input class="form-control__input" type="radio" name="goal" id="add" value="add">
-            <label class="form-control__label" for="add">Набор массы</label>
+        <div class="form__column">
+          <div class="form__group form-group">
+            <label class="form-group__label" for="tel">Телефон:*</label>
+
+            <input class="form-group__field" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90"/>
+
+            <svg
+              class="form-group__icon" width="20" height="20" stroke="black"
+              viewBox="0 0 20 20" aria-hidden="true"
+            >
+              <use href="./images/icons/stack.svg#phone"></use>
+            </svg>
           </div>
-
-          <div class="form-control">
-            <input class="form-control__input" type="radio" name="goal" id="nevermind" value="nevermind">
-            <label class="form-control__label" for="nevermind">Не знаю (Нужен ваш совет)</label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="form__row">
-      <h2 class="main-content__sub-header form__header">Контактные данные (владельца кота)</h2>
-
-      <div class="form__column">
-        <div class="form__control form-control">
-          <label class="form-control__label" for="email">E-mail:*</label>
-
-          <input class="form-control__input" type="email" name="email" id="email" placeholder="кuklachev@gmail.com"/>
-
-          <svg class="form-control__icon" width="20" height="20"
-               stroke="black" viewBox="0 0 20 20"
-               aria-hidden="true"
-          >
-            <use href="./images/icons/stack.svg#mail"></use>
-          </svg>
         </div>
       </div>
 
-      <div class="form__column">
-        <div class="form__control form-control">
-          <label class="form-control__label" for="tel">Телефон:*</label>
-
-          <input class="form-control__input" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90"/>
-
-          <svg
-            class="form-control__icon" width="20" height="20" stroke="black"
-            viewBox="0 0 20 20" aria-hidden="true"
-          >
-            <use href="./images/icons/stack.svg#phone"></use>
-          </svg>
+      <div class="form__list">
+        <div class="main-content__sub-header">
+          <h2 class="form__header">Комментарий</h2>
         </div>
-      </div>
-    </div>
 
-    <div class="form__row">
-      <h2 class="form__header">Комментарий</h2>
-
-      <div class="form-control">
-        <textarea class="form-control__input" name="comment" id="comment"
+        <div class="form-group">
+        <textarea class="form-group__field" name="comment" id="comment"
                   placeholder="Расскажите обо всех повадках кота"></textarea>
-      </div>
-    </div>
-
-    <div class="form__row">
-      <h2 class="form__header">Дополнительно</h2>
-
-      <div class="form-control">
-        <input class="form-control__input" type="checkbox" name="shuga" id="shuga" checked>
-        <label class="form-control__label" for="shuga">Cахарозаменитель</label>
+        </div>
       </div>
 
-      <div class="form-control">
-        <input class="form-control__input" type="checkbox" name="water" id="water">
-        <label class="form-control__label" for="water">Питьевая вода</label>
-      </div>
+      <div class="form__list">
+        <div class="main-content__sub-header">
+          <h2 class="form__header">Дополнительно</h2>
+        </div>
 
-      <div class="form-control">
-        <input class="form-control__input" type="checkbox" name="milk" id="milk">
-        <label class="form-control__label" for="milk">Молоко</label>
-      </div>
+        <div class="form-group">
+          <input class="form-group__field" type="checkbox" name="shuga" id="shuga" checked>
+          <label class="form-group__label" for="shuga">Cахарозаменитель</label>
+        </div>
 
-      <div class="form-control">
-        <input class="form-control__input" type="checkbox" name="vit" id="vit">
-        <label class="form-control__label" for="vit">Витамины</label>
+        <div class="form-group">
+          <input class="form-group__field" type="checkbox" name="water" id="water">
+          <label class="form-group__label" for="water">Питьевая вода</label>
+        </div>
+
+        <div class="form-group">
+          <input class="form-group__field" type="checkbox" name="milk" id="milk">
+          <label class="form-group__label" for="milk">Молоко</label>
+        </div>
+
+        <div class="form-group">
+          <input class="form-group__field" type="checkbox" name="vit" id="vit">
+          <label class="form-group__label" for="vit">Витамины</label>
+        </div>
       </div>
     </div>
 
