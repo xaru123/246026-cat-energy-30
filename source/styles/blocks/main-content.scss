@@ -1,3 +1,8 @@
+.main-content {
+  @include set-flexbox(column);
+  row-gap: 20px;
+}
+
 .main-content__header {
   @include set-typography(36px, 36px);
 

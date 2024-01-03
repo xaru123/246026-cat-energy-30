@@ -1,4 +1,5 @@
 .button {
+  width: auto;
   display: inline-flex;
   padding: 10px 44px;
   justify-content: center;
@@ -6,10 +7,11 @@
   gap: 4px;
   background: $color-primary;
 
-  @include set-typography(20px, 26xpx, $color-white);
+  @include set-typography(16px, 29px, $color-white);
   border: 0;
 
   @media (min-width: $width-table) {
+    @include set-typography(20px, 26px, $color-white);
     padding: 14px 26px;
   }
 }
