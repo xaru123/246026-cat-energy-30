@@ -2,7 +2,9 @@
   background: $color-block-back;
 
   @media (min-width: $width-table) {
-    background: $color-white !important;
+    div.example {
+      background: $color-white;
+    }
   }
 }
 
@@ -105,18 +107,20 @@
   flex-direction: column;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 124px;
     height: 56px;
+
     @include set-svg-sprite("weight-back", 124px, 56px);
     @include set-background-svg-options();
 
     @media (min-width: $width-table) {
       width: 162px;
       height: 77px;
+
       @include set-svg-sprite("weight-back", 162px, 77px);
     }
   }
@@ -146,7 +150,6 @@
 }
 
 .example__image {
-
   @media (min-width: $width-desktop) {
     grid-column: 2 / 3;
     grid-row: 1/ 4;

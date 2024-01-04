@@ -6,6 +6,7 @@
   align-items: center;
   gap: 4px;
   background: $color-primary;
+
   @include set-typography(16px, 29px, $color-white);
   @include set-typography-additional();
   border: 0;

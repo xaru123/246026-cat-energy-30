@@ -1,10 +1,12 @@
 .main-footer {
   width: 100%;
+
   @include set-flexbox(column);
 }
 
 .main-footer__buttons {
   padding: 40px 20px;
+
   @include set-flexbox(column);
   align-items: center;
 

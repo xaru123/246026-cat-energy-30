@@ -8,10 +8,11 @@
 
 .form-group__field {
   position: relative;
+
   @include set-typography-additional();
   @include set-typography(16px, 18px, $color-text-400);
   padding: 14px 15px;
-  width: -webkit-fill-available;
+  width: fill-available;
 
   &::placeholder {
     color: #212529;
@@ -20,7 +21,7 @@
 
   &:focus {
     color: #212529;
-    background-color: #fff;
+    background-color: #ffffff;
     border-color: #bdbdbd;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
@@ -47,9 +48,6 @@
   transition: color 0.15s ease-in-out;
 
   .form-group__field:hover + & {
-    color: red;
+    color: $color-primary;
   }
 }
-
-
-

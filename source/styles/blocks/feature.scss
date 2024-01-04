@@ -37,6 +37,7 @@
   &--slim::before {
     width: 50px;
     left: 20px;
+
     @include set-svg-sprite("cat-back", 50px, 53px);
 
     @media (min-width: $width-table) {
@@ -59,6 +60,7 @@
   &--mass::before {
     width: 67px;
     left: 11px;
+
     @include set-svg-sprite("cat-back-2", 67px, 50px);
 
     @media (min-width: $width-table) {
@@ -87,7 +89,7 @@
 
   @media (min-width: $width-table) {
     padding-bottom: 25px;
-    padding-left: 0px;
+    padding-left: 0;
 
     @include set-typography(36px, 36px);
   }
@@ -103,12 +105,14 @@
 .feature__text {
   padding-bottom: 20px;
   border-bottom: 1px solid $color-border;
+
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
 
   @media (min-width: $width-table) {
     padding-bottom: 50px;
     border-bottom: 0;
     width: 340px;
+
     @include set-typography(16px, 24px, $color-black, $font-secondary);
   }
 

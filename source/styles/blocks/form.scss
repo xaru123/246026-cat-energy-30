@@ -7,7 +7,7 @@
 
 .form__list--border {
   &::after {
-    content: '';
+    content: "";
     position: relative;
     width: $width-desktop * 2;
     left: -100%;
