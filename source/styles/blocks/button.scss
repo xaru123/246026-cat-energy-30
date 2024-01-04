@@ -1,4 +1,5 @@
 .button {
+  width: auto;
   display: inline-flex;
   padding: 10px 44px;
   justify-content: center;
@@ -6,22 +7,29 @@
   gap: 4px;
   background: $color-primary;
 
-  @include set-typography(20px, 26xpx, $color-white);
+  @include set-typography(16px, 29px, $color-white);
+  @include set-typography-additional();
   border: 0;
 
   @media (min-width: $width-table) {
+    @include set-typography(20px, 26px, $color-white);
     padding: 14px 26px;
   }
-}
 
-.button:hover {
-  background: $color-primary-hover;
+  &:hover {
+    background: $color-primary-hover;
+  }
+
+  &:active {
+    color: $color-primary-active;
+  }
 }
 
 .button--default {
   background: $color-text-200;
-}
+  color: $color-text-400;
 
-.button--default:hover {
-  background: $color-text-400;
+  &:hover {
+    background: $color-text-400;
+  }
 }

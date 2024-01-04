@@ -1,5 +1,24 @@
 .socials__list {
+  width: 100%;
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 24px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.socials__item {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $width-table) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.socials__link {
+  display: flex;
 }

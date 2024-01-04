@@ -20,9 +20,9 @@
       <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50">
       <img class="logo__img" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
     </picture>
-
-    <img class="logo__text logo__text--header" src="images/footer-logo.svg" width="101" height="85" alt="Cat Energy">
   </div>
+
+  <img class="main-header__logo-text" src="images/footer-logo.svg" width="101" height="18" alt="Cat Energy">
 
   <button class="main-header__toggle" type="button">
     <span class="element-hidden">Открыть меню.</span>
@@ -31,15 +31,16 @@
   <nav class="main-header__nav">
     <ul class="main-nav">
       <li class="main-nav__item main-nav__item--active">
-        <a class="main-nav__link" href="./index.html">Главная</a></li>
+        <a class="main-nav__link" href="./index.html">Главная</a>
       </li>
 
       <li class="main-nav__item">
-        <a class="main-nav__link" href="./catalog.html">Каталог продукции</a></li>
+        <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>
       </li>
 
       <li class="main-nav__item">
-        <a class="main-nav__link" href="./form.html">Подбор программы</a></li>
+        <a class="main-nav__link" href="./form.html">Подбор программы</a>
+      </li>
     </ul>
   </nav>
 </header>
@@ -50,27 +51,27 @@
       <h1 class="preview-info__header main-content__header">Функциональное питание для котов</h1>
 
       <p class="preview-info__text">Занялся собой? Займись котом!</p>
-
-      <button class="preview__button button" type="button">Подобрать программу</button>
     </div>
 
     <picture>
       <source type="image/png" media="(min-width: 1440px)"
-              srcset="images/cat-green@1x.png 1x, images/cat-green@2x.png 2x" width="720" height="690">
+        srcset="images/cat-green@1x.png 1x, images/cat-green@2x.png 2x" width="720" height="690">
       <img class="preview__wrapper" src="images/cat-green-mobile@1x.png" srcset="images/cat-green-mobile@2x.png 2x"
-           width="320" height="302" alt="Фон с котиком>">
+        width="320" height="302" alt="Фон с котиком>">
     </picture>
 
     <div class="preview__product product">
       <picture>
         <source type="image/png" media="(min-width: 1440px)"
-                srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x" width="552" height="499">
+          srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x" width="552" height="499">
         <source type="image/png" media="(min-width: 768px)"
-                srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x" width="709" height="609">
+          srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x" width="709" height="609">
         <img class="product__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x"
-             width="280" height="270" alt="Банка>">
+          width="280" height="270" alt="Банка>">
       </picture>
     </div>
+
+    <button class="preview__button button" type="button">Подобрать программу</button>
   </section>
 
   <section class="main-content__feature feature">
@@ -124,43 +125,46 @@
   <section class="main-content__example example">
     <h3 class="main-content__header example__head">Живой пример</h3>
 
-    <div class="example__info example-info">
-      <p class="example-info__text">
+    <div class="example__container">
+
+      <p class="example__text">
         Борис сбросил 5 кг за 2 месяца, просто заменив свой
         обычный корм на Cat Energy Slim. Отличный результат
         без изнуряющих тренировок! При этом он не менял своих
         привычек и по-прежнему спит по 16 часов в день.
       </p>
 
-      <dl class="example-info__values info-values">
-        <dt class="info-values__title">Снижение веса</dt>
+      <div class="example__list">
+        <div class="example__values">
+          <div class="example__item">
+            <span class="example__definition">5 КГ</span>
+            <span class="example__title">снижение веса</span>
+          </div>
 
-        <dd class="info-values__definition">5 КГ</dd>
+          <div class="example__item">
+            <span class="example__definition">60 ДНЕЙ</span>
+            <span class="example__title">затрачено времени</span>
+          </div>
+        </div>
 
-        <dt class="info-values__title">Затрачено времени</dt>
+        <div class="example__values-total">
+          <span class="example__total">Затраты на питание:</span>
+          <span class="example__total">15 000 РУБ.</span>
+        </div>
+      </div>
 
-        <dd class="info-values__definition">60 ДНЕЙ</dd>
-      </dl>
+      <div class="example__image example-image">
+        <img class="example-image__image example-image__image--before" src="images/cat-before@1x.png"
+          srcset="images/cat-before@2x.png"
+          width="280" height="280" alt="До">
 
-      <dl class="example-info__total info-total">
-        <dt class="info-total__text">Затраты на питание:</dt>
-        <dd class="info-total__text">15 000 РУБ.</dd>
-      </dl>
+        <img class="example-image__image example-image__image--after" src="images/cat-after@1x.png"
+          srcset="images/cat-after@2x.png"
+          width="280" height="280" alt="После">
+
+        <div class="example-image__bar"></div>
+      </div>
     </div>
-
-    <div class="example__image example-image">
-      <img class="example-image__image example-image__image--before" src="images/cat-before@1x.png"
-           srcset="images/cat-before@2x.png"
-           width="280" height="280" alt="До">
-
-      <img class="example-image__image example-image__image--after" src="images/cat-after@1x.png"
-           srcset="images/cat-after@2x.png"
-           width="280" height="280" alt="После">
-
-      <div class="example-image__bar"></div>
-    </div>
-
-
   </section>
 </main>
 
@@ -168,65 +172,67 @@
   <section class="main-footer__location location">
     <h2 class="main-footer__header element-hidden">Карта</h2>
 
-    <picture>
-      <source type="image/png" media="(min-width: 1440px)" srcset="images/location@1x.png 1x, images/location@2x.png 2x"
-              width="1400" height="400">
-      <source type="image/png" media="(min-width: 768px)"
-              srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x" width="768" height="400">
-      <img class="location__map" src="images/location@1x.png" srcset="images/location@2x.png 2x" width="320"
-           height="362" alt="Карта">
-    </picture>
-
-    <div class="location__info location-info">
-      <p class="location-info__invitation">Приглашаем к сотрудничеству дилеров!</p>
-      <address class="location-info__address">
+    <div class="location__container">
+      <p class="location__invitation">Приглашаем к сотрудничеству дилеров!</p>
+      <address class="location__address">
         ул. Большая
         Конюшенная, д. 19/8
         Санкт-Петербург
       </address>
     </div>
+
+    <picture>
+      <source type="image/png" media="(min-width: 1440px)" srcset="images/location@1x.png, images/location@2x.png 2x"
+        width="1400" height="400">
+      <source type="image/png" media="(min-width: 768px)"
+        srcset="images/location-tablet@1x.png, images/location-tablet@2x.png 2x" width="768" height="400">
+      <img class="location__map" src="images/location@1x.png" srcset="images/location@2x.png 2x" width="320"
+        height="362" alt="Карта">
+    </picture>
   </section>
 
-  <div class="main-footer__logo logo">
-    <img class="logo__text" src="images/footer-logo.svg" width="101" height="85" alt="Cat Energy">
-  </div>
+  <div class="main-footer__buttons">
+    <div class="main-footer__logo logo">
+      <img class="logo__img logo__img--footer" src="images/footer-logo.svg" width="128" height="24" alt="Cat Energy">
+    </div>
 
-  <div class="main-footer__network socials">
-    <ul class="socials__list container">
-      <li class="socials__item">
-        <a class="socials__link socials__link--vk" href="#">
-          <span class="element-hidden">Вк</span>
-          <svg width="28" height="22" viewBox="0 0 28 22">
-            <use href="./images/icons/stack.svg#vk"></use>
-          </svg>
-        </a>
-      </li>
+    <div class="main-footer__network socials">
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a class="socials__link socials__link--vk" href="#">
+            <span class="element-hidden">Вк</span>
+            <svg width="28" height="22" viewBox="0 0 28 22">
+              <use href="./images/icons/stack.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
 
-      <li class="socials__item">
-        <a class="socials__link socials__link--youtube" href="#">
-          <span class="element-hidden">Youtube</span>
-          <svg width="28" height="22" viewBox="0 0 28 22">
-            <use href="./images/icons/stack.svg#youtube"></use>
-          </svg>
-        </a>
-      </li>
+        <li class="socials__item">
+          <a class="socials__link socials__link--youtube" href="#">
+            <span class="element-hidden">Youtube</span>
+            <svg width="28" height="22" viewBox="0 0 28 22">
+              <use href="./images/icons/stack.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
 
-      <li class="socials__item">
-        <a class="socials__link socials__link--tg" href="#">
-          <span class="element-hidden">Телеграм</span>
-          <svg width="28" height="22" viewBox="0 0 28 22">
-            <use href="./images/icons/stack.svg#telegram"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </div>
+        <li class="socials__item">
+          <a class="socials__link socials__link--tg" href="#">
+            <span class="element-hidden">Телеграм</span>
+            <svg width="28" height="22" viewBox="0 0 28 22">
+              <use href="./images/icons/stack.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <div class="main-footer__copyright copyright">
-    <span class="copyright__name">HTML Academy</span>
-    <svg width="27" height="34" viewBox="0 0 27 34">
-      <use href="./images/icons/stack.svg#html-academy"></use>
-    </svg>
+    <div class="main-footer__copyright copyright">
+      <span class="copyright__name">HTML Academy</span>
+      <svg width="27" height="34" viewBox="0 0 27 34">
+        <use href="./images/icons/stack.svg#html-academy"></use>
+      </svg>
+    </div>
   </div>
 </footer>
 </body>

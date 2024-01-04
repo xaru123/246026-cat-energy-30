@@ -1,5 +1,12 @@
+.form-footer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+}
+
 .form-footer__text {
   @include set-typography(14px, 16px);
+  text-align: center;
 
   @media (min-width: $width-table) {
     @include set-typography(16px, 16px);

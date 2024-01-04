@@ -1,68 +1,130 @@
+.feature {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+
+  @media (min-width: $width-desktop) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 80px;
+  }
+}
+
 .feature__item {
   position: relative;
+  background: $color-text-200;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $width-table) {
+    padding: 77px 316px 57px 52px;
+  }
+
+  @media (min-width: $width-table) {
+    padding: 77px 61px 59px 52px;
+  }
 
   &::before {
-    content: " ";
-    display: block;
-    width: 70px;
-    height: 55px;
-
     @include set-background-svg-options();
-
-    @media (min-width: $width-table) {
-      width: 268px;
-      height: 211px;
-    }
-
-    @media (min-width: $width-desktop) {
-      width: 134px;
-      height: 110px;
-    }
+    content: " ";
+    position: absolute;
+    display: block;
+    top: 20px;
+    height: 50px;
   }
 
   &--slim::before {
+    width: 50px;
+    left: 20px;
+
     @include set-svg-sprite("cat-back", 50px, 53px);
 
     @media (min-width: $width-table) {
+      width: 200px;
+      height: 211px;
       background-size: 200px 211px;
+      left: 445px;
+      top: 90px;
     }
 
     @media (min-width: $width-desktop) {
+      width: 100px;
+      height: 106px;
       background-size: 100px 106px;
+      top: 40px;
+      left: 52px;
     }
   }
 
   &--mass::before {
+    width: 67px;
+    left: 11px;
+
     @include set-svg-sprite("cat-back-2", 67px, 50px);
 
     @media (min-width: $width-table) {
+      width: 268px;
+      height: 211px;
       background-size: 268px 200px;
+      left: 411px;
+      top: 90px;
     }
 
     @media (min-width: $width-desktop) {
+      width: 134px;
+      height: 100px;
       background-size: 134px 100px;
+      top: 48px;
+      left: 33px;
     }
   }
 }
 
 .feature__name {
   @include set-typography(24px, 37px);
+  @include set-typography-additional();
+  padding-left: 70px;
+  padding-bottom: 30px;
 
   @media (min-width: $width-table) {
+    padding-bottom: 25px;
+    padding-left: 0;
+
+    @include set-typography(36px, 36px);
+  }
+
+  @media (min-width: $width-table) {
+    padding-bottom: 73px;
+    padding-left: 214px;
+
     @include set-typography(36px, 36px);
   }
 }
 
 .feature__text {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-border;
+
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
 
   @media (min-width: $width-table) {
+    padding-bottom: 50px;
+    border-bottom: 0;
+    width: 340px;
+
     @include set-typography(16px, 24px, $color-black, $font-secondary);
+  }
+
+  @media (min-width: $width-desktop) {
+    width: auto;
+    padding-bottom: 27px;
   }
 }
 
 .feature__link {
   @include set-typography(16px, 16px);
+  @include set-typography-additional();
 
   &::after {
     content: " ";
@@ -76,6 +138,6 @@
   }
 
   @media (min-width: $width-table) {
-    @include set-typography(20 pxpx, normal);
+    @include set-typography(20px, normal);
   }
 }

@@ -1,1 +1,40 @@
-//.main-footer__location {}
+.main-footer {
+  width: 100%;
+
+  @include set-flexbox(column);
+}
+
+.main-footer__buttons {
+  padding: 40px 20px;
+
+  @include set-flexbox(column);
+  align-items: center;
+
+  > * {
+    width: 100%;
+  }
+
+  @media (min-width: $width-table) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 30px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 66px 110px;
+  }
+}
+
+.main-footer__logo {
+  @include set-flexbox();
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-border;
+
+  @media (min-width: $width-table) {
+    border-bottom: 0;
+    padding-bottom: 0;
+    justify-content: flex-start;
+  }
+}

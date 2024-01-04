@@ -4,15 +4,20 @@
   }
 }
 
-.preview-info__header {
+.preview__header {
   color: $color-white;
+  margin-bottom: 25px;
 
   @media (min-width: $width-table) {
     color: $color-black;
   }
 }
 
-.preview-info__text {
+.preview__text {
   @include set-typography();
   @include set-typography-additional();
+}
+
+.preview__button {
+  margin: 0 20px;
 }

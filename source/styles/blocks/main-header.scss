@@ -1,9 +1,25 @@
+.main-header {
+  @include set-flexbox();
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 20px;
+}
+
+.main-header__logo-text {
+  display: none;
+
+  @media (max-width: $width-table) {
+    display: block;
+  }
+}
+
 .main-header__toggle {
   width: 24px;
   height: 16px;
 
   @include set-svg-sprite-mask("menu", 24px, 16px);
   @include set-background-svg-options();
+
   background-color: $color-black;
 
   &--close {
@@ -11,5 +27,17 @@
     height: 18px;
 
     @include set-svg-sprite-mask("close", 18px, 18px);
+  }
+
+  @media (min-width: $width-table) {
+    display: none;
+  }
+}
+
+.main-header__nav {
+  display: none;
+
+  @media (min-width: $width-table) {
+    display: flex;
   }
 }

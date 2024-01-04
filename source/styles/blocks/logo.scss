@@ -1,9 +1,3 @@
-.logo__text {
-  &--header {
-    display: none;
-
-    @media (max-width: $width-table) {
-      display: block;
-    }
-  }
+.logo__img {
+  display: flex;
 }

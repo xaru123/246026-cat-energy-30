@@ -1,0 +1,47 @@
+.location {
+  position: relative;
+}
+
+.location__container {
+  @include set-grid();
+  padding: 26px 20px;
+  grid-template-columns: repeat(2, 140px);
+  justify-content: space-between;
+  align-content: space-between;
+
+  @media (min-width: $width-table) {
+    padding: 60px 70px;
+  }
+
+  @media (min-width: $width-desktop) {
+    grid-template-columns: repeat(2, 163px);
+    padding: 60px 80px;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    background: $color-white;
+  }
+}
+
+.location__invitation {
+  @include set-typography(16px, 20px, $color-text-600);
+
+  @media (min-width: $width-table) {
+    @include set-typography(20px, 26px, $color-text-600);
+  }
+}
+
+.location__address {
+  @include set-typography(14px, 20px, $color-text-400, $font-secondary);
+
+  @media (min-width: $width-table) {
+    @include set-typography(14px, 20px, $color-text-400, $font-secondary);
+  }
+}
+
+.location__map {
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+}
