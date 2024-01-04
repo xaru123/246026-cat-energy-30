@@ -1,3 +1,37 @@
+.present {
+  position: relative;
+  min-height: 290px;
+}
+
+.present__container {
+  background: rgba(104, 183, 56, 0.85);
+  @include set-flexbox(column);
+  row-gap: 48px;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+
+  @media (min-width: $width-table) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.present__img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 290px;
+  height: 290px;
+  max-height: 290px;
+}
+
 .present__text {
   @include set-typography(16px, 20px, $color-white, $font-secondary);
+  width: 161px;
+  height: 60.025px;
+  text-align: center;
 }
