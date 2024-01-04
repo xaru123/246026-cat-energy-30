@@ -4,12 +4,13 @@
 
 .catalog__list {
   list-style: none;
+
   @include set-flexbox(column);
   flex-wrap: wrap;
 
   @media (min-width: $width-table) {
     flex-direction: row;
-    gap: 60px
+    gap: 60px;
   }
 }
 
@@ -112,6 +113,7 @@
   align-items: center;
   padding-left: 36px;
   padding-right: 36px;
+
   @media (min-width: $width-table) {
     padding: 0;
   }

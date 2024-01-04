@@ -5,6 +5,7 @@
 
 .present__container {
   background: rgba(104, 183, 56, 0.85);
+
   @include set-flexbox(column);
   row-gap: 48px;
   align-items: center;
@@ -32,6 +33,6 @@
 .present__text {
   @include set-typography(16px, 20px, $color-white, $font-secondary);
   width: 161px;
-  height: 60.025px;
+  height: 60px;
   text-align: center;
 }
