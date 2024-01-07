@@ -41,7 +41,11 @@
 }
 
 .location__map {
-  width: 100%;
-  object-fit: cover;
-  display: flex;
+  width: 100vw;
+  height: 362px;
+
+  @media (min-width: $width-table) {
+    height: 400px;
+  }
 }
+

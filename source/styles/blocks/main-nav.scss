@@ -1,8 +1,26 @@
 .main-nav {
+  position: relative;
+
+  &--opened {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.main-nav__list {
   @include set-flexbox();
   justify-content: flex-end;
   gap: 33px;
   list-style: none;
+  padding-top: 22px;
+  padding-bottom: 24px;
+
+  @media (max-width: $width-table) {
+    .main-nav--opened & {
+      @include set-flexbox(column);
+      justify-content: flex-end;
+    }
+  }
 }
 
 .main-nav__link {
