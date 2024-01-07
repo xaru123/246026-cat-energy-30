@@ -10,8 +10,7 @@
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=1791f735-ea34-4caf-a6d8-e167e95ae2aa&lang=ru_RU"
-    type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1791f735-ea34-4caf-a6d8-e167e95ae2aa&lang=ru_RU"></script>
 </head>
 
 <body class="page__body">
@@ -155,37 +154,22 @@
         </div>
       </div>
 
-<!--      <div class="example__image example-image">-->
-<!--        <img class="example-image__image example-image__image&#45;&#45;before" src="images/cat-before@1x.png"-->
-<!--          srcset="images/cat-before@2x.png"-->
-<!--          width="280" height="280" alt="До"-->
-<!--        >-->
+      <div class="example__image example-image">
+        <img class="example-image__image example-image__image--before" src="images/cat-before@1x.png"
+          srcset="images/cat-before@2x.png"
+          width="280" height="256" alt="До"
+        >
 
-<!--        <img class="example-image__image example-image__image&#45;&#45;after" src="images/cat-after@1x.png"-->
-<!--          srcset="images/cat-after@2x.png"-->
-<!--          width="280" height="280" alt="После"-->
-<!--        >-->
-<!--      </div>-->
+        <img class="example-image__image example-image__image--after" src="images/cat-after@1x.png"
+          srcset="images/cat-after@2x.png"
+          width="280" height="256" alt="После"
+        >
 
-<!--      <div class="container1">-->
-<!--        <div class="image-container">-->
-<!--          <img class="image-before slider-image image-1" src="images/cat-before@1x.png"-->
-<!--            srcset="images/cat-before@2x.png" alt="color photo"-->
-<!--           >-->
-<!--          <img class="image-after slider-image image-2" id="my-img" src="images/cat-after@1x.png"-->
-<!--            srcset="images/cat-after@2x.png" alt="black and white">-->
-<!--        </div>-->
-<!--        <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"-->
-<!--          class="slider">-->
-<!--        <div class="slider-line" aria-hidden="true"></div>-->
-<!--      </div>-->
-      <div class="img-comp-container">
-        <div class="img-comp-img">
-          <img  src="images/cat-before@1x.png" width="300" height="200">
-        </div>
-        <div class="img-comp-img img-comp-overlay">
-          <img src="images/cat-after@1x.png" width="300" height="200">
-        </div>
+        <label for="range"></label>
+
+        <input class="example-image__range" type="range" min="0" max="100" id="range" name="range"/>
+
+        <div class="example-image__line" aria-hidden="true"></div>
       </div>
     </div>
   </section>
