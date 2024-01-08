@@ -7,6 +7,10 @@ function toggleMenu() {
   const navMain = document.querySelector('.main-nav');
   const toggle = document.querySelector('.main-header__toggle');
 
+  if (!navMain) {
+    return ;
+  }
+
   navMain.classList.remove('main-nav--nojs');
 
   toggle.addEventListener('click', () => {
