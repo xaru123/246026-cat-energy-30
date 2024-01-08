@@ -60,12 +60,11 @@
 }
 
 
-.location__address--hidden {
+.location__text--hidden {
   display: none;
 
   @media (min-width: $width-table) {
     display: block;
-
   }
 }
 
