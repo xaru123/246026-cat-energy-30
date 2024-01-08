@@ -20,23 +20,26 @@ function toggleMenu() {
       toggle.classList.remove('main-header__toggle--closed');
     }
   });
-
 }
 
 function createMap() {
   // eslint-disable-next-line no-undef
-  ymaps.ready(init);
+  const yandexMapApi = ymaps;
+
+  yandexMapApi.ready(init);
 
   function init() {
-    // eslint-disable-next-line no-undef
-    const myMap = new ymaps.Map('map', {
+    if (!document.querySelectorAll('#map').length) {
+      return;
+    }
+
+    const myMap = new yandexMapApi.Map('map', {
         center: [59.938631, 30.323037],
         zoom: 14,
         controls: []
       }),
 
-      // eslint-disable-next-line no-undef
-      myPieChart = new ymaps.Placemark(
+      myPieChart = new yandexMapApi.Placemark(
         [59.938631, 30.323037],
         {
           hintContent: 'Собственный значок метки',

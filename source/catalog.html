@@ -7,29 +7,32 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="page__body">
+<body class="page__body ">
 <header class="page__header main-header">
-  <div class="main-header__logo logo">
-    <picture>
-      <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59">
-      <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50">
-      <img class="logo__img" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
-    </picture>
+  <div class="main-header__container container">
+    <div class="main-header__logo logo">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202"
+          height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50">
+        <img class="logo__img" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
+      </picture>
+
+      <img class="logo__text" src="images/logo-header-text.svg" width="101" height="18" alt="Cat Energy">
+    </div>
+
+    <button class="main-header__toggle" type="button">
+      <span class="visually-hidden">Открыть меню.</span>
+    </button>
   </div>
-
-  <img class="main-header__logo-text" src="images/footer-logo.svg" width="101" height="18" alt="Cat Energy">
-
-  <button class="main-header__toggle" type="button">
-    <span class="visually-hidden">Открыть меню.</span>
-  </button>
 
   <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
     <ul class="main-nav__list">
-      <li class="main-nav__item main-nav__item--active">
+      <li class="main-nav__item">
         <a class="main-nav__link" href="./index.html">Главная</a>
       </li>
 
-      <li class="main-nav__item">
+      <li class="main-nav__item main-nav__item--active">
         <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>
       </li>
 

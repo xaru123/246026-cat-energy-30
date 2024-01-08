@@ -1,13 +1,17 @@
 .container {
-  width: $width-mobile;
-  margin-right: auto;
-  margin-left: auto;
+  width: calc(100% - 2 * $padding-mobile);
+  padding-right: $padding-mobile;
+  padding-left: $padding-mobile;
 
   @media (min-width: $width-table) {
-    width: $width-table;
+    width: calc(100% - 2 * $padding-table);
+    padding-right: $padding-table;
+    padding-left: $padding-table;
   }
 
   @media (min-width: $width-desktop) {
-    width: $width-desktop;
+    width: calc(100% - 2 * $padding-desktop);
+    padding-right: $padding-desktop;
+    padding-left: $padding-desktop;
   }
 }

@@ -1,38 +1,53 @@
 .main-header {
-  @include set-flexbox();
-  justify-content: space-between;
-  align-items: center;
-  padding: 13px 20px;
+  padding-top: 13px;
 
-  @media (max-width: $width-table) {
-    flex-wrap: wrap;
+  @media (min-width: $width-table) {
+    @include set-flexbox();
+    flex-wrap: nowrap;
+    padding-top: 26px;
+    padding-bottom: 0;
+    align-items: center;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 56px;
   }
 }
 
-.main-header__logo-text {
-  width: 101px;
-  height: 18px;
-  display: none;
+div.main-header__container {
+  @include set-flexbox();
+  align-items: center;
+  padding-bottom: 15px;
 
-  @media (max-width: $width-table) {
-    display: block;
+  @media (min-width: $width-table) {
+    flex: 0 1;
+    padding-right: 0;
+    padding-bottom: 0;
   }
+}
+
+.main-header__logo {
+  @include set-flexbox();
+  align-items: center;
+  justify-content: start;
+  gap: 56px;
 }
 
 .main-header__toggle {
-  width: 24px;
-  height: 16px;
+  width: 25px;
+  height: 24px;
+  margin-left: auto;
 
-  @include set-svg-sprite-mask("menu", 24px, 16px);
+  @include set-svg-sprite-mask("menu", 25px, 24px);
   @include set-background-svg-options();
 
   background-color: $color-black;
 
   &--closed {
     width: 18px;
-    height: 18px;
+    height: 20px;
 
-    @include set-svg-sprite-mask("close", 18px, 18px);
+    @include set-svg-sprite-mask("close", 18px, 20px);
   }
 
   @media (min-width: $width-table) {
