@@ -10,34 +10,59 @@
 .main-content__sub-header {
   position: relative;
   z-index: 2;
-  max-width: 187px;
 
-  h2 {
-    padding-right: 20px;
-    position: relative;
-    width: fit-content;
-    background: $color-white;
-    z-index: 2;
-
-    @include set-typography(24px, 26px);
-
-    @media (min-width: $width-table) {
-      padding: 40px;
-
-      @include set-typography(36px, 36px);
-    }
-  }
-
-  &::after {
+  &::before {
     content: "";
     position: absolute;
-    left: -100%;
-    top: 50%;
-    display: flex;
-    width: calc(100vw + 100%);
+    right: 0;
+    width: calc(100vw - 20px);
     height: 2px;
-    background: $color-primary;
-    z-index: 1;
+    top: 40px;
+    background-color: $color-primary;
+    /* box-shadow: 100vw 0 0#68b738; */
+    left: 0;
+
+    @media (min-width: $width-table) {
+      background-color: $color-primary;
+      width: 100vw;
+      left: unset;
+      box-shadow: 100vw 0 0 $color-primary;
+      top: 77px;
+    }
+
+    @media (min-width: $width-desktop) {
+      background-color: $color-primary;
+      width: 100vw;
+      left: unset;
+      box-shadow: 100vw 0 0 $color-primary;
+      top: 77px;
+    }
+  }
+}
+
+.main-content__sub-header h2 {
+  position: relative;
+
+  z-index: 2;
+  padding-top: 25px;
+
+  @include set-typography(24px, 27px);
+  display: flex;
+  width: fit-content;
+  background: $color-white;
+  padding-right: 20px;
+
+  @media (min-width: $width-table) {
+    padding-top: 55px;
+
+    @include set-typography(36px, 36px);
+    padding-right: 42px;
+    margin-left: -40px;
+    padding-left: 40px;
+  }
+
+  @media (max-width: $width-table) {
+    max-width: 187px;
   }
 }
 

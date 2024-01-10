@@ -1,7 +1,39 @@
+.form-content__container {
+  border-top: 1px solid $color-border;
+  padding-top: 27px;
+
+  @include set-flexbox(column);
+  gap: 38px;
+  padding-bottom: 16px;
+
+  @media (min-width: $width-table) {
+    border-top: 0;
+    padding-top: 63px;
+    padding-left: 69px;
+    gap: 54px;
+    width: calc(100% - 69px * 2);
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 75px;
+    padding-left: 110px;
+    width: calc(100vw - 110px * 2);
+  }
+}
+
+.form-content__header {
+  padding-bottom: 0;
+}
+
 .form-content__text {
   @include set-typography(14px, 18px);
+  @include set-typography-additional();
+  text-wrap: balance;
 
   @media (min-width: $width-table) {
     @include set-typography(20px, 30px);
+    //padding-right: 375px;
+    font-style: normal;
+    width: 323px;
   }
 }

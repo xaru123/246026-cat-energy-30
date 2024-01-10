@@ -11,9 +11,15 @@
     margin-left: auto;
     padding-right: 36px;
   }
+}
+
+.main-nav--form {
+  @media (min-width: $width-table) {
+    padding-right: 31px;
+  }
 
   @media (min-width: $width-desktop) {
-    padding-right: 113px;
+    padding-right: 112px;
   }
 }
 
@@ -91,3 +97,8 @@
   }
 }
 
+.main-nav--form .main-nav__list {
+  @media (min-width: $width-desktop) {
+    gap: 34px;
+  }
+}

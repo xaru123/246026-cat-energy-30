@@ -13,11 +13,11 @@
   font-family: $family;
   font-size: $size;
   line-height: $line-height;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@mixin set-typography-additional($weight:400, $style: normal , $text-transform:uppercase) {
-  font-style: $style;
-  font-weight: $weight;
+@mixin set-typography-additional($text-transform:uppercase) {
   text-transform: $text-transform;
 }
 

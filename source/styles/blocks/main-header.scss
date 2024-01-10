@@ -17,7 +17,7 @@
 div.main-header__container {
   @include set-flexbox();
   align-items: center;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
 
   @media (min-width: $width-table) {
     flex: 0 1;

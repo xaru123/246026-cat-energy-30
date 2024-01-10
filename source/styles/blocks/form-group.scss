@@ -1,8 +1,8 @@
 .form-group {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 13px;
-  align-items: baseline;
+  column-gap: 14px;
+  align-items: center;
   position: relative;
 }
 
@@ -11,21 +11,208 @@
 
   @include set-typography-additional();
   @include set-typography(16px, 18px, $color-text-400);
-  padding: 14px 15px;
+  padding-left: 14px;
+  padding-top: 13px;
+  padding-bottom: 12px;
   width: fill-available;
+  border: 1px solid $color-border-100;
 
   &::placeholder {
     color: #212529;
     opacity: 0.4;
   }
 
-  &:focus {
-    color: #212529;
-    background-color: #ffffff;
-    border-color: #bdbdbd;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  &:hover {
+    border: 1px solid $color-text-300;
   }
+
+  &:focus {
+    outline: 2px solid $color-text-400;
+    outline-offset: -2px;
+  }
+
+  &:invalid {
+    outline: 2px solid $color-invalid;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: $width-table) {
+    padding: 13px 18px 14px;
+    height: auto;
+    line-height: 22px;
+
+    @include set-typography(20px, 22px, $color-text-400);
+  }
+}
+
+.form-group--comment {
+  grid-template-columns: 1fr;
+  height: 150px;
+
+  @media (min-width: $width-table) {
+    height: 174px;
+  }
+}
+
+.form-group--comment .form-group__field {
+  padding: 12px 14px;
+  height: calc(100% - 26px);
+
+  @media (min-width: $width-table) {
+    padding: 14px 20px;
+    height: calc(100% - 28px);
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 12px 19px;
+    height: calc(100% - 26px);
+  }
+}
+
+.form-group--radio {
+  grid-template-columns: 1fr;
+}
+
+.form-group--radio .form-group__field {
+  padding-top: 6px;
+  padding-left: 14px;
+  padding-bottom: 6px;
+  padding-right: 14px;
+  height: calc(100% - 26px);
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+  margin: 0;
+
+  &:checked + label {
+    &::before {
+      box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 9px $color-white;
+      background: $color-primary;
+
+      @media (min-width: $width-table) {
+        box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 11px $color-white;
+      }
+    }
+  }
+
+  &:focus {
+    outline: 0 solid $color-text-400;
+  }
+
+  &:disabled + label {
+    opacity: 0.3;
+  }
+}
+
+input[type="radio"] + label {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  border-radius: 99em;
+  transition: 0.25s ease;
+
+  &::before {
+    display: flex;
+    flex-shrink: 0;
+    content: "";
+    background-color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 1px $color-text-300;
+
+    @media (min-width: $width-table) {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+    }
+  }
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  margin: 0;
+
+  &:disabled + label {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 0 solid $color-text-400;
+  }
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 45px;
+  line-height: 29px;
+  height: 29px;
+  cursor: pointer;
+
+  @media (min-width: $width-table) {
+    height: 40px;
+    line-height: 39px;
+    padding-left: 60px;
+  }
+}
+
+input[type="checkbox"]:checked + label::before,
+input[type="checkbox"]:not(:checked) + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $color-text-300;
+  background-color: $color-white;
+
+  @media (min-width: $width-table) {
+    width: 38px;
+    height: 38px;
+    margin-right: 20px;
+  }
+}
+
+input[type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+  left: 7px;
+  top: 7px;
+  width: 15px;
+  height: 8px;
+  border-radius: 1px;
+  border-left: 2px solid $color-primary;
+  border-bottom: 2px solid $color-primary;
+  transform: rotate(-45deg);
+
+  @media (min-width: $width-table) {
+    width: 19px;
+    height: 13px;
+    left: 8px;
+  }
+}
+
+input[type="checkbox"]:not(:checked) + label::after {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label::after {
+  opacity: 1;
 }
 
 .form-group__label {
@@ -43,11 +230,15 @@
 
 .form-group__icon {
   position: absolute;
-  top: 50%;
-  right: 12px;
+  left: calc(100% - 20px - 13px);
+  top: calc(50% - 10px);
   transition: color 0.15s ease-in-out;
 
-  .form-group__field:hover + & {
+  .form-group__field:focus + & {
     color: $color-primary;
+  }
+
+  .form-group__field:invalid + & {
+    color: $color-invalid;
   }
 }
