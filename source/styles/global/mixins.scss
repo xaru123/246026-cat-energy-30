@@ -28,7 +28,8 @@
 
 @mixin set-svg-sprite-mask($id-svg:arrow, $width: auto, $height: auto) {
   mask-image: url("../../images/icons/stack.svg##{$id-svg}");
-  background-size: $width $height;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 
 @mixin set-background-svg-options($x: 50%, $y: 50%, $repeat: no-repeat) {

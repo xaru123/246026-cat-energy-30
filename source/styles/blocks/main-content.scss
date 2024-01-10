@@ -1,11 +1,6 @@
-.main-content {
-  @include set-flexbox(column);
-  row-gap: 20px;
-}
-
 .main-content__header {
   @include set-typography(36px, 36px);
-  padding-bottom: 40px;
+  padding-bottom: 42px;
 
   @media (min-width: $width-table) {
     @include set-typography(60px, 60px);
@@ -43,5 +38,53 @@
     height: 2px;
     background: $color-primary;
     z-index: 1;
+  }
+}
+
+.main-content__preview {
+  padding-bottom: 20px;
+
+  @media (min-width: $width-table) {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 30px;
+  }
+}
+
+.main-content__feature {
+  padding-bottom: 23px;
+
+  @media (min-width: $width-table) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 73px;
+  }
+}
+
+.main-content__stages {
+  padding-bottom: 49px;
+
+  @media (min-width: $width-table) {
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 73px;
+  }
+}
+
+.main-content__example  {
+  padding-bottom: 40px;
+
+  @media (min-width: $width-table) {
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 28px;
   }
 }

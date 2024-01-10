@@ -1,5 +1,6 @@
 .main-nav {
   position: relative;
+  z-index: 3;
 
   &--opened {
     display: flex;
