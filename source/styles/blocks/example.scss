@@ -5,15 +5,16 @@
   @media (min-width: $width-table) {
     padding-top: 45px;
     border-top: 1px solid $color-border-400;
-    background: linear-gradient(white 620px, $color-block-back 0%);
+    background: linear-gradient($color-white 620px, $color-block-back 0%);
 
     div.example {
       background: $color-white;
     }
   }
+
   @media (min-width: $width-desktop) {
     border-top: 0;
-    background: linear-gradient(white 140px, $color-block-back 0%);
+    background: linear-gradient($color-white 140px, $color-block-back 0%);
     padding-top: 7px;
   }
 }
@@ -57,7 +58,6 @@
 
   @media (min-width: $width-table) {
     @include set-typography(14px, 14px, $color-text-400, $font-secondary);
-
   }
 }
 

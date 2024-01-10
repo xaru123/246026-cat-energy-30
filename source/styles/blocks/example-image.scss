@@ -55,12 +55,12 @@
   left: var(--value);
   transform: translateX(-50%);
   pointer-events: none;
-
 }
 
 .example-image__line svg {
   position: absolute;
   transform: translateX(-50%);
+
   @include set-background-svg-options();
 
   margin: auto;
@@ -72,14 +72,12 @@
   &:hover {
     .example-image__line {
       background-color: $color-primary;
-
     }
   }
 }
+
 .example-image__range:hover {
-
-.example-image__line  {
-  background-color: $color-primary;
-
-}
+  .example-image__line {
+    background-color: $color-primary;
+  }
 }
