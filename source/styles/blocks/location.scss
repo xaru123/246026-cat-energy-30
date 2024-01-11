@@ -3,7 +3,7 @@
 }
 
 .location__container {
-  @include set-grid();
+  display: grid;
   padding-top: 26px;
   padding-bottom: 26px;
   grid-template-columns: repeat(2, 50%);

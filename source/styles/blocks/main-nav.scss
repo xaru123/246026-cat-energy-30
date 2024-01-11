@@ -2,15 +2,15 @@
   position: relative;
   z-index: 3;
 
-  &--opened {
-    display: flex;
-    flex: 1;
-  }
-
   @media (min-width: $width-table) {
     margin-left: auto;
     padding-right: 36px;
   }
+}
+
+.main-nav--opened {
+  display: flex;
+  flex: 1;
 }
 
 .main-nav--form {
@@ -67,15 +67,6 @@
   @include set-typography();
   @include set-typography-additional();
 
-  li.main-nav__item--active & {
-    padding-bottom: 7px;
-    border-bottom: 2px solid $color-primary;
-
-    .main-nav--index & {
-      border-bottom-color: $color-white;
-    }
-  }
-
   &:hover {
     opacity: 0.6;
   }
@@ -94,6 +85,17 @@
     .main-nav--index & {
       color: $color-white;
     }
+  }
+}
+
+li.main-nav__item--active .main-nav__link {
+  padding-bottom: 7px;
+  border-bottom: 2px solid $color-primary;
+}
+
+.main-nav--index.main-nav--index .main-nav__link {
+  @media (min-width: $width-desktop) {
+    border-bottom-color: $color-white;
   }
 }
 

@@ -1,6 +1,9 @@
 .advanced__container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  gap: 34px;
+  grid-template-rows: repeat(2, auto);
+  padding-top: 34px;
+  padding-bottom: 35px;
 
   @media (min-width: $width-desktop) {
     grid-template-columns: 1fr auto;
@@ -17,11 +20,11 @@
 .advanced__item {
   list-style: none;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(2, 50%);
   border-bottom: 1px solid $color-border;
   padding-top: 12px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 
   &:nth-child(1) {
     border-top: 1px solid $color-border;
@@ -44,13 +47,11 @@
 }
 
 .advanced__head {
-  grid-column: 1 / 4;
-  grid-row: 1/ 3;
-
   @include set-typography(16px, 16px, $color-text-800);
-  padding-bottom: 13px;
-
   @include set-typography-additional();
+  grid-column: 1/3;
+  grid-row: 1/ 2;
+  padding-bottom: 14px;
 
   @media (min-width: $width-table) {
     @include set-typography(20px, 20px, $color-text-800);
@@ -73,7 +74,7 @@
 }
 
 .advanced__button {
-  grid-column: 1 / 4;
+  grid-column: 1 / 3;
 
   @media (min-width: $width-desktop) {
     grid-column: -1/4;

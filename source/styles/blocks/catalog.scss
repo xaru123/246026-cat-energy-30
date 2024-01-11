@@ -1,12 +1,14 @@
 .catalog {
   list-style: none;
+  padding-top: 8px;
+  padding-bottom: 4px;
 }
 
 .catalog__list {
-  list-style: none;
-
   @include set-flexbox(column);
   flex-wrap: wrap;
+  list-style: none;
+  padding-top: 40px;
 
   @media (min-width: $width-table) {
     flex-direction: row;
@@ -15,14 +17,14 @@
 }
 
 .catalog__item {
+  @include set-item-border-after();
+  position: relative;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 50%);
-  border-bottom: 1px solid $color-border;
-  padding: 20px;
-  padding-bottom: 25px;
-  row-gap: 17px;
-  position: relative;
+  row-gap: 21.5px;
+  padding-top: 20px;
+  padding-bottom: 24.5px;
 
   @media (min-width: $width-table) {
     flex-basis: calc(100% / 2 - 40px - 60px - 1%);
@@ -47,32 +49,41 @@
   }
 }
 
+.catalog__item:nth-child(1) {
+  @include set-item-border-before();
+}
+
 .catalog__item--default {
   @include set-flexbox(column);
   justify-content: center;
   align-items: center;
-  row-gap: 25px;
-
-  .catalog__info {
-    row-gap: 8px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .catalog__button {
-    width: 100%;
-  }
+  row-gap: 18px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
   @media (min-width: $width-table) {
     background: $color-white;
     border: 1px solid $color-border-200;
     justify-content: space-between;
-
-    .catalog__image {
-      width: 60px;
-      height: 60px;
-    }
   }
+}
+
+.catalog__item--default .catalog__info {
+  row-gap: 8px;
+  text-align: center;
+  align-items: center;
+}
+
+.catalog__item--default .catalog__image {
+  @media (min-width: $width-table) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.catalog__item--default .catalog__button {
+  margin-top: 3px;
+  width: 100%;
 }
 
 .catalog__info {
@@ -87,6 +98,7 @@
 
 .catalog__name {
   @include set-typography(16px, 20px, $color-text-800);
+  @include set-typography-additional();
   width: 76px;
 
   @media (min-width: $width-table) {
@@ -109,10 +121,14 @@
 }
 
 .catalog__image {
+  align-self: center;
+}
+
+.catalog__image img {
   display: flex;
   align-items: center;
-  padding-left: 36px;
-  padding-right: 36px;
+  background-position: 50% 50%;
+  margin: 0 auto;
 
   @media (min-width: $width-table) {
     padding: 0;

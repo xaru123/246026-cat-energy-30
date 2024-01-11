@@ -1,6 +1,6 @@
 .example-image {
-  height: 512px;
-  width: 560px;
+  height: 257px;
+  width: 256px;
   margin: auto;
   position: relative;
   --h: 256 * 2;
@@ -11,6 +11,11 @@
     content: "";
     display: block;
     padding-bottom: calc((var(--h) / var(--w)) * 100%);
+  }
+
+  @media (min-width: $width-table) {
+    height: 512px;
+    width: 560px;
   }
 
   @media (min-width: $width-desktop) {

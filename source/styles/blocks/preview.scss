@@ -1,6 +1,14 @@
 .preview {
+  margin-top: -20px;
+
   @media (max-width: $width-desktop) {
     position: relative;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $width-table) {
+    padding-bottom: 30px;
+    margin-top: 0;
   }
 }
 
@@ -9,6 +17,7 @@
   position: relative;
   padding: 20px 34px 0;
   width: calc(100% - 2 * 35px);
+  padding-top: 20px;
 
   @include set-flexbox(column);
   justify-content: center;

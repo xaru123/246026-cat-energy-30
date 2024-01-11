@@ -1,4 +1,6 @@
 .form__container {
+  @include set-flexbox(column, 25px);
+
   @media (min-width: $width-table) {
     padding-left: 70px;
     padding-right: 70px;
@@ -15,7 +17,8 @@
 .form__list {
   @include set-flexbox(column);
   gap: 14px;
-  padding-top: 22px;
+  //padding-top: 22px;
+  padding-top: 8px;
   padding-bottom: 25px;
   position: relative;
 
@@ -28,6 +31,10 @@
   @media (min-width: $width-desktop) {
     padding-top: 49px;
   }
+}
+
+.form__list:nth-child(1) {
+  padding-top: 0;
 }
 
 .form__wrapper {
@@ -74,8 +81,8 @@
 }
 
 .form__list--contacts {
-  padding-top: 35px;
-  padding-bottom: 0;
+  padding-top: 9px;
+  padding-bottom: 0px;
 
   @media (min-width: $width-table) {
     padding-top: 77px;
@@ -88,7 +95,7 @@
 }
 
 .form__list-comment {
-  padding-top: 36px;
+  padding-top: 12px;
   padding-bottom: 0;
   margin-bottom: -2px;
 
@@ -104,7 +111,7 @@
 }
 
 .form__list-additional {
-  padding-top: 33px;
+  padding-top: 9px;
   gap: 13.5px;
 
   @media (min-width: $width-table) {
@@ -127,24 +134,7 @@
 }
 
 .form__list--border {
-  &::after {
-    content: "";
-    margin-left: -20px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid $color-border;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    overflow: hidden;
-  }
-
-  @media (min-width: $width-table) {
-    &::after {
-      display: none;
-    }
-  }
+  @include set-item-border-after()
 }
 
 .form__list--contacts .form__wrapper {

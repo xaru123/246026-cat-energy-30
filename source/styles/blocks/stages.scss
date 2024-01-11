@@ -1,14 +1,22 @@
+.stages {
+  padding-bottom: 29px;
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 73px;
+  }
+}
 .stages__list {
   counter-reset: numbers;
   display: grid;
   gap: 20px;
+  padding-top: 45px;
 
   @media (min-width: $width-table) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 87px;
     column-gap: 61px;
-    padding-top: 31px;
+    padding-top: 73px;
   }
 
   @media (min-width: $width-desktop) {

@@ -5,6 +5,8 @@
 
   @media (min-width: $width-table) {
     gap: 29px;
+    padding-bottom: 15px;
+    margin-top: -$padding-table;
   }
 
 
@@ -12,6 +14,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 80px;
+    padding-bottom: 73px;
+
   }
 }
 
