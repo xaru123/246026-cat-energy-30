@@ -2,15 +2,17 @@
   @include set-flexbox(column, 25px);
 
   @media (min-width: $width-table) {
-    padding-left: 70px;
-    padding-right: 70px;
-    width: calc(100% - 70px * 2);
+    width: calc(100% - 40px * 2);
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   @media (min-width: $width-desktop) {
-    padding-left: 110px;
-    padding-right: 110px;
-    width: calc(100% - 110px * 2);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: calc(100%);
   }
 }
 
@@ -43,7 +45,7 @@
   @include set-flexbox(column);
 
   @media (min-width: $width-table) {
-    padding-bottom: 10px;
+    padding-bottom: 41px;
   }
 
   @media (min-width: $width-desktop) {
@@ -52,20 +54,12 @@
     grid-template-rows: 1fr;
     align-items: flex-start;
     gap: 80px;
-    padding-bottom: 13px;
   }
 }
 
 .form__wrapper .form__list--main {
   @media (min-width: $width-desktop) {
     padding-bottom: 3px;
-  }
-}
-
-.form__wrapper .form__list--radio {
-  @media (min-width: $width-desktop) {
-
-    margin-top: 50px;
   }
 }
 
@@ -85,11 +79,10 @@
   padding-bottom: 0px;
 
   @media (min-width: $width-table) {
-    padding-top: 77px;
+    padding-top: 51px;
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 75px;
     padding-bottom: 5px;
   }
 }
@@ -100,25 +93,25 @@
   margin-bottom: -2px;
 
   @media (min-width: $width-table) {
-    padding-top: 90px;
-    padding-bottom: 12px;
+    padding-top: 62px;
+    padding-bottom: 43px;
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 77px;
-    padding-bottom: 19px;
+    padding-top: 53px;
+    padding-bottom: 50px;
   }
 }
 
 .form__list-additional {
-  padding-top: 9px;
+  padding-top: 8px;
   gap: 13.5px;
 
   @media (min-width: $width-table) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40px 40px;
-    padding-top: 55px;
+    padding-top: 32px;
     row-gap: 32px;
     column-gap: 62px;
     padding-bottom: 41px;
@@ -127,7 +120,7 @@
   @media (min-width: $width-desktop) {
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: 40px;
-    padding-top: 58px;
+    padding-top: 31px;
     column-gap: 20px;
     padding-bottom: 50px;
   }
@@ -146,5 +139,12 @@
 
   @media (min-width: $width-desktop) {
     gap: 79px;
+  }
+}
+
+
+.form__header {
+    @media (max-width: $width-table) {
+      max-width: 187px
   }
 }

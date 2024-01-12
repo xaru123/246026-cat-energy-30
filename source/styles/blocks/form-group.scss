@@ -57,8 +57,8 @@
 
 .form-group__icon {
   position: absolute;
-  left: calc(100% - 20px - 13px);
-  top: calc(50% - 10px);
+  right: 13px;
+  top: 14px;
   transition: color 0.15s ease-in-out;
 
   .form-group__field:focus + & {
@@ -67,5 +67,10 @@
 
   .form-group__field:invalid + & {
     color: $color-invalid;
+  }
+
+  @media (min-width: $width-table) {
+    top: 17px;
+    right: 18px;
   }
 }

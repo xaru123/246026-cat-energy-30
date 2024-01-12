@@ -1,18 +1,20 @@
 .main-content {
   @include set-flexbox(column, $padding-mobile);
 
-  @media (max-width: $width-table) {
-    padding-top: 20px;
-  }
+  padding-top: 20px;
 
   @media (min-width: $width-table) {
     gap: $padding-table;
+    padding-top: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    gap: 50px;
   }
 }
 
 .main-content__header {
   @include set-typography(36px, 36px);
-  //padding-bottom: 42px;
 
   @media (min-width: $width-table) {
     @include set-typography(60px, 60px);
@@ -23,19 +25,18 @@
   position: relative;
 
   &:before {
-    @include set-item-border(0, 0, 35%, 0);
-    border-bottom: 2px solid $color-primary;
+    @include set-item-border(1rem, 0, unset, 0);
+    border-bottom: 3px solid $color-primary;
     width: calc(100vw - 20px);
     left: $padding-mobile;
-  }
 
-  //  @media (min-width: $width-table) {
-  //&::before {
-  //width: 100vw;
-  //top: 77px;
-  //left: unset;
-  //box-shadow: 100vw 0 0 $color-primary;
-  //}
+    @media (min-width: $width-table) {
+      top: 1.4rem;
+      background-color: $color-primary;
+      left: unset;
+      box-shadow: 50vw 0 0 $color-primary;
+    }
+  }
 }
 
 .main-content__sub-header h2 {
@@ -43,19 +44,18 @@
   position: relative;
   display: flex;
   width: fit-content;
-  //padding-top: 25px;
   padding-right: 20px;
   background: $color-white;
 
   @media (min-width: $width-table) {
     @include set-typography(36px, 36px);
-    padding-top: 55px;
     padding-right: 42px;
-    //margin-left: -40px;
-    //padding-left: 40px;
-  }
+    max-width: calc(100% - 43px);
 
-  @media (max-width: $width-table) {
-    //max-width: 187px; catalog add tovar
+    margin-left: -40px;
+    padding-left: 40px;
   }
 }
+
+
+

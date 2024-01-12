@@ -6,6 +6,11 @@
     margin-left: auto;
     padding-right: 36px;
   }
+
+  @media (min-width: $width-desktop) {
+    margin-left: auto;
+    padding-right: 113px;
+  }
 }
 
 .main-nav--opened {

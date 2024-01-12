@@ -1,7 +1,7 @@
 .example {
   background: $color-block-back;
   padding-top: 26px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 
   @media (min-width: $width-table) {
     padding-top: 41px;
@@ -144,7 +144,7 @@
 
 .example__item {
   position: relative;
-  padding-top: 17px;
+  padding-top: 16.5px;
   text-align: center;
   display: flex;
   flex-direction: column;

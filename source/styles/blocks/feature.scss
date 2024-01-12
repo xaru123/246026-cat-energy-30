@@ -2,20 +2,20 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
+  padding-bottom: 3px;
 
   @media (min-width: $width-table) {
     gap: 29px;
     padding-bottom: 15px;
-    margin-top: -$padding-table;
+    margin-top: -60px;
   }
-
 
   @media (min-width: $width-desktop) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 80px;
-    padding-bottom: 73px;
-
+    padding-bottom: 22px;
+    margin-top: -50px;
   }
 }
 
