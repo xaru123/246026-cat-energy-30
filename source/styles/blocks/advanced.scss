@@ -1,7 +1,7 @@
-.advanced__header {
-  @media (min-width: $width-table) {
-
+.main-content__sub-header h2.advanced__header {
+  @media (min-width: $width-table)  and (max-width: $width-desktop){
     margin-left: 0;
+    padding-left: 40px;
   }
 }
 
@@ -10,16 +10,19 @@
   gap: 34px;
   grid-template-rows: repeat(2, auto);
   padding-top: 34px;
-  padding-bottom: 35px;
+  padding-bottom: 36px;
 
   @media (min-width: $width-table) {
-    padding-top: 81px;
+    padding-top: 80px;
     gap: 68px;
     padding-bottom: 77px;
   }
   @media (min-width: $width-desktop) {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 245px;
     grid-template-rows: auto;
+    padding-top: 78px;
+    padding-bottom: 86px;
+    gap: 80px;
   }
 }
 
@@ -35,7 +38,7 @@
   grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(2, 50%);
   border-bottom: 1px solid $color-border;
-  padding-top: 12px;
+  padding-top: 12.5px;
   padding-bottom: 18px;
 
   &:nth-child(1) {
@@ -47,14 +50,15 @@
     padding: 25px 38px 27.5px;
     grid-template-rows: auto 40px;
     column-gap: 0px;
-    row-gap: 25px;
+    row-gap: 15px;
     border: 1px solid $color-border;
+    align-items: center;
   }
 
   @media (min-width: $width-desktop) {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 15px 25px 17px 27px;
+    padding: 16px 0 15px;
+    grid-template-columns: 285px 150px 1fr 244px;
+    grid-template-rows: 40px;
     column-gap: 40px;
     align-items: baseline;
   }
@@ -71,19 +75,23 @@
     @include set-typography(20px, 20px, $color-text-800);
     grid-column: inherit;
     grid-row: inherit;
-    padding-bottom: 0;
+    padding-bottom: 10px;
 
   }
 }
 
 .advanced__text {
   @include set-typography(14px, 14px, $color-text-400, $font-secondary);
-  padding-bottom: 15px;
+  padding-bottom: 14px;
 
   @media (min-width: $width-table) {
     @include set-typography(16px, 20px, $color-text-400, $font-secondary);
     padding-bottom: 0;
     text-align: right;
+  }
+
+  @media (min-width: $width-desktop) {
+    text-align: left;
   }
 }
 

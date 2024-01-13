@@ -1,5 +1,6 @@
 $height-img-mobile: 290px;
 $height-img-table: 200px;
+$height-img-desktop: 288px;
 
 .present {
   position: relative;
@@ -7,6 +8,10 @@ $height-img-table: 200px;
 
   @media (min-width: $width-table) {
     max-height: $height-img-table;
+  }
+
+  @media (min-width: $width-desktop) {
+    max-height: $height-img-desktop;
   }
 }
 
@@ -44,6 +49,13 @@ $height-img-table: 200px;
     min-height: $height-img-table;
     height: $height-img-table;
     max-height: $height-img-table;
+  }
+
+
+  @media (min-width: $width-desktop) {
+    min-height: $height-img-desktop;
+    height: $height-img-desktop;
+    max-height: $height-img-desktop;
   }
 }
 
