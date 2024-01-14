@@ -24,7 +24,7 @@
 .main-content__sub-header {
   position: relative;
 
-  &:before {
+  &::before {
     @include set-item-border(1rem, 0, unset, 0);
     border-bottom: 3px solid $color-primary;
     width: calc(100vw - 20px);
@@ -56,6 +56,4 @@
     padding-left: 40px;
   }
 }
-
-
 

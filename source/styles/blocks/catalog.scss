@@ -36,5 +36,6 @@
 
 .catalog__item {
   position: relative;
+
   @include set-item-border-after();
 }

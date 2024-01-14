@@ -15,9 +15,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    background-image: linear-gradient(transparent 111px, $color-text-200 0);
     row-gap: 7px;
-
   }
 }
 
@@ -63,7 +61,6 @@
     row-gap: 20px;
     padding-bottom: 29px;
   }
-
 }
 
 .product__name {
@@ -84,7 +81,6 @@
   @media (min-width: $width-table) {
     display: block;
   }
-
 }
 
 .product__name--new {
@@ -110,6 +106,7 @@
     grid-row: inherit;
     grid-column: inherit;
     height: 100%;
+
     @include set-typography(16px, 20px, $color-white);
   }
 }
@@ -153,6 +150,7 @@
     margin: 0 auto;
     padding-top: 6px;
   }
+
   @media (min-width: $width-desktop) {
     width: 100%;
     padding-top: 39px;

@@ -76,7 +76,7 @@
 
 .form__list--contacts {
   padding-top: 9px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 
   @media (min-width: $width-table) {
     padding-top: 51px;
@@ -127,8 +127,7 @@
 }
 
 .form__list--border {
-  @include set-item-border-after()
-}
+  @include set-item-border-after(); }
 
 .form__list--contacts .form__wrapper {
   gap: 14px;
@@ -144,7 +143,7 @@
 
 
 .form__header {
-    @media (max-width: $width-table) {
-      max-width: 187px
+  @media (max-width: $width-table) {
+    max-width: 187px;
   }
 }

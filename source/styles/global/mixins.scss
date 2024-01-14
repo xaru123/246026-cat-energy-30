@@ -63,7 +63,7 @@
 }
 
 @mixin set-item-border-after() {
-  &:after {
+  &::after {
     @include set-item-border(0,0,0,0);
   }
 
@@ -75,7 +75,7 @@
 }
 
 @mixin set-item-border-before() {
-  &:before {
+  &::before {
     @include set-item-border(0,0,100%,0);
   }
 
@@ -87,9 +87,8 @@
 }
 
 @mixin set-item-border-middle() {
-  &:before {
+  &::before {
     @include set-item-border(0,0,35%,0);
   }
 }
-
 

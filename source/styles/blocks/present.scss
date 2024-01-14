@@ -36,6 +36,14 @@ $height-img-desktop: 288px;
     padding-left: 78px;
     gap: 264px;
   }
+
+  @media (min-width: $width-desktop) {
+    justify-content: flex-start;
+    gap: 43px;
+    flex-direction: column;
+    padding-top: 59px;
+    padding-left: 2px;
+  }
 }
 
 .present__img {
