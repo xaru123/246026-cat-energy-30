@@ -26,6 +26,11 @@
   @media (min-width: $width-table) {
     align-items: flex-start;
   }
+
+  @media (min-width: $width-desktop-max) {
+    width: calc(100% - 2 * $padding-desktop-max);
+    padding-right: $padding-desktop-max;
+    padding-left: $padding-desktop-max;  }
 }
 
 .preview__wrapper {
@@ -130,6 +135,10 @@
     top: 343px;
     left: 188px;
   }
+
+  @media (min-width: $width-desktop-max) {
+    left: calc(155px + $padding-desktop-max);
+  }
 }
 
 .preview__can {
@@ -148,6 +157,10 @@
   @media (min-width: $width-desktop) {
     position: absolute;
     top: 29px;
-    left: 556px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding-left: 226px;
   }
 }
