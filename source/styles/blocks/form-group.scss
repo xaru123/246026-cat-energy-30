@@ -1,31 +1,45 @@
 .form-group {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 13px;
-  align-items: baseline;
+  column-gap: 14px;
+  align-items: center;
   position: relative;
 }
 
-.form-group__field {
-  position: relative;
+.form-group--comment {
+  grid-template-columns: 1fr;
+  height: 150px;
 
-  @include set-typography-additional();
-  @include set-typography(16px, 18px, $color-text-400);
-  padding: 14px 15px;
-  width: fill-available;
+  @media (min-width: $width-table) {
+    height: 174px;
+  }
+}
 
-  &::placeholder {
-    color: #212529;
-    opacity: 0.4;
+.form-group--comment .form-group__field {
+  padding: 12px 14px;
+  height: calc(100% - 26px);
+
+  @media (min-width: $width-table) {
+    padding: 14px 20px;
+    height: calc(100% - 28px);
   }
 
-  &:focus {
-    color: #212529;
-    background-color: #ffffff;
-    border-color: #bdbdbd;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  @media (min-width: $width-desktop) {
+    padding: 12px 19px;
+    height: calc(100% - 26px);
   }
+}
+
+.form-group--radio {
+  grid-template-columns: 1fr;
+}
+
+.form-group--radio .form-group__field {
+  padding-top: 6px;
+  padding-left: 14px;
+  padding-bottom: 6px;
+  padding-right: 14px;
+  height: calc(100% - 26px);
 }
 
 .form-group__label {
@@ -43,11 +57,20 @@
 
 .form-group__icon {
   position: absolute;
-  top: 50%;
-  right: 12px;
+  right: 13px;
+  top: 14px;
   transition: color 0.15s ease-in-out;
 
-  .form-group__field:hover + & {
+  .form-group__field:focus + & {
     color: $color-primary;
+  }
+
+  .form-group__field:invalid + & {
+    color: $color-invalid;
+  }
+
+  @media (min-width: $width-table) {
+    top: 17px;
+    right: 18px;
   }
 }

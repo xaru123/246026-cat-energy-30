@@ -3,8 +3,22 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 19px;
   border-top: 1px solid $color-border;
+
+  &:hover svg {
+    stroke: $color-primary;
+  }
+
+  &:active {
+    svg {
+      stroke: $color-primary;
+    }
+
+    * {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $width-table) {
     border-top: 0;

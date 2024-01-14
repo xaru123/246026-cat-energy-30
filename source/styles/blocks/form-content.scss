@@ -1,7 +1,35 @@
+.form-content__container {
+  @include set-flexbox(column, 38px);
+  padding-top: 7px;
+  padding-bottom: 18px;
+
+  @media (min-width: $width-table) {
+    width: calc(100% - 69px * 2);
+    gap: 54px;
+    padding-top: 63px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: calc(100vw - 110px * 2);
+    padding-top: 75px;
+    padding-left: 0;
+    padding-bottom: 16px;
+  }
+}
+
+.form-content__header {
+  padding-bottom: 0;
+}
+
 .form-content__text {
   @include set-typography(14px, 18px);
+  @include set-typography-additional();
+  text-wrap: balance;
 
   @media (min-width: $width-table) {
     @include set-typography(20px, 30px);
+    font-style: normal;
+    width: 323px;
   }
 }

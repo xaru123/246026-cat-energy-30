@@ -1,6 +1,18 @@
+$height-img-mobile: 290px;
+$height-img-table: 200px;
+$height-img-desktop: 288px;
+
 .present {
   position: relative;
-  min-height: 290px;
+  max-height: $height-img-mobile;
+
+  @media (min-width: $width-table) {
+    max-height: $height-img-table;
+  }
+
+  @media (min-width: $width-desktop) {
+    max-height: $height-img-desktop;
+  }
 }
 
 .present__container {
@@ -15,24 +27,56 @@
   right: 0;
   bottom: 0;
   justify-content: center;
+  padding-top: 17px;
 
   @media (min-width: $width-table) {
+    padding-top: 0;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding-left: 78px;
+    gap: 264px;
+  }
+
+  @media (min-width: $width-desktop) {
+    justify-content: flex-start;
+    gap: 43px;
+    flex-direction: column;
+    padding-top: 59px;
+    padding-left: 2px;
   }
 }
 
 .present__img {
   object-fit: cover;
   width: 100%;
-  min-height: 290px;
-  height: 290px;
-  max-height: 290px;
+  min-height: $height-img-mobile;
+  height: $height-img-mobile;
+  max-height: $height-img-mobile;
+
+  @media (min-width: $width-table) {
+    min-height: $height-img-table;
+    height: $height-img-table;
+    max-height: $height-img-table;
+  }
+
+
+  @media (min-width: $width-desktop) {
+    min-height: $height-img-desktop;
+    height: $height-img-desktop;
+    max-height: $height-img-desktop;
+  }
 }
 
 .present__text {
   @include set-typography(16px, 20px, $color-white, $font-secondary);
-  width: 161px;
-  height: 60px;
   text-align: center;
+
+  @media (min-width: $width-table) {
+    text-align: left;
+    padding-top: 5px;
+  }
+
+  @media (min-width: $width-desktop) {
+    text-align: center;
+  }
 }

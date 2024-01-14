@@ -13,11 +13,11 @@
   font-family: $family;
   font-size: $size;
   line-height: $line-height;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@mixin set-typography-additional($weight:400, $style: normal , $text-transform:uppercase) {
-  font-style: $style;
-  font-weight: $weight;
+@mixin set-typography-additional($text-transform:uppercase) {
   text-transform: $text-transform;
 }
 
@@ -26,9 +26,10 @@
   background-size: $width $height;
 }
 
-@mixin set-svg-sprite-mask($id-svg:arrow, $width: 20px, $height: 20px) {
+@mixin set-svg-sprite-mask($id-svg:arrow, $width: auto, $height: auto) {
   mask-image: url("../../images/icons/stack.svg##{$id-svg}");
-  background-size: $width $height;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 
 @mixin set-background-svg-options($x: 50%, $y: 50%, $repeat: no-repeat) {
@@ -38,13 +39,55 @@
 
 @mixin debugger-outline($color: gray, $type:solid, $width:1px) {
   outline: $width $type $color;
+  background: #daadad;
 }
 
-@mixin set-flexbox($direction: row) {
+@mixin set-flexbox($direction: row, $gap: 0) {
   display: flex;
   flex-direction: $direction;
+  gap: $gap;
+  flex-wrap: nowrap;
 }
 
-@mixin set-grid($direction: row) {
-  display: grid;
+@mixin set-item-border($top:0, $right:0, $bottom:0, $left: 0) {
+  content: "";
+  margin-left: -$padding-mobile;
+  border-bottom: 1px solid $color-border;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@mixin set-item-border-after() {
+  &::after {
+    @include set-item-border(0,0,0,0);
+  }
+
+  @media (min-width: $width-table) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@mixin set-item-border-before() {
+  &::before {
+    @include set-item-border(0,0,100%,0);
+  }
+
+  @media (min-width: $width-table) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@mixin set-item-border-middle() {
+  &::before {
+    @include set-item-border(0,0,35%,0);
+  }
 }

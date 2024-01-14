@@ -1,51 +1,88 @@
 .example {
   background: $color-block-back;
+  padding-top: 26px;
+  padding-bottom: 39px;
 
   @media (min-width: $width-table) {
+    padding-top: 41px;
+    border-top: 1px solid $color-border-400;
+    background: linear-gradient($color-white 615px, $color-block-back 0%);
+    padding-bottom: 101px;
+
     div.example {
       background: $color-white;
     }
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-bottom: 28px;
+
+    border-top: 0;
+    background: linear-gradient($color-white 140px, $color-block-back 0%);
+    padding-top: 7px;
   }
 }
 
 .example__container {
   display: grid;
   grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  padding-top: 43px;
+
+  @media (min-width: $width-table) {
+    padding-top: 61px;
+    gap: 52px;
+  }
 
   @media (min-width: $width-desktop) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
   }
 }
 
 .example__text {
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
-  padding-bottom: 20px;
-  word-wrap: break-word;
-  hyphens: auto;
   width: 100%;
 
   @media (min-width: $width-table) {
     @include set-typography(16px, 24px, $color-black, $font-secondary);
-    padding-bottom: 55px;
   }
 
   @media (min-width: $width-desktop) {
     @include set-typography(16px, 24px, $color-black, $font-secondary);
     padding-top: 85px;
-    padding-bottom: 70px;
-    width: 436px;
+    padding-bottom: 66px;
+    width: 433px;
+    text-wrap: pretty;
   }
 }
 
 .example__title {
   @include set-typography(12px, 12px, $color-text-400, $font-secondary);
-  width: 59px;
-  margin: 0 auto;
-  text-align: center;
 
   @media (min-width: $width-table) {
     @include set-typography(14px, 14px, $color-text-400, $font-secondary);
+  }
+}
+
+.example__item--weight .example__title {
+  padding-left: 21px;
+  padding-right: 22px;
+
+  @media (min-width: $width-table) {
+    padding-left: 32px;
+    padding-right: 34px;
+  }
+}
+
+.example__item--days .example__title {
+  padding-left: 32px;
+  padding-right: 33px;
+
+  @media (min-width: $width-table) {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
@@ -56,6 +93,7 @@
 
   @media (min-width: $width-table) {
     @include set-typography(30px, 37px);
+    padding-bottom: 11px;
   }
 }
 
@@ -65,6 +103,10 @@
 
   @media (min-width: $width-table) {
     @include set-typography(20px, 20px);
+  }
+
+  @media (min-width: $width-desktop) {
+    text-align: left;
   }
 }
 
@@ -82,26 +124,27 @@
 .example__list {
   display: grid;
   grid-template-rows: 70px auto;
-  row-gap: 20px;
+  row-gap: 21px;
   justify-content: center;
 
   @media (min-width: $width-table) {
     grid-template-rows: 1fr;
     grid-template-columns: auto auto;
     justify-content: space-between;
+    padding-bottom: 48px;
   }
 
   @media (min-width: $width-desktop) {
     grid-template-rows: 77px auto;
     grid-template-columns: 1fr;
     justify-content: start;
-    row-gap: 55px;
+    row-gap: 56px;
   }
 }
 
 .example__item {
   position: relative;
-  padding-top: 15px;
+  padding-top: 16.5px;
   text-align: center;
   display: flex;
   flex-direction: column;

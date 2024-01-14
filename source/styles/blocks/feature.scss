@@ -2,11 +2,20 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
+  padding-bottom: 3px;
+
+  @media (min-width: $width-table) {
+    gap: 29px;
+    padding-bottom: 15px;
+    margin-top: -60px;
+  }
 
   @media (min-width: $width-desktop) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 80px;
+    padding-bottom: 22px;
+    margin-top: -50px;
   }
 }
 
@@ -14,6 +23,7 @@
   position: relative;
   background: $color-text-200;
   padding: 20px;
+  padding-bottom: 23px;
   display: grid;
   grid-template-columns: 1fr;
 
@@ -21,8 +31,8 @@
     padding: 77px 316px 57px 52px;
   }
 
-  @media (min-width: $width-table) {
-    padding: 77px 61px 59px 52px;
+  @media (min-width: $width-desktop) {
+    padding: 80px 61px 58px 52px;
   }
 
   &::before {
@@ -33,51 +43,53 @@
     top: 20px;
     height: 50px;
   }
+}
 
-  &--slim::before {
-    width: 50px;
-    left: 20px;
+.feature__item--slim::before {
+  width: 50px;
+  height: 55px;
+  left: 20px;
 
-    @include set-svg-sprite("cat-back", 50px, 53px);
+  @include set-svg-sprite("cat-back", 50px, 53px);
 
-    @media (min-width: $width-table) {
-      width: 200px;
-      height: 211px;
-      background-size: 200px 211px;
-      left: 445px;
-      top: 90px;
-    }
-
-    @media (min-width: $width-desktop) {
-      width: 100px;
-      height: 106px;
-      background-size: 100px 106px;
-      top: 40px;
-      left: 52px;
-    }
+  @media (min-width: $width-table) {
+    width: 202px;
+    height: 213px;
+    background-size: 200px 211px;
+    left: 62.5%;
+    top: 80px;
   }
 
-  &--mass::before {
-    width: 67px;
-    left: 11px;
+  @media (min-width: $width-desktop) {
+    width: 100px;
+    height: 106px;
+    background-size: 100px 106px;
+    top: 44px;
+    left: 52px;
+  }
+}
 
-    @include set-svg-sprite("cat-back-2", 67px, 50px);
+.feature__item--mass::before {
+  width: 70px;
+  height: 57px;
+  left: 11px;
 
-    @media (min-width: $width-table) {
-      width: 268px;
-      height: 211px;
-      background-size: 268px 200px;
-      left: 411px;
-      top: 90px;
-    }
+  @include set-svg-sprite("cat-back-2", 67px, 50px);
 
-    @media (min-width: $width-desktop) {
-      width: 134px;
-      height: 100px;
-      background-size: 134px 100px;
-      top: 48px;
-      left: 33px;
-    }
+  @media (min-width: $width-table) {
+    width: 268px;
+    height: 211px;
+    background-size: 268px 200px;
+    left: 58%;
+    top: 87px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 134px;
+    height: 100px;
+    background-size: 134px 100px;
+    top: 49px;
+    left: 33px;
   }
 }
 
@@ -85,31 +97,33 @@
   @include set-typography(24px, 37px);
   @include set-typography-additional();
   padding-left: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 29px;
+  padding-top: 10px;
 
   @media (min-width: $width-table) {
     padding-bottom: 25px;
     padding-left: 0;
+    padding-top: 0;
 
     @include set-typography(36px, 36px);
   }
 
-  @media (min-width: $width-table) {
+  @media (min-width: $width-desktop) {
     padding-bottom: 73px;
-    padding-left: 214px;
+    padding-left: 160px;
 
     @include set-typography(36px, 36px);
   }
 }
 
 .feature__text {
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   border-bottom: 1px solid $color-border;
 
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
 
   @media (min-width: $width-table) {
-    padding-bottom: 50px;
+    padding-bottom: 29px;
     border-bottom: 0;
     width: 340px;
 
@@ -117,27 +131,35 @@
   }
 
   @media (min-width: $width-desktop) {
-    width: auto;
-    padding-bottom: 27px;
+    width: 100%;
+    padding-bottom: 4px;
   }
 }
 
 .feature__link {
   @include set-typography(16px, 16px);
   @include set-typography-additional();
+  padding-top: 18px;
+  padding-left: 1px;
 
   &::after {
     content: " ";
-    padding-right: 25px;
-    width: 32px;
-    height: 10px;
+    width: 64px;
+    height: 100%;
     display: inline-flex;
 
-    @include set-svg-sprite("arrow", 32px, 10px);
+    @include set-svg-sprite("arrow", 32px, 13px);
     @include set-background-svg-options();
+
+    @media (min-width: $width-table) {
+      padding-left: 20px;
+      vertical-align: bottom;
+    }
   }
 
   @media (min-width: $width-table) {
     @include set-typography(20px, normal);
+    padding-top: 23px;
+    padding-left: 0;
   }
 }
