@@ -127,7 +127,8 @@
 }
 
 .form__list--border {
-  @include set-item-border-after(); }
+  @include set-item-border-after();
+}
 
 .form__list--contacts .form__wrapper {
   gap: 14px;
