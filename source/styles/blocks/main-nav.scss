@@ -1,16 +1,6 @@
 .main-nav {
   position: relative;
   z-index: 3;
-
-  @media (min-width: $width-table) {
-    margin-left: auto;
-    padding-right: 36px;
-  }
-
-  @media (min-width: $width-desktop) {
-    margin-left: auto;
-    padding-right: 113px;
-  }
 }
 
 .main-nav--opened {
@@ -18,21 +8,11 @@
   flex: 1;
 }
 
-.main-nav--form {
-  @media (min-width: $width-table) {
-    padding-right: 31px;
-  }
-
-  @media (min-width: $width-desktop) {
-    padding-right: 112px;
-  }
-}
-
 .main-nav__list {
   @include set-flexbox();
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex: 1;
-  gap: 33px;
+  gap: 34px;
   list-style: none;
   align-items: center;
 
@@ -51,20 +31,19 @@
   width: 100%;
   border-bottom: 1px solid $color-border-400;
 
-  &:nth-child(1) {
-    border-top: 1px solid $color-border-400;
-  }
-
   @media (min-width: $width-table) {
     border: 0;
     width: auto;
     padding: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
 
-    &:nth-child(1) {
-      border: 0;
-    }
+.main-nav__item:nth-child(1) {
+  @media (max-width: $width-table) {
+    border-top: 1px solid $color-border-400;
+
   }
 }
 
@@ -94,18 +73,12 @@
 }
 
 li.main-nav__item--active .main-nav__link {
-  padding-bottom: 7px;
+  padding-bottom: 5px;
   border-bottom: 2px solid $color-primary;
 }
 
 .main-nav--index.main-nav--index .main-nav__link {
   @media (min-width: $width-desktop) {
     border-bottom-color: $color-white;
-  }
-}
-
-.main-nav--form .main-nav__list {
-  @media (min-width: $width-desktop) {
-    gap: 34px;
   }
 }

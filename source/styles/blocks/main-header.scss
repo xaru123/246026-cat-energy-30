@@ -3,15 +3,25 @@
   border-bottom: 1px solid $color-border;
 
   @media (min-width: $width-table) {
-    @include set-flexbox();
     padding-top: 26px;
     padding-bottom: 0;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 174px auto;
+    justify-content: left;
+    column-gap: 94px;
     border: 0;
   }
 
   @media (min-width: $width-desktop) {
     padding-top: 56px;
+    grid-template-columns: 201px auto;
+    column-gap: 44.2%;
+  }
+}
+
+.main-header--form {
+  @media (min-width: $width-table) and (max-width: $width-desktop) {
+    column-gap: 97px;
   }
 }
 
