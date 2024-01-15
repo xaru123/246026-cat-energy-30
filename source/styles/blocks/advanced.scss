@@ -8,18 +8,20 @@
 .advanced__container {
   display: grid;
   gap: 34px;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: auto 290px;
+  grid-template-columns: 1fr;
   padding-top: 34px;
   padding-bottom: 36px;
 
   @media (min-width: $width-table) {
+    grid-template-rows: auto 200px;
     padding-top: 80px;
     gap: 68px;
     padding-bottom: 77px;
   }
 
   @media (min-width: $width-desktop) {
-    grid-template-columns: auto 245px;
+    grid-template-columns: auto 247px;
     grid-template-rows: auto;
     padding-top: 78px;
     padding-bottom: 86px;

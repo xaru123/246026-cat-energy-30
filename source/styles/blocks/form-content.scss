@@ -4,14 +4,12 @@
   padding-bottom: 18px;
 
   @media (min-width: $width-table) {
-    width: calc(100% - 69px * 2);
     gap: 54px;
     padding-top: 63px;
     padding-left: 40px;
   }
 
   @media (min-width: $width-desktop) {
-    width: calc(100vw - 110px * 2);
     padding-top: 75px;
     padding-left: 0;
     padding-bottom: 16px;
