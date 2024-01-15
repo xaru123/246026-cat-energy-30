@@ -1,0 +1,171 @@
+.field {
+  position: relative;
+
+  @include set-typography-additional();
+  @include set-typography(16px, 18px, $color-text-400);
+  padding-left: 14px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  width: fill-available;
+  border: 1px solid $color-border-100;
+
+  &::placeholder {
+    color: #212529;
+    opacity: 0.4;
+  }
+
+  &:hover {
+    border: 1px solid $color-text-300;
+  }
+
+  &:focus {
+    outline: 2px solid $color-text-400;
+    outline-offset: -2px;
+  }
+
+  &:invalid {
+    outline: 2px solid $color-invalid;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: $width-table) {
+    padding: 13px 18px 14px;
+    height: auto;
+    line-height: 22px;
+
+    @include set-typography(20px, 22px, $color-text-400);
+  }
+}
+
+.field[type="radio"] {
+  position: absolute;
+  left: -9999px;
+  margin: 0;
+
+  &:checked + label {
+    &::before {
+      box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 9px $color-white;
+      background: $color-primary;
+
+      @media (min-width: $width-table) {
+        box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 11px $color-white;
+      }
+    }
+  }
+
+  &:focus {
+    outline: 0 solid $color-text-400;
+  }
+
+  &:disabled + label {
+    opacity: 0.3;
+  }
+}
+
+.field[type="radio"] + label {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  border-radius: 99em;
+  transition: 0.25s ease;
+
+  &::before {
+    display: flex;
+    flex-shrink: 0;
+    content: "";
+    background-color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 1px $color-text-300;
+
+    @media (min-width: $width-table) {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+    }
+  }
+}
+
+textarea.field {
+  resize: none;
+}
+
+.field[type="checkbox"]:checked,
+.field[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  margin: 0;
+
+  &:disabled + label {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 0 solid $color-text-400;
+  }
+}
+
+.field[type="checkbox"]:checked + label,
+.field[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 45px;
+  line-height: 29px;
+  height: 29px;
+  cursor: pointer;
+
+  @media (min-width: $width-table) {
+    height: 40px;
+    line-height: 39px;
+    padding-left: 60px;
+  }
+}
+
+.field[type="checkbox"]:checked + label::before,
+.field[type="checkbox"]:not(:checked) + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $color-text-300;
+  background-color: $color-white;
+
+  @media (min-width: $width-table) {
+    width: 38px;
+    height: 38px;
+    margin-right: 20px;
+  }
+}
+
+.field[type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+  left: 7px;
+  top: 7px;
+  width: 15px;
+  height: 8px;
+  border-radius: 1px;
+  border-left: 2px solid $color-primary;
+  border-bottom: 2px solid $color-primary;
+  transform: rotate(-45deg);
+
+  @media (min-width: $width-table) {
+    width: 19px;
+    height: 13px;
+    left: 8px;
+  }
+}
+
+.field[type="checkbox"]:not(:checked) + label::after {
+  opacity: 0;
+}
+
+.field[type="checkbox"]:checked + label::after {
+  opacity: 1;
+}

@@ -1,14 +1,41 @@
 .form-footer {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  row-gap: 20px;
+  row-gap: 20.5px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+
+  @media (min-width: $width-table) {
+    grid-template-columns: 284px 1fr;
+    grid-template-rows: 1fr;
+    width: calc(100% - 70px * 2);
+    align-items: flex-start;
+    text-align-last: start;
+    gap: 57px;
+    padding-left: 40px;
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: $width-desktop) {
+    grid-template-columns: 569px 1fr;
+    gap: 79px;
+    padding-left: 0;
+    padding-right: 0;
+    width: calc(100% - 110px * 2);
+    padding-bottom: 78px;
+  }
 }
 
 .form-footer__text {
-  @include set-typography(14px, 16px);
+  @include set-typography(14px, 16px, $color-black, $font-secondary);
   text-align: center;
 
   @media (min-width: $width-table) {
-    @include set-typography(16px, 16px);
+    @include set-typography(16px, 16px, $color-black, $font-secondary);
+    padding-top: 6%;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 5%;
   }
 }

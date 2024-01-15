@@ -1,7 +1,106 @@
-.example-image__bar {
-  width: 40px;
-  height: 40px;
+.example-image {
+  height: 256px;
+  width: 256px;
+  margin: auto;
+  position: relative;
+  --h: 256 * 2;
+  --w: 560;
+  --value: 50%;
 
-  @include set-svg-sprite("thumb", 40px, 40px);
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: calc((var(--h) / var(--w)) * 100%);
+  }
+
+  @media (min-width: $width-table) {
+    height: 512px;
+    width: 560px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: -121px;
+  }
+}
+
+.example-image__image {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.example-image__image--before {
+  clip-path: polygon(0% 0%, var(--value) 0%, var(--value) 100%, 0% 100%);
+}
+
+.example-image__image--after {
+  clip-path: polygon(100% 0%, var(--value) 0%, var(--value) 100%, 100% 100%);
+}
+
+.example-image__range {
+  background-color: transparent;
+  box-sizing: border-box;
+  font-family: inherit;
+  height: 100%;
+  margin: 0;
+  outline: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+
+  &:hover {
+    & + .example-image__line {
+      color: $color-primary;
+      background: $color-primary;
+
+      svg {
+        color: $color-primary;
+        box-shadow: inset 0 0 0 2px $color-primary;
+      }
+    }
+  }
+
+  &:active {
+    & + .example-image__line {
+      color: $color-primary-hover;
+      background: $color-primary-hover;
+
+      svg {
+        color: $color-primary-hover;
+        box-shadow: inset 0 0 0 2px $color-primary-hover;
+      }
+    }
+  }
+}
+
+.example-image__line {
+  position: absolute;
+  inset: 0;
+  width: 4px;
+  height: 100%;
+  background-color: $color-text-500;
+  left: var(--value);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.example-image__line svg {
+  position: absolute;
+  transform: translateX(-50%);
+  border-radius: 50%;
+
   @include set-background-svg-options();
+
+  margin: auto;
+  top: 0;
+  left: 1px;
+  right: 0;
+  bottom: 0;
+  background: $color-white;
+  height: 24px;
+  width: 23px;
+  padding: 9px;
+  box-shadow: inset 0 0 0 2px $color-text-500;
 }

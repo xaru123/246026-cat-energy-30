@@ -21,4 +21,13 @@
 
 .socials__link {
   display: flex;
+
+  &:hover svg {
+    stroke: $color-primary;
+  }
+
+  &:active svg {
+    stroke: $color-primary;
+    opacity: 0.3;
+  }
 }
