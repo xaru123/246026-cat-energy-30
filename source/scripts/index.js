@@ -42,8 +42,8 @@ function createMap() {
     }
 
     const myMap = new yandexMapApi.Map('map', {
-        center: [59.938631, 30.323037],
-        zoom: 14,
+        center:[59.93825104300474,30.325100658889138],
+        zoom: 14.5,
         controls: []
       }),
 
