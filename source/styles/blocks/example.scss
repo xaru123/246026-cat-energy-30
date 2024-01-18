@@ -27,17 +27,16 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   padding-top: 43px;
-  gap:20px;
+  gap: 20px;
 
   @media (min-width: $width-table) {
     padding-top: 61px;
-    gap:52px;
+    gap: 52px;
   }
 
   @media (min-width: $width-desktop) {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, auto);
-
   }
 }
 
@@ -83,10 +82,8 @@
   @media (min-width: $width-table) {
     padding-left: 7px;
     padding-right: 5px;
-    background: white;
     margin: 0 auto;
     background: $color-block-back;
-
   }
 }
 
@@ -154,6 +151,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+
   @include set-svg-sprite("weight-back", 124px, 56px);
   @include set-background-svg-options();
   width: 124px;

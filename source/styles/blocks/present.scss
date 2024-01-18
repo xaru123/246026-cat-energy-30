@@ -1,5 +1,6 @@
 .present {
   position: relative;
+
   @include set-flexbox(column);
   row-gap: 47px;
   align-items: center;
@@ -7,7 +8,9 @@
   padding-top: 20px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient($color-primary-opacity, $color-primary-opacity), image-set(
+  background-image:
+    linear-gradient($color-primary-opacity, $color-primary-opacity),
+    image-set(
                   url("../../images/cat-green-catalog-mobile@1x.webp") type("image/webp") 1x,
                   url("../../images/cat-green-catalog-mobile@2x.webp") type("image/webp") 2x,
                   url("../../images/cat-green-catalog-mobile@1x.png") type("image/png") 1x,
@@ -19,7 +22,9 @@
     justify-content: flex-start;
     padding-left: 79px;
     gap: 265px;
-    background-image: linear-gradient($color-primary-opacity, $color-primary-opacity), image-set(
+    background-image:
+      linear-gradient($color-primary-opacity, $color-primary-opacity),
+      image-set(
                     url("../../images/cat-green-catalog-tablet@1x.webp") type("image/webp") 1x,
                     url("../../images/cat-green-catalog-tablet@2x.webp") type("image/webp") 2x,
                     url("../../images/cat-green-catalog-tablet@1x.png") type("image/png") 1x,
@@ -33,7 +38,9 @@
     padding-top: 59px;
     padding-left: 2px;
 
-    background-image: linear-gradient($color-primary-opacity, $color-primary-opacity), image-set(
+    background-image:
+      linear-gradient($color-primary-opacity, $color-primary-opacity),
+      image-set(
                     url("../../images/cat-green-catalog@1x.webp") type("image/webp") 1x,
                     url("../../images/cat-green-catalog@2x.webp") type("image/webp") 2x,
                     url("../../images/cat-green-catalog@1x.png") type("image/png") 1x,
