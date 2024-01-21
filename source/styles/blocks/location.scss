@@ -37,6 +37,7 @@
 }
 
 .location__invitation {
+  //max-width: 163px;
   @include set-typography(16px, 20px, $color-text-600);
   @include set-typography-additional();
 
@@ -46,6 +47,7 @@
 }
 
 .location__address {
+  //justify-self: end;
   @include set-typography(14px, 20px, $color-text-400, $font-secondary);
   font-style: inherit;
 
