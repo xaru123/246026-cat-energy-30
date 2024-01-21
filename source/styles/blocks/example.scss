@@ -43,7 +43,7 @@
 .example__text {
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
   width: 100%;
-  display: -webkit-box;
+  display: box;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
@@ -55,6 +55,7 @@
 
   @media (min-width: $width-desktop) {
     -webkit-line-clamp: 4;
+
     @include set-typography(16px, 24px, $color-black, $font-secondary);
     padding-top: 85px;
     padding-bottom: 15px;

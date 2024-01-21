@@ -5,6 +5,7 @@
   row-gap: 47px;
   align-items: center;
   justify-content: center;
+  margin-top: -20px;
   padding-top: 20px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,7 +39,7 @@
     flex-direction: column;
     padding-top: 59px;
     padding-left: 2px;
-    padding-right:0;
+    padding-right: 0;
     background-image:
       linear-gradient($color-primary-opacity, $color-primary-opacity),
       image-set(

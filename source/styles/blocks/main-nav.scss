@@ -36,6 +36,7 @@
   padding: 0;
   z-index: 10;
   background-color: $color-white;
+
   @include set-flexbox(column);
   justify-content: flex-start;
   align-items: center;
@@ -113,7 +114,7 @@
 }
 
 li.main-nav__item--active .main-nav__link {
-  padding-bottom: 5px;
+  padding-bottom: 7px;
   border-bottom: 2px solid $color-primary;
 }
 

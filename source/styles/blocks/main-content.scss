@@ -1,7 +1,6 @@
 .main-content {
   @include set-flexbox(column, $padding-mobile);
-
-  padding-top: 20px;
+  //padding-top: 20px;
 
   @media (min-width: $width-table) {
     gap: $padding-table;
@@ -15,10 +14,8 @@
 
 .main-content__header {
   @include set-typography(36px, 36px);
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: $width-table) {
     @include set-typography(60px, 60px);
@@ -27,6 +24,8 @@
 
 .main-content__sub-header {
   position: relative;
+  margin: 0;
+  padding: 0;
 
   &::before {
     @include set-item-border(1rem, 0, unset, 0);
