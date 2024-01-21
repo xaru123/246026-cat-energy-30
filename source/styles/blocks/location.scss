@@ -6,7 +6,8 @@
   display: grid;
   padding-top: 26px;
   padding-bottom: 26px;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, 140px);
+
   justify-content: space-between;
   align-content: space-between;
   z-index: 2;
@@ -37,7 +38,6 @@
 }
 
 .location__invitation {
-  //max-width: 163px;
   @include set-typography(16px, 20px, $color-text-600);
   @include set-typography-additional();
 
@@ -47,9 +47,9 @@
 }
 
 .location__address {
-  //justify-self: end;
   @include set-typography(14px, 20px, $color-text-400, $font-secondary);
   font-style: inherit;
+  margin-left: auto;
 
   @media (min-width: $width-table) {
     @include set-typography(16px, 20px, $color-text-400, $font-secondary);
