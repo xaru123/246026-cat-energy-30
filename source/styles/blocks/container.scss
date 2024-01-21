@@ -10,14 +10,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    width: calc(100% - 2 * $padding-desktop);
-    padding-right: $padding-desktop;
-    padding-left: $padding-desktop;
-  }
-
-  @media (min-width: $width-desktop-max) {
-    width: calc(100% - 2 * $padding-desktop-max);
-    padding-right: $padding-desktop-max;
-    padding-left: $padding-desktop-max;
+    max-width: 1220px;
+    margin: 0 auto;
   }
 }
