@@ -15,6 +15,10 @@
 
 .main-content__header {
   @include set-typography(36px, 36px);
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 
   @media (min-width: $width-table) {
     @include set-typography(60px, 60px);
