@@ -1,73 +1,23 @@
 .main-header {
-  padding-top: 13px;
+  position: relative;
+}
+
+.main-header--border {
   border-bottom: 1px solid $color-border;
 
   @media (min-width: $width-table) {
-    padding-top: 26px;
-    padding-bottom: 0;
-    display: grid;
-    grid-template-columns: 174px auto;
-    justify-content: space-between;
-    column-gap: 94px;
     border: 0;
   }
-
-  @media (min-width: $width-desktop) {
-    padding-top: 56px;
-    grid-template-columns: 201px auto;
-    column-gap: 44.2%;
-  }
 }
 
-.main-header--form {
-  @media (min-width: $width-table) and (max-width: $width-desktop) {
-    column-gap: 97px;
-  }
-}
-
-div.main-header__container {
-  @include set-flexbox();
+.main-header__container {
+  padding-top: 13px;
   padding-bottom: 14px;
-  align-items: center;
 
   @media (min-width: $width-table) {
-    flex: 0 1;
-    padding-right: 0;
-    padding-bottom: 0;
+    padding-top: 25px;
   }
-}
-
-.main-header__logo {
-  @include set-flexbox();
-  align-items: center;
-  justify-content: start;
-  gap: 56px;
-}
-
-.main-header__toggle {
-  @include set-svg-sprite-mask("menu", 25px, 24px);
-  @include set-background-svg-options();
-  width: 25px;
-  height: 24px;
-  margin-left: auto;
-  background-color: $color-black;
-
-  @media (min-width: $width-table) {
-    display: none;
-  }
-}
-
-.main-header__toggle--closed {
-  width: 18px;
-  height: 20px;
-
-  @include set-svg-sprite-mask("close", 18px, 20px);
-}
-
-.main-header__nav {
-  display: none;
-
-  @media (min-width: $width-table) {
-    display: flex;
+  @media (min-width: $width-desktop) {
+    padding-top: 55px;
   }
 }

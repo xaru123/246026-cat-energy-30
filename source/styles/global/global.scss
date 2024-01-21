@@ -4,24 +4,19 @@ body {
   font-size: 18px;
   line-height: 27px;
   margin: 0;
-}
-
-ul,
-p,
-li,
-span,
-i,
-h1,
-h2,
-h3,
-dd,
-dl,
-dt {
-  margin: 0;
   padding: 0;
+  min-width: 320px;
+  box-sizing: border-box;
+  font-weight: 400;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

@@ -13,13 +13,3 @@
 .logo__img {
   display: flex;
 }
-
-.logo__text {
-  width: 101px;
-  height: 18px;
-  display: none;
-
-  @media (max-width: $width-table) {
-    display: flex;
-  }
-}

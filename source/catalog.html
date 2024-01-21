@@ -9,11 +9,11 @@
   <link rel="preload" href="/source/fonts/oswald/Oswald.woff2" as="font">
 </head>
 
-<body class="page__body ">
-<header class="page__header main-header container">
-  <div class="main-header__container">
-    <div class="main-header__logo logo">
-      <a class="logo__link" href="index.html">
+<body class="page__body">
+<header class="page__header main-header main-header--border">
+  <div class="main-header__container container">
+    <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
+      <div class="main-nav__logo logo">
         <picture>
           <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202"
             height="59">
@@ -21,32 +21,68 @@
             height="50">
           <img class="logo__img" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
         </picture>
-      </a>
+      </div>
 
-      <img class="logo__text" src="images/footer-logo.svg" width="101" height="18" alt="Cat Energy">
-    </div>
+      <img class="main-nav__text" src="images/footer-logo.svg" width="101" height="18" alt="Cat Energy">
 
-    <button class="main-header__toggle" type="button">
-      <span class="visually-hidden">Открыть меню.</span>
-    </button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="./index.html">Главная</a>
+        </li>
+
+        <li class="main-nav__item main-nav__item--active">
+          <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>
+        </li>
+
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="./form.html">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-
-  <nav class="main-header__nav main-nav main-nav--nojs">
-    <ul class="main-nav__list">
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="./index.html">Главная</a>
-      </li>
-
-      <li class="main-nav__item main-nav__item--active">
-        <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>
-      </li>
-
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="./form.html">Подбор программы</a>
-      </li>
-    </ul>
-  </nav>
 </header>
+
+<!--<header class="page__header main-header container">-->
+<!--  <div class="main-header__container">-->
+<!--    <div class="main-header__logo logo">-->
+<!--      <a class="logo__link" href="index.html">-->
+<!--        <picture>-->
+<!--          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202"-->
+<!--            height="59">-->
+<!--          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174"-->
+<!--            height="50">-->
+<!--          <img class="logo__img" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">-->
+<!--        </picture>-->
+<!--      </a>-->
+
+<!--      <img class="logo__text" src="images/footer-logo.svg" width="101" height="18" alt="Cat Energy">-->
+<!--    </div>-->
+
+<!--    <button class="main-header__toggle" type="button">-->
+<!--      <span class="visually-hidden">Открыть меню.</span>-->
+<!--    </button>-->
+<!--  </div>-->
+
+<!--  <nav class="main-header__nav main-nav main-nav&#45;&#45;nojs">-->
+<!--    <ul class="main-nav__list">-->
+<!--      <li class="main-nav__item">-->
+<!--        <a class="main-nav__link" href="./index.html">Главная</a>-->
+<!--      </li>-->
+
+<!--      <li class="main-nav__item main-nav__item&#45;&#45;active">-->
+<!--        <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>-->
+<!--      </li>-->
+
+<!--      <li class="main-nav__item">-->
+<!--        <a class="main-nav__link" href="./form.html">Подбор программы</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </nav>-->
+<!--</header>-->
 
 <main class="page__main main-content container">
   <section class="main-content__catalog catalog">
