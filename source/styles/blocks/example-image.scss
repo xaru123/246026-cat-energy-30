@@ -19,7 +19,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin-top: -121px;
+    margin: 0;
   }
 }
 
@@ -90,7 +90,6 @@
   position: absolute;
   transform: translateX(-50%);
   border-radius: 50%;
-
   @include set-background-svg-options();
 
   margin: auto;
@@ -99,8 +98,8 @@
   right: 0;
   bottom: 0;
   background: $color-white;
-  height: 24px;
-  width: 23px;
+  height: 40px;
+  width: 40px;
   padding: 9px;
   box-shadow: inset 0 0 0 2px $color-text-500;
 }

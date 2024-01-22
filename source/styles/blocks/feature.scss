@@ -2,7 +2,6 @@
   display: grid;
   grid-template-rows: auto auto;
   gap: 21px;
-  padding-bottom: 3px;
 
   @media (min-width: $width-table) {
     gap: 29px;
@@ -14,7 +13,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 80px;
-    padding-bottom: 22px;
+    padding-bottom: 50px;
     margin-top: -50px;
   }
 }

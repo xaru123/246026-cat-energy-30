@@ -1,8 +1,12 @@
 .stages {
   padding-bottom: 29px;
 
+  @media (min-width: $width-table) {
+    padding-bottom: 35px;
+  }
+
   @media (min-width: $width-desktop) {
-    padding-bottom: 23px;
+    padding-bottom: 49px;
   }
 }
 
@@ -10,14 +14,15 @@
   counter-reset: numbers;
   display: grid;
   gap: 20px;
-  padding-top: 42px;
+  margin: 0;
+  padding: 43px 0 0;
 
   @media (min-width: $width-table) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    row-gap: 87px;
-    column-gap: 61px;
-    padding-top: 73px;
+    row-gap: 86px;
+    column-gap: 59px;
+    padding-top: 72px;
   }
 
   @media (min-width: $width-desktop) {
@@ -32,7 +37,7 @@
   list-style: none;
   position: relative;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 60px 1fr;
   gap: 20px;
 
   @media (min-width: $width-table) {
@@ -40,38 +45,6 @@
     grid-template-columns: auto;
     padding-bottom: 47px;
     gap: 29px;
-  }
-
-  &::before {
-    content: " ";
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: $color-primary;
-    z-index: 2;
-
-    @include set-background-svg-options();
-
-    @media (min-width: $width-table) {
-      width: 80px;
-      height: 80px;
-    }
-  }
-
-  &--leaf::before {
-    @include set-svg-sprite("leaf", 25px, 32px);
-  }
-
-  &--water::before {
-    @include set-svg-sprite("water", 27px, 29px);
-  }
-
-  &--eat::before {
-    @include set-svg-sprite("eat", 27px, 30px);
-  }
-
-  &--time::before {
-    @include set-svg-sprite("time", 27px, 31px);
   }
 
   &::after {
@@ -91,6 +64,21 @@
   }
 }
 
+.stages__icon-container {
+  background: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  @include set-background-svg-options();
+
+  @media (min-width: $width-table) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .stages__text {
   padding-top: 2px;
   z-index: 3;
@@ -99,7 +87,7 @@
 
   @media (min-width: $width-table) {
     @include set-typography(16px, 24px, $color-black, $font-secondary);
-    padding-top: 2px;
+    padding-top: 3px;
     padding-right: 60px;
     text-wrap: pretty;
   }

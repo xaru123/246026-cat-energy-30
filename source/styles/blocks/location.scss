@@ -15,8 +15,7 @@
 
   @media (min-width: $width-table) {
     grid-template-columns: 163px 157px;
-    padding: 60px 70px;
-    width: calc(100% - 70px * 2);
+    padding: 62px 70px 58px;
   }
 
   @media (min-width: $width-desktop) {
@@ -24,8 +23,8 @@
     padding: 60px 78px 60px 80px;
     position: absolute;
     top: 95px;
-    left: calc((100% - $width-desktop)/ 2);
-    width: calc(565px - 78px - 80px);
+    left: calc((100% - $width-desktop)/ 2 + $padding-desktop);
+    width: 565px;
     background: $color-white;
     gap: 87px;
     justify-content: flex-start;
@@ -38,6 +37,9 @@
 }
 
 .location__invitation {
+  margin:0;
+  padding: 0;
+
   @include set-typography(16px, 20px, $color-text-600);
   @include set-typography-additional();
 
@@ -46,9 +48,12 @@
   }
 }
 
-.location__address {
+.location__address p{
+  margin:0;
+  padding: 0;
+  font-style: normal;
+
   @include set-typography(14px, 20px, $color-text-400, $font-secondary);
-  font-style: inherit;
   margin-left: auto;
 
   @media (min-width: $width-table) {

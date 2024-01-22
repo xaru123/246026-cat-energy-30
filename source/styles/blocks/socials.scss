@@ -1,4 +1,6 @@
 .socials__list {
+  margin: 0;
+  padding:0;
   width: 100%;
   list-style: none;
   display: flex;
@@ -21,6 +23,7 @@
 
 .socials__link {
   display: flex;
+  color: inherit;
 
   &:hover svg {
     stroke: $color-primary;

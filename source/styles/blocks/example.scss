@@ -6,7 +6,7 @@
   @media (min-width: $width-table) {
     padding-top: 41px;
     border-top: 1px solid $color-border-400;
-    background: linear-gradient($color-white 615px, $color-block-back 0%);
+    background: linear-gradient(0deg, $color-block-back 462px, transparent 0);
     padding-bottom: 101px;
 
     div.example {
@@ -15,10 +15,9 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding-bottom: 26px;
-
+    padding-bottom: 76px;
     border-top: 0;
-    background: linear-gradient($color-white 140px, $color-block-back 0%);
+    background: linear-gradient($color-white 147px, $color-block-back 0%);
     padding-top: 7px;
   }
 }
@@ -26,12 +25,11 @@
 .example__container {
   display: grid;
   grid-template-rows: repeat(3, auto);
-  padding-top: 43px;
   gap: 20px;
 
   @media (min-width: $width-table) {
-    padding-top: 61px;
-    gap: 52px;
+    padding-top: 4px;
+    gap: 45px;
   }
 
   @media (min-width: $width-desktop) {
@@ -43,23 +41,19 @@
 .example__text {
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
   width: 100%;
-  display: box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  margin: 0;
+  padding: 23px 0 0;
 
   @media (min-width: $width-table) {
     @include set-typography(16px, 24px, $color-black, $font-secondary);
-    -webkit-line-clamp: 3;
+    padding: 15px 0 8px;
   }
 
   @media (min-width: $width-desktop) {
-    -webkit-line-clamp: 4;
-
     @include set-typography(16px, 24px, $color-black, $font-secondary);
-    padding-top: 85px;
-    padding-bottom: 15px;
-    width: 433px;
+    padding-top: 101px;
+    padding-bottom: 21px;
+    max-width: 433px;
     text-wrap: pretty;
   }
 }
@@ -136,7 +130,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: auto auto;
     justify-content: space-between;
-    padding-bottom: 48px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: $width-desktop) {

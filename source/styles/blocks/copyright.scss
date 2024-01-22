@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 19px;
+  padding-top: 18px;
   border-top: 1px solid $color-border;
 
   &:hover svg {
@@ -29,5 +29,7 @@
 }
 
 .copyright__name {
+  text-decoration: none;
+
   @include set-typography(16px, 20px, $color-text-400, $font-secondary);
 }
