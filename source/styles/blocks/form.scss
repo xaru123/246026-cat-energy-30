@@ -2,7 +2,6 @@
   @include set-flexbox(column, 25px);
 
   @media (min-width: $width-table) {
-    width: calc(100% - 40px * 2);
     padding-top: 20px;
     padding-right: 40px;
     padding-left: 40px;
@@ -12,21 +11,19 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    width: calc(100%);
   }
 }
 
 .form__list {
   @include set-flexbox(column);
-  gap: 14px;
-  //padding-top: 22px;
+  gap: 15px;
   padding-top: 8px;
   padding-bottom: 25px;
   position: relative;
 
   @media (min-width: $width-table) {
     padding-top: 51px;
-    padding-bottom: 71px;
+    padding-bottom: 73px;
     gap: 22px;
   }
 
@@ -93,19 +90,20 @@
   margin-bottom: -2px;
 
   @media (min-width: $width-table) {
-    padding-top: 62px;
-    padding-bottom: 43px;
+    padding-top: 48px;
+    padding-bottom: 27px;
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 53px;
-    padding-bottom: 50px;
+    padding-top: 41px;
+    padding-bottom: 34px;
   }
 }
 
 .form__list-additional {
-  padding-top: 8px;
-  gap: 13.5px;
+  padding-top: 12px;
+  gap: 25px;
+  padding-bottom: 29px;
 
   @media (min-width: $width-table) {
     display: grid;
@@ -114,7 +112,7 @@
     padding-top: 32px;
     row-gap: 32px;
     column-gap: 62px;
-    padding-bottom: 41px;
+    padding-bottom: 53px;
   }
 
   @media (min-width: $width-desktop) {
@@ -122,7 +120,7 @@
     grid-template-rows: 40px;
     padding-top: 31px;
     column-gap: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 62px;
   }
 }
 
@@ -143,8 +141,8 @@
 }
 
 
-.form__header {
-  @media (max-width: $width-table) {
-    max-width: 187px;
-  }
-}
+//.form__header {
+//  @media (max-width: $width-table) {
+//    max-width: 187px;
+//  }
+//}

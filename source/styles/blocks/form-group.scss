@@ -11,13 +11,13 @@
   height: 150px;
 
   @media (min-width: $width-table) {
-    height: 174px;
+    height: 202px;
   }
 }
 
 .form-group--comment .form-group__field {
   padding: 12px 14px;
-  height: calc(100% - 26px);
+  height: 150px;
 
   @media (min-width: $width-table) {
     padding: 14px 20px;
@@ -71,6 +71,6 @@
 
   @media (min-width: $width-table) {
     top: 17px;
-    right: 18px;
+    right: 15px;
   }
 }

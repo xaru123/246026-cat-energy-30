@@ -1,11 +1,8 @@
 .field {
   position: relative;
-
   @include set-typography-additional();
   @include set-typography(16px, 18px, $color-text-400);
-  padding-left: 14px;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  padding: 13px 14px 12px;
   width: fill-available;
   border: 1px solid $color-border-100;
 
@@ -35,6 +32,10 @@
 
     @include set-typography(20px, 22px, $color-text-400);
   }
+}
+
+.form-group__wrapper .field {
+  padding-right: 40px;
 }
 
 .field[type="radio"] {
@@ -93,79 +94,41 @@ textarea.field {
   resize: none;
 }
 
-.field[type="checkbox"]:checked,
-.field[type="checkbox"]:not(:checked) {
-  position: absolute;
-  left: -9999px;
-  margin: 0;
-
-  &:disabled + label {
-    opacity: 0.3;
-  }
-
-  &:focus {
-    outline: 0 solid $color-text-400;
-  }
+input[type=checkbox] {
+  display: none;
 }
 
-.field[type="checkbox"]:checked + label,
-.field[type="checkbox"]:not(:checked) + label {
-  display: inline-block;
+input[type=checkbox] + label {
   position: relative;
   padding-left: 45px;
-  line-height: 29px;
-  height: 29px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  user-select: none;
 
   @media (min-width: $width-table) {
-    height: 40px;
-    line-height: 39px;
-    padding-left: 60px;
+    padding-left: 59px;
   }
 }
 
-.field[type="checkbox"]:checked + label::before,
-.field[type="checkbox"]:not(:checked) + label::before {
-  content: "";
+input[type=checkbox] + label:before {
+  content: '';
   position: absolute;
   left: 0;
-  top: 0;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
   border: 1px solid $color-text-300;
-  background-color: $color-white;
 
   @media (min-width: $width-table) {
-    width: 38px;
-    height: 38px;
-    margin-right: 20px;
+    width: 40px;
+    height: 40px;
   }
 }
 
-.field[type="checkbox"] + label::after {
-  content: "";
-  position: absolute;
-  transition: all 0.2s ease;
-  left: 7px;
-  top: 7px;
-  width: 15px;
-  height: 8px;
-  border-radius: 1px;
-  border-left: 2px solid $color-primary;
-  border-bottom: 2px solid $color-primary;
-  transform: rotate(-45deg);
-
-  @media (min-width: $width-table) {
-    width: 19px;
-    height: 13px;
-    left: 8px;
-  }
-}
-
-.field[type="checkbox"]:not(:checked) + label::after {
-  opacity: 0;
-}
-
-.field[type="checkbox"]:checked + label::after {
-  opacity: 1;
+input[type=checkbox]:checked + label::before {
+  background-image: url("../../images/icons/stack.svg#sel");;
+  background-position: center;
+  background-size: 24px 20px;
+  background-repeat: no-repeat;
 }

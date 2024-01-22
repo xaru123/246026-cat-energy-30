@@ -1,18 +1,19 @@
 .form-content__container {
   @include set-flexbox(column, 38px);
-  padding-top: 7px;
+  padding-top: 26px;
   padding-bottom: 18px;
 
   @media (min-width: $width-table) {
     gap: 54px;
-    padding-top: 63px;
-    padding-left: 40px;
+    padding-top: 50px;
+    padding-left: 41px;
+    padding-bottom: 25px;
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 75px;
+    padding-top: 57px;
     padding-left: 0;
-    padding-bottom: 16px;
+    padding-bottom: 47px;
   }
 }
 
@@ -24,6 +25,8 @@
   @include set-typography(14px, 18px);
   @include set-typography-additional();
   text-wrap: balance;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: $width-table) {
     @include set-typography(20px, 30px);

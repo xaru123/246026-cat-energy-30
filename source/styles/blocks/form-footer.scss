@@ -9,11 +9,12 @@
     grid-template-columns: 284px 1fr;
     grid-template-rows: 1fr;
     width: calc(100% - 70px * 2);
-    align-items: flex-start;
+    align-items: center;
     text-align-last: start;
-    gap: 57px;
+    gap: 58px;
     padding-left: 40px;
-    padding-bottom: 61px;
+    padding-bottom: 59px;
+    padding-top: 0;
   }
 
   @media (min-width: $width-desktop) {
@@ -32,10 +33,9 @@
 
   @media (min-width: $width-table) {
     @include set-typography(16px, 16px, $color-black, $font-secondary);
-    padding-top: 6%;
+    margin-top: -4px;
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 5%;
   }
 }

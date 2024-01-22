@@ -28,7 +28,7 @@
   padding: 0;
 
   &::before {
-    @include set-item-border(1rem, 0, unset, 0);
+    @include set-item-border(15px, 0, unset, 0);
     border-bottom: 3px solid $color-primary;
     width: calc(100vw - 20px);
     left: $padding-mobile;
@@ -47,13 +47,16 @@
   position: relative;
   display: flex;
   width: fit-content;
+  margin: 0;
+  padding: 0;
   padding-right: 20px;
   background: $color-white;
+  box-sizing: content-box;
 
   @media (min-width: $width-table) {
     @include set-typography(36px, 36px);
-    padding-right: 42px;
-    max-width: calc(100% - 43px);
+    padding-right: 33px;
+    max-width: calc(100% - 28px);
 
     margin-left: -40px;
     padding-left: 40px;
