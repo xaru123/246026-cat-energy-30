@@ -1,5 +1,6 @@
 .field {
   position: relative;
+
   @include set-typography-additional();
   @include set-typography(16px, 18px, $color-text-400);
   padding: 13px 14px 12px;
@@ -94,11 +95,11 @@ textarea.field {
   resize: none;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
 }
 
-input[type=checkbox] + label {
+input[type="checkbox"] + label {
   position: relative;
   padding-left: 45px;
   display: flex;
@@ -111,8 +112,8 @@ input[type=checkbox] + label {
   }
 }
 
-input[type=checkbox] + label:before {
-  content: '';
+input[type="checkbox"] + label::before {
+  content: "";
   position: absolute;
   left: 0;
   width: 30px;
@@ -126,8 +127,8 @@ input[type=checkbox] + label:before {
   }
 }
 
-input[type=checkbox]:checked + label::before {
-  background-image: url("../../images/icons/stack.svg#sel");;
+input[type="checkbox"]:checked + label::before {
+  background-image: url("../../images/icons/stack.svg#sel");
   background-position: center;
   background-size: 24px 20px;
   background-repeat: no-repeat;

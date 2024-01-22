@@ -90,6 +90,7 @@
   position: absolute;
   transform: translateX(-50%);
   border-radius: 50%;
+
   @include set-background-svg-options();
 
   margin: auto;

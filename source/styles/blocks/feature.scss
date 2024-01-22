@@ -34,9 +34,9 @@
 
   @media (min-width: $width-table) {
     grid-template-areas:
-    "name icon"
-    "text icon"
-    "link .";
+      "name icon"
+      "text icon"
+      "link .";
     grid-template-rows: auto auto auto;
     grid-template-columns: auto 270px;
     padding: 77px 45px 57px 52px;
@@ -45,9 +45,9 @@
 
   @media (min-width: $width-desktop) {
     grid-template-areas:
-    "icon name"
-    "text text"
-    "link link";
+      "icon name"
+      "text text"
+      "link link";
     grid-template-rows: 100px 1fr auto;
     grid-template-columns: 100px 1fr;
     text-align: left;
@@ -73,7 +73,7 @@
 
   @media (min-width: $width-desktop) {
     top: 0;
-    left: 0px;
+    left: 0;
     width: 100px;
     height: 100px;
   }
@@ -101,12 +101,14 @@
   margin: 0;
   padding: 23px 0 22px;
   border-bottom: 1px solid $color-border;
+
   @include set-typography(14px, 18px, $color-text-400, $font-secondary);
 
   @media (min-width: $width-table) {
     padding: 18px 0 40px;
     border-bottom: 0;
     min-width: 340px;
+
     @include set-typography(16px, 24px, $color-black, $font-secondary);
   }
 
@@ -125,7 +127,7 @@
   position: relative;
   display: inline-block;
 
-  &:hover:after {
+  &:hover::after {
     background-position: center left;
   }
 
@@ -134,13 +136,14 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     width: 32px;
     height: 15px;
     margin-left: 15px;
     background-image: url("../../images/icons/stack.svg#arrow");
+
     @include set-background-svg-options(center, left -5px);
     transform: translateY(-50%);
 
