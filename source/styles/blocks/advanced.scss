@@ -1,5 +1,5 @@
 .main-content__sub-header h2.advanced__header {
-  @media (min-width: $width-table)  and (max-width: $width-desktop) {
+  @media (min-width: $width-table) and (max-width: $width-desktop) {
     margin-left: 0;
     padding-left: 40px;
   }
@@ -17,14 +17,14 @@
     grid-template-rows: auto 200px;
     padding-top: 80px;
     gap: 68px;
-    padding-bottom: 77px;
+    padding-bottom: 76px;
   }
 
   @media (min-width: $width-desktop) {
-    grid-template-columns: auto 247px;
+    grid-template-columns: auto 245px;
     grid-template-rows: auto;
-    padding-top: 78px;
-    padding-bottom: 86px;
+    padding-top: 79px;
+    padding-bottom: 87px;
     gap: 80px;
   }
 }
@@ -55,7 +55,7 @@
     padding: 25px 38px 27.5px;
     grid-template-rows: auto 40px;
     column-gap: 0;
-    row-gap: 15px;
+    row-gap: 16px;
     border: 1px solid $color-border;
     border-bottom: 0;
     align-items: center;
@@ -67,6 +67,10 @@
     grid-template-rows: 40px;
     column-gap: 40px;
     align-items: baseline;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid $color-border;
   }
 }
 

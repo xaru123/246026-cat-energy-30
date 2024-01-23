@@ -1,5 +1,6 @@
 .present {
   position: relative;
+
   @include set-flexbox(column);
   align-items: center;
   justify-content: center;
@@ -8,26 +9,26 @@
   background-image:
     linear-gradient($color-primary-opacity, $color-primary-opacity),
     image-set(
-                  url("../../images/cat-green-catalog-mobile@1x.webp") type("image/webp") 1x,
-                  url("../../images/cat-green-catalog-mobile@2x.webp") type("image/webp") 2x,
-                  url("../../images/cat-green-catalog-mobile@1x.png") type("image/png") 1x,
-                  url("../../images/cat-green-catalog-mobile@2x.png") type("image/png") 2x);
+      url("../../images/cat-green-catalog-mobile@1x.webp") type("image/webp") 1x,
+      url("../../images/cat-green-catalog-mobile@2x.webp") type("image/webp") 2x,
+      url("../../images/cat-green-catalog-mobile@1x.png") type("image/png") 1x,
+      url("../../images/cat-green-catalog-mobile@2x.png") type("image/png") 2x);
   padding: 52px 45px 35px;
   gap: 49px;
 
   @media (min-width: $width-table) {
-    padding-top: 0;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 79px;
-    padding-right: 137px;
+    padding-left: 78px;
+    padding-right: 126px;
+    padding-top: 34px;
     background-image:
       linear-gradient($color-primary-opacity, $color-primary-opacity),
       image-set(
-                    url("../../images/cat-green-catalog-tablet@1x.webp") type("image/webp") 1x,
-                    url("../../images/cat-green-catalog-tablet@2x.webp") type("image/webp") 2x,
-                    url("../../images/cat-green-catalog-tablet@1x.png") type("image/png") 1x,
-                    url("../../images/cat-green-catalog-tablet@2x.png") type("image/png") 2x);
+        url("../../images/cat-green-catalog-tablet@1x.webp") type("image/webp") 1x,
+        url("../../images/cat-green-catalog-tablet@2x.webp") type("image/webp") 2x,
+        url("../../images/cat-green-catalog-tablet@1x.png") type("image/png") 1x,
+        url("../../images/cat-green-catalog-tablet@2x.png") type("image/png") 2x);
   }
 
   @media (min-width: $width-desktop) {
@@ -40,10 +41,10 @@
     background-image:
       linear-gradient($color-primary-opacity, $color-primary-opacity),
       image-set(
-                    url("../../images/cat-green-catalog@1x.webp") type("image/webp") 1x,
-                    url("../../images/cat-green-catalog@2x.webp") type("image/webp") 2x,
-                    url("../../images/cat-green-catalog@1x.png") type("image/png") 1x,
-                    url("../../images/cat-green-catalog@2x.png") type("image/png") 2x);
+        url("../../images/cat-green-catalog@1x.webp") type("image/webp") 1x,
+        url("../../images/cat-green-catalog@2x.webp") type("image/webp") 2x,
+        url("../../images/cat-green-catalog@1x.png") type("image/png") 1x,
+        url("../../images/cat-green-catalog@2x.png") type("image/png") 2x);
   }
 }
 
@@ -52,6 +53,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  margin-left: -6px;
 
   @media (min-width: $width-table) {
     text-align: left;
@@ -60,5 +62,6 @@
 
   @media (min-width: $width-desktop) {
     text-align: center;
+    margin-left: 1px;
   }
 }

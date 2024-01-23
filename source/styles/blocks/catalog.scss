@@ -5,12 +5,12 @@
 
   @media (min-width: $width-table) {
     padding-top: 49px;
-    padding-bottom: 41px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 73px;
-    padding-bottom: 28px;
+    padding-top: 57px;
+    padding-bottom: 55px;
   }
 }
 
@@ -25,14 +25,15 @@
   @media (min-width: $width-table) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 68px 60px;
-    padding-top: 90px;
+    column-gap: 60px;
+    row-gap: 141px;
+    padding-top: 165px;
   }
 
   @media (min-width: $width-desktop) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
-    row-gap: 69px;
+    row-gap: 143px;
   }
 }
 

@@ -28,7 +28,7 @@
 
   @media (min-width: $width-desktop) {
     @include set-typography(16px, 20px, $color-text-400, $font-secondary);
-    padding-top: 4px;
+    padding-top: 6px;
     padding-bottom: 7px;
     border-bottom: 1px solid $color-border;
   }

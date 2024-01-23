@@ -5,41 +5,33 @@
   row-gap: 16px;
   padding-top: 22px;
   padding-bottom: 24px;
+  position: relative;
 
   @media (min-width: $width-table) {
     display: grid;
-    padding: 10px 38px 38px;
-    grid-template-rows: 200px auto 40px;
+    padding: 162px 38px 40px;
+    grid-template-rows: 172px 40px;
     grid-template-columns: 1fr;
-    background-image: linear-gradient(transparent 76px, $color-text-200 0);
+    background: #f2f2f2;
   }
 
   @media (min-width: $width-desktop) {
-    row-gap: 7px;
+    padding: 152px 38px 41px;
+    row-gap: 26px;
   }
 }
 
 .product__image-wrapper {
   display: flex;
-  align-items: center;
-  background-position: 50% 50%;
   margin: 0 auto;
 
   @media (min-width: $width-table) {
-    align-self: center;
-    height: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+    position: absolute;
+    bottom: 66%;
+    left: 0;
+    right: 0;
   }
-}
-
-.product__image {
-  object-fit: contain;
-  margin: auto;
-  display: flex;
 }
 
 .product:nth-child(1) {
@@ -52,14 +44,11 @@
 
   @media (min-width: $width-table) {
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
     row-gap: 20px;
   }
 
   @media (min-width: $width-desktop) {
-    row-gap: 20px;
-    padding-bottom: 29px;
+    row-gap: 16px;
   }
 }
 
@@ -126,21 +115,23 @@
 
   @media (min-width: $width-table) {
     background: $color-white;
-    margin-top: 75px;
     border: 1px solid $color-border-200;
-    grid-template-rows: 60px auto 40px;
+    grid-template-rows: auto 40px;
     padding-bottom: 41px;
     display: grid;
-    padding-top: 47px;
     row-gap: 47px;
     align-items: flex-start;
+    padding-top: 154px;
   }
 
   @media (min-width: $width-desktop) {
-    margin-top: 77px;
-    padding-top: 49px;
+    padding-top: 120px;
     row-gap: 0;
   }
+}
+
+.product--default .product__image-wrapper {
+  bottom: 74%;
 }
 
 .product--default .product__info {
@@ -158,7 +149,7 @@
 
   @media (min-width: $width-desktop) {
     width: 100%;
-    padding-top: 39px;
+    padding-top: 30px;
   }
 }
 
