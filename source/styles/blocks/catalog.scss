@@ -1,10 +1,10 @@
 .catalog {
   list-style: none;
-  padding-top: 8px;
+  padding-top: 27px;
   padding-bottom: 4px;
 
   @media (min-width: $width-table) {
-    padding-top: 64px;
+    padding-top: 49px;
     padding-bottom: 41px;
   }
 
@@ -18,6 +18,8 @@
   @include set-flexbox(column);
   flex-wrap: wrap;
   list-style: none;
+  margin: 0;
+  padding: 0;
   padding-top: 41px;
 
   @media (min-width: $width-table) {

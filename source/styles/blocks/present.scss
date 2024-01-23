@@ -1,12 +1,8 @@
 .present {
   position: relative;
-
   @include set-flexbox(column);
-  row-gap: 47px;
   align-items: center;
   justify-content: center;
-  margin-top: -20px;
-  padding-top: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image:
@@ -16,6 +12,8 @@
                   url("../../images/cat-green-catalog-mobile@2x.webp") type("image/webp") 2x,
                   url("../../images/cat-green-catalog-mobile@1x.png") type("image/png") 1x,
                   url("../../images/cat-green-catalog-mobile@2x.png") type("image/png") 2x);
+  padding: 52px 45px 35px;
+  gap: 49px;
 
   @media (min-width: $width-table) {
     padding-top: 0;
@@ -23,7 +21,6 @@
     justify-content: space-between;
     padding-left: 79px;
     padding-right: 137px;
-    //gap: 265px;
     background-image:
       linear-gradient($color-primary-opacity, $color-primary-opacity),
       image-set(
@@ -53,6 +50,8 @@
 .present__text {
   @include set-typography(16px, 20px, $color-white, $font-secondary);
   text-align: center;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: $width-table) {
     text-align: left;
