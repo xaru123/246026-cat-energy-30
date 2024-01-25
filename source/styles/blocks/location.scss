@@ -20,7 +20,7 @@
 
   @media (min-width: $width-desktop) {
     grid-template-columns: 163px 1fr;
-    padding: 60px 78px 60px 80px;
+    padding: 64px 78px 60px 80px;
     position: absolute;
     top: 95px;
     left: calc((100% - $width-desktop) / 2 + $padding-desktop);

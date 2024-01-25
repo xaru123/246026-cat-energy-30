@@ -111,7 +111,7 @@
     background: $color-white;
     border: 1px solid $color-border-200;
     grid-template-rows: auto 40px;
-    padding-bottom: 44px;
+    padding-bottom: 38px;
     display: grid;
     row-gap: 47px;
     align-items: flex-start;
@@ -121,6 +121,7 @@
   @media (min-width: $width-desktop) {
     padding-top: 120px;
     row-gap: 0;
+    padding-bottom: 39px;
   }
 }
 
@@ -130,7 +131,7 @@
 
 .product--default .product__info {
   row-gap: 8px;
-  padding-top: 4px;
+  padding-top: 5px;
   text-align: center;
   align-items: center;
 
@@ -144,8 +145,7 @@
   @media (min-width: $width-desktop) {
     width: 100%;
     row-gap: 25px;
-    padding-top: 30px;
-    padding-bottom: 89px;
+    padding-top: 28px;
   }
 }
 
