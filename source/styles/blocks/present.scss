@@ -1,6 +1,5 @@
 .present {
   position: relative;
-
   @include set-flexbox(column);
   align-items: center;
   justify-content: center;
@@ -32,12 +31,12 @@
   }
 
   @media (min-width: $width-desktop) {
-    justify-content: flex-start;
     gap: 43px;
     flex-direction: column;
-    padding-top: 59px;
     padding-left: 2px;
     padding-right: 0;
+    padding-bottom: 43px;
+    padding-top: 58px;
     background-image:
       linear-gradient($color-primary-opacity, $color-primary-opacity),
       image-set(
@@ -54,6 +53,7 @@
   margin: 0;
   padding: 0;
   margin-left: -6px;
+  max-width: 161px;
 
   @media (min-width: $width-table) {
     text-align: left;

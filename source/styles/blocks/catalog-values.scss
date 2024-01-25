@@ -1,36 +1,56 @@
 .catalog-values {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
+  @include set-flexbox(column);
   width: 100%;
   margin: 0;
   padding: 0;
+  list-style: none;
+  padding-top: 14px;
 
   @media (min-width: $width-table) {
     row-gap: 7px;
+    padding-top: 21px;
   }
 
   @media (min-width: $width-desktop) {
-    row-gap: 0;
+    row-gap: 5px;
+    padding-top: 21px;
   }
 }
 
-.catalog-values__text {
-  @include set-typography(12px, 16px, $color-text-400, $font-secondary);
+.catalog-values__item {
+  @include set-flexbox();
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 
+
   @media (min-width: $width-table) {
-    @include set-typography(16px, 20px, $color-text-400, $font-secondary);
     padding-bottom: 4px;
     border-bottom: 1px solid $color-border;
   }
 
   @media (min-width: $width-desktop) {
-    @include set-typography(16px, 20px, $color-text-400, $font-secondary);
-    padding-top: 6px;
     padding-bottom: 7px;
-    border-bottom: 1px solid $color-border;
+    padding-top: 0;
+    margin: auto 0;
+    height: 29px;
+    align-items: center;
+
+    &:nth-child(1) {
+      padding-bottom:2px ;
+    }
+  }
+}
+
+.catalog-values__text {
+  @include set-typography(12px, 16px, $color-text-400, $font-secondary);
+
+  @media (min-width: $width-table) {
+    @include set-typography(16px, 20px, $color-text-400, $font-secondary);
+  }
+
+  @media (min-width: $width-desktop) {
+    @include set-typography(16px, 20px, $color-text-400, $font-secondary);
   }
 }
 
