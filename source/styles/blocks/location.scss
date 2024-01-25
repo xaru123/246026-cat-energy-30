@@ -66,7 +66,7 @@
   }
 }
 
-.location__address--city {
+.location__city {
   @media (min-width: $width-table) {
     display: block;
     margin-top: 16px;
@@ -80,7 +80,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: image-set(
+  background-image:
+    image-set(
       url("../../images/location-mobile@1x.webp") type("image/webp") 1x,
       url("../../images/location-mobile@2x.webp") type("image/webp") 2x,
       url("../../images/location-mobile@1x.png") type("image/png") 1x,
@@ -89,7 +90,8 @@
 
   @media (min-width: $width-table) {
     height: 400px;
-    background-image: image-set(
+    background-image:
+      image-set(
         url("../../images/location-tablet@1x.webp") type("image/webp") 1x,
         url("../../images/location-tablet@2x.webp") type("image/webp") 2x,
         url("../../images/location-tablet@1x.png") type("image/png") 1x,
@@ -98,7 +100,8 @@
   }
 
   @media (min-width: $width-desktop) {
-    background-image: image-set(
+    background-image:
+      image-set(
         url("../../images/location@1x.webp") type("image/webp") 1x,
         url("../../images/location@2x.webp") type("image/webp") 2x,
         url("../../images/location@1x.png") type("image/png") 1x,

@@ -3,6 +3,23 @@
   z-index: 5;
 }
 
+.main-header--index {
+  background-image:
+    linear-gradient(-90deg, $color-primary-opacity 50%, $color-white 0%),
+    image-set(
+        url("../../images/cat-green@1x.webp") type("image/webp") 1x,
+        url("../../images/cat-green@2x.webp") type("image/webp") 2x,
+        url("../../images/cat-green@1x.png") type("image/png") 1x,
+        url("../../images/cat-green@2x.png") type("image/png") 2x),
+    linear-gradient(-90deg, #3a4a30 50%, #ffffff 50%);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 0 0, 112% 0;
+  min-height: 693px;
+  margin-top: -130px;
+  margin-bottom: 112px;
+}
+
 .main-header--border {
   border-bottom: 1px solid $color-border;
 
