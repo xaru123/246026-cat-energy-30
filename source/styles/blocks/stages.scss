@@ -95,5 +95,9 @@
 
   @media (min-width: $width-desktop) {
     padding-right: 0;
+    padding-top: 4px;
+    min-width: 245px;
+    width: 245px;
+    max-width: 245px;
   }
 }

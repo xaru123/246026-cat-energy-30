@@ -30,8 +30,7 @@
   &::before {
     @include set-item-border(15px, 0, unset, 0);
     border-bottom: 3px solid $color-primary;
-    width: calc(100vw - 20px);
-    left: $padding-mobile;
+    box-shadow: 100vw 0 0 $color-primary;
 
     @media (min-width: $width-table) {
       top: 1.4rem;
@@ -48,10 +47,11 @@
   display: flex;
   width: fit-content;
   margin: 0;
-  padding: 0;
-  padding-right: 20px;
-  background: $color-white;
-  box-sizing: content-box;
+  padding: 0 20px 0 20px;
+  background: #ffffff;
+  word-break: break-all;
+  max-width: 223px;
+  margin-left: -20px;
 
   @media (min-width: $width-table) {
     @include set-typography(36px, 36px);

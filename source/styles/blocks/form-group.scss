@@ -45,6 +45,7 @@
 .form-group__label {
   @include set-typography(16px, 18px, $color-text-400);
   @include set-typography-additional();
+  text-wrap: nowrap;
 
   @media (min-width: $width-table) {
     @include set-typography(20px, normal);

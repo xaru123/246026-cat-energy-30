@@ -130,6 +130,6 @@ input[type="checkbox"] + label::before {
 input[type="checkbox"]:checked + label::before {
   background-image: url("../../images/icons/stack.svg#sel");
   background-position: center;
-  background-size: 17px 17px;
+  background-size: 59%;
   background-repeat: no-repeat;
 }

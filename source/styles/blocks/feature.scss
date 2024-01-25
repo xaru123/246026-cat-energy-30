@@ -157,6 +157,10 @@
     margin-top: 10px;
     padding-right: 20px;
   }
+
+  @media (min-width: $width-desktop) {
+    margin-top: 8px;
+  }
 }
 
 .feature__icon {
