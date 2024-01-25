@@ -23,7 +23,7 @@
     padding: 60px 78px 60px 80px;
     position: absolute;
     top: 95px;
-    left: calc((100% - $width-desktop)/ 2 + $padding-desktop);
+    left: calc((100% - $width-desktop) / 2 + $padding-desktop);
     width: 565px;
     background: $color-white;
     gap: 87px;
@@ -48,7 +48,7 @@
   }
 }
 
-.location__address p {
+.location__address {
   margin: 0;
   padding: 0;
   font-style: normal;
@@ -66,12 +66,10 @@
   }
 }
 
-
-.location__text--hidden {
-  display: none;
-
+.location__address--city {
   @media (min-width: $width-table) {
     display: block;
+    margin-top: 16px;
   }
 }
 
