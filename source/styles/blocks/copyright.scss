@@ -7,12 +7,12 @@
   border-top: 1px solid $color-border;
 
   &:hover svg {
-    stroke: $color-primary;
+    color: $color-primary;
   }
 
   &:active {
     svg {
-      stroke: $color-primary;
+      color: $color-primary;
     }
 
     * {

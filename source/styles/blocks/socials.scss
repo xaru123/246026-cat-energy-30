@@ -1,13 +1,18 @@
 .socials__list {
   margin: 0;
-  padding: 0;
   width: 100%;
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 0 24px;
   border-left: 0;
   border-right: 0;
+  flex-wrap: wrap;
+  padding: 0 60px;
+
+  @media (min-width: $width-table) {
+    padding: 0;
+  }
 }
 
 .socials__item {
@@ -26,11 +31,11 @@
   color: inherit;
 
   &:hover svg {
-    stroke: $color-primary;
+    color: $color-primary;
   }
 
   &:active svg {
-    stroke: $color-primary;
+    color: $color-primary;
     opacity: 0.3;
   }
 }

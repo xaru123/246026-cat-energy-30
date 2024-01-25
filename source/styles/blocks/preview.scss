@@ -1,12 +1,14 @@
+$color-bg-img: #3a4a30;
+
 .preview {
   background-image:
-    linear-gradient($color-primary-opacity 302px, $color-white 0%),
+    linear-gradient(0deg, $color-white 178px, $color-primary-opacity 0),
     image-set(
       url("../../images/cat-green-mobile@1x.webp") type("image/webp") 1x,
       url("../../images/cat-green-mobile@2x.webp") type("image/webp") 2x,
       url("../../images/cat-green-mobile@1x.png") type("image/png") 1x,
       url("../../images/cat-green-mobile@2x.png") type("image/png") 2x),
-    linear-gradient(#3a4a30 302px, #ffffff 0);
+    linear-gradient(0deg, $color-white 178px, $color-bg-img 0);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top center;
@@ -43,11 +45,11 @@
 
   @include set-flexbox(column);
   justify-content: center;
-  align-items: center;
+  //align-items: center;
   text-align: center;
 
   @media (min-width: $width-table) {
-    align-items: flex-start;
+    //align-items: flex-start;
     padding-top: 50px;
     padding-left: 120px;
     text-align: left;
@@ -104,17 +106,16 @@
 }
 
 .preview__can {
-  display: flex;
   width: 280px;
   height: 270px;
 
   @media (min-width: $width-table) {
-    width: 666px;
+    width: 706px;
     height: 606px;
   }
 
   @media (min-width: $width-desktop) {
-    width: 550px;
+    width: 552px;
     height: 500px;
   }
 }
@@ -126,13 +127,14 @@
     padding-bottom: 0;
     order: 4;
     margin-top: -82px;
-    margin-left: -48px;
+    margin-left: -88px;
+    text-align: center;
   }
 
   @media (min-width: $width-desktop) {
     position: absolute;
     top: 93px;
-    left: 50px;
+    left: 85px;
     right: 0;
     display: flex;
     justify-content: center;
