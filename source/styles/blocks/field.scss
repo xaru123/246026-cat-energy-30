@@ -1,15 +1,14 @@
 .field {
   position: relative;
-
   @include set-typography-additional();
   @include set-typography(16px, 18px, $color-text-400);
   padding: 13px 14px 12px;
-  width: fill-available;
   border: 1px solid $color-border-100;
+  width: 100%;
 
   &::placeholder {
-    color: #212529;
-    opacity: 0.4;
+    color: $color-text-400;
+    opacity: 1;
   }
 
   &:hover {
