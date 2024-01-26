@@ -1,15 +1,5 @@
 .main-content {
   @include set-flexbox(column, $padding-mobile);
-  //padding-top: 20px;
-
-  //@media (min-width: $width-table) {
-  //  gap: $padding-table;
-  //  padding-top: 0;
-  //}
-  //
-  //@media (min-width: $width-desktop) {
-  //  gap: 0;
-  //}
 }
 
 .main-content__header {
@@ -58,6 +48,20 @@
     padding-right: 33px;
     max-width: calc(100% - 28px);
 
+    margin-left: -40px;
+    padding-left: 40px;
+  }
+}
+
+.main-content__sub-header h2.advanced__header {
+  max-width: 272px;
+
+  @media (min-width: $width-table) {
+    max-width: fit-content;
+    margin: 0;
+  }
+
+  @media (min-width: $width-desktop) {
     margin-left: -40px;
     padding-left: 40px;
   }

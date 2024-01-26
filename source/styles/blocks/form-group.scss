@@ -11,7 +11,7 @@
   height: 150px;
 
   @media (min-width: $width-table) {
-    height: 202px;
+    height: 200px;
   }
 }
 
@@ -54,6 +54,10 @@
 
 .form-group__wrapper {
   position: relative;
+}
+
+.form-group__wrapper .field {
+  padding-right: 40px;
 }
 
 .form-group__icon {

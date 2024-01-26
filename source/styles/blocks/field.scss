@@ -1,15 +1,14 @@
 .field {
-  position: relative;
-
   @include set-typography-additional();
   @include set-typography(16px, 18px, $color-text-400);
   padding: 13px 14px 12px;
-  width: fill-available;
   border: 1px solid $color-border-100;
+  width: 100%;
+  position: relative;
 
   &::placeholder {
-    color: #212529;
-    opacity: 0.4;
+    color: $color-text-400;
+    opacity: 1;
   }
 
   &:hover {
@@ -35,41 +34,40 @@
   }
 }
 
-.form-group__wrapper .field {
-  padding-right: 40px;
-}
-
-.field[type="radio"] {
+.field--radio {
   position: absolute;
   left: -9999px;
   margin: 0;
+  cursor: pointer;
+  width: 0;
 
-  &:checked + label {
-    &::before {
-      box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 9px $color-white;
-      background: $color-primary;
+  &:hover + label::before,
+  &:focus + label::before {
+    box-shadow: inset 0 0 0 1px #bababa, inset 0 0 0 9px $color-white;
 
-      @media (min-width: $width-table) {
-        box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 11px $color-white;
-      }
+    @media (min-width: $width-table) {
+      box-shadow: inset 0 0 0 1px #bababa, inset 0 0 0 11px $color-white;
     }
-  }
-
-  &:focus {
-    outline: 0 solid $color-text-400;
   }
 
   &:disabled + label {
     opacity: 0.3;
+    cursor: not-allowed;
+
+    &::before {
+      box-shadow: inset 0 0 0 1px $color-text-300;
+    }
   }
 }
 
-.field[type="radio"] + label {
+.field--radio + label {
   display: flex;
   align-items: center;
   padding-top: 0;
   border-radius: 99em;
   transition: 0.25s ease;
+  cursor: pointer;
+  z-index: 2;
 
   &::before {
     display: flex;
@@ -91,15 +89,48 @@
   }
 }
 
-textarea.field {
+.field--radio:checked + label::before {
+  box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 9px $color-white;
+  background: $color-primary;
+
+  @media (min-width: $width-table) {
+    box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 11px $color-white;
+  }
+}
+
+.field--radio:checked:focus + label::before,
+.field--radio:checked:hover + label::before {
+  box-shadow: inset 0 0 0 1px #bababa, inset 0 0 0 9px $color-white;
+  background: $color-primary;
+
+  @media (min-width: $width-table) {
+    box-shadow: inset 0 0 0 1px #bababa, inset 0 0 0 11px $color-white;
+  }
+}
+
+.field--textarea {
   resize: none;
 }
 
-input[type="checkbox"] {
+.field--checkbox {
   display: none;
+
+  &:hover + label::before,
+  &:focus + label::before {
+    border-color: $color-border-700;
+  }
+
+  &:disabled + label {
+    opacity: 0.3;
+    cursor: not-allowed;
+
+    &::before {
+      border-color: $color-text-300;
+    }
+  }
 }
 
-input[type="checkbox"] + label {
+.field--checkbox + label {
   position: relative;
   padding-left: 45px;
   display: flex;
@@ -112,7 +143,7 @@ input[type="checkbox"] + label {
   }
 }
 
-input[type="checkbox"] + label::before {
+.field--checkbox + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -127,7 +158,7 @@ input[type="checkbox"] + label::before {
   }
 }
 
-input[type="checkbox"]:checked + label::before {
+.field--checkbox:checked + label::before {
   background-image: url("../../images/icons/stack.svg#sel");
   background-position: center;
   background-size: 59%;

@@ -83,7 +83,8 @@
 
     <article class="feature__item">
       <div class="feature__icon-container">
-        <svg class="feature__icon feature__icon--slim" width="50" height="50">
+        <svg class="feature__icon feature__icon--slim" width="50" height="50" aria-labelledby="cat-back">
+          <title id="cat-back">Иконка спины кота</title>
           <use href="./images/icons/stack.svg#cat-back"></use>
         </svg>
       </div>
@@ -100,7 +101,8 @@
 
     <article class="feature__item">
       <div class="feature__icon-container">
-        <svg class="feature__icon feature__icon--mass" width="50" height="50">
+        <svg class="feature__icon feature__icon--mass" width="50" height="50" aria-labelledby="cat-back-2">
+          <title id="cat-back-2">Иконка тигра</title>
           <use href="./images/icons/stack.svg#cat-back-2"></use>
         </svg>
       </div>
@@ -122,7 +124,8 @@
     <ul class="stages__list">
       <li class="stages__item">
         <div class="stages__icon-container">
-          <svg class="stages__icon" width="30" height="30">
+          <svg class="stages__icon" width="30" height="30" aria-labelledby="leaf">
+            <title id="leaf">Иконка листа</title>
             <use href="./images/icons/stack.svg#leaf"></use>
           </svg>
         </div>
@@ -132,7 +135,8 @@
 
       <li class="stages__item">
         <div class="stages__icon-container">
-          <svg class="stages__icon" width="30" height="30">
+          <svg class="stages__icon" width="30" height="30" aria-labelledby="water">
+            <title id="water">Иконка воды</title>
             <use href="./images/icons/stack.svg#water"></use>
           </svg>
         </div>
@@ -142,7 +146,8 @@
 
       <li class="stages__item">
         <div class="stages__icon-container">
-          <svg class="stages__icon" width="30" height="30">
+          <svg class="stages__icon" width="30" height="30" aria-labelledby="eat">
+            <title id="eat">Иконка приборов</title>
             <use href="./images/icons/stack.svg#eat"></use>
           </svg>
         </div>
@@ -152,7 +157,8 @@
 
       <li class="stages__item">
         <div class="stages__icon-container">
-          <svg class="stages__icon" width="30" height="30">
+          <svg class="stages__icon" width="30" height="30" aria-labelledby="time">
+            <title id="time">Иконка часов</title>
             <use href="./images/icons/stack.svg#time"></use>
           </svg>
         </div>
@@ -219,10 +225,11 @@
 
         <label for="range"></label>
 
-        <input class="example-image__range" type="range" min="0" max="100" id="range" name="range"/>
+        <input class="example-image__range" type="range" name="range" max="100" id="range" aria-hidden="true"/>
 
-        <div class="example-image__line" aria-hidden="true">
-          <svg width="20" height="20">
+        <div class="example-image__line">
+          <svg width="20" height="20" aria-labelledby="thumb">
+            <title id="thumb">Иконка ползунка</title>
             <use class="example-image__thumb" href="./images/icons/stack.svg#thumb"></use>
           </svg>
         </div>
