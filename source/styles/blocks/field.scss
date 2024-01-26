@@ -39,10 +39,11 @@
   padding-right: 40px;
 }
 
-.field[type="radio"] {
+.field--radio {
   position: absolute;
   left: -9999px;
   margin: 0;
+  cursor: pointer;
 
   &:checked + label {
     &::before {
@@ -64,12 +65,13 @@
   }
 }
 
-.field[type="radio"] + label {
+.field--radio + label {
   display: flex;
   align-items: center;
   padding-top: 0;
   border-radius: 99em;
   transition: 0.25s ease;
+  cursor: pointer;
 
   &::before {
     display: flex;
@@ -91,15 +93,23 @@
   }
 }
 
-textarea.field {
+.field--textarea {
   resize: none;
 }
 
-input[type="checkbox"] {
+.field--checkbox {
   display: none;
+
+  &:disabled + label {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 0 solid $color-text-400;
+  }
 }
 
-input[type="checkbox"] + label {
+.field--checkbox + label {
   position: relative;
   padding-left: 45px;
   display: flex;
@@ -112,7 +122,7 @@ input[type="checkbox"] + label {
   }
 }
 
-input[type="checkbox"] + label::before {
+.field--checkbox + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -127,7 +137,7 @@ input[type="checkbox"] + label::before {
   }
 }
 
-input[type="checkbox"]:checked + label::before {
+.field--checkbox:checked + label::before {
   background-image: url("../../images/icons/stack.svg#sel");
   background-position: center;
   background-size: 59%;
