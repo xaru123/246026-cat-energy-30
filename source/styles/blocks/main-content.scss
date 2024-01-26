@@ -1,15 +1,5 @@
 .main-content {
   @include set-flexbox(column, $padding-mobile);
-  //padding-top: 20px;
-
-  //@media (min-width: $width-table) {
-  //  gap: $padding-table;
-  //  padding-top: 0;
-  //}
-  //
-  //@media (min-width: $width-desktop) {
-  //  gap: 0;
-  //}
 }
 
 .main-content__header {
