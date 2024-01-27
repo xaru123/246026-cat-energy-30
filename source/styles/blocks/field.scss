@@ -5,6 +5,7 @@
   border: 1px solid $color-border-100;
   width: 100%;
   position: relative;
+  max-height: 45px;
 
   &::placeholder {
     color: $color-text-400;
@@ -26,9 +27,10 @@
   }
 
   @media (min-width: $width-table) {
-    padding: 13px 18px 14px;
+    padding: 14px 19px;
     height: auto;
     line-height: 22px;
+    max-height: 52px;
 
     @include set-typography(20px, 22px, $color-text-400);
   }
@@ -40,15 +42,6 @@
   margin: 0;
   cursor: pointer;
   width: 0;
-
-  &:hover + label::before,
-  &:focus + label::before {
-    box-shadow: inset 0 0 0 1px #bababa, inset 0 0 0 9px $color-white;
-
-    @media (min-width: $width-table) {
-      box-shadow: inset 0 0 0 1px #bababa, inset 0 0 0 11px $color-white;
-    }
-  }
 
   &:disabled + label {
     opacity: 0.3;
@@ -90,35 +83,39 @@
 }
 
 .field--radio:checked + label::before {
-  box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 9px $color-white;
+  @include set-radio-btn-shadow($color-text-300);
   background: $color-primary;
-
-  @media (min-width: $width-table) {
-    box-shadow: inset 0 0 0 1px #cdcdcd, inset 0 0 0 11px $color-white;
-  }
 }
 
-.field--radio:checked:focus + label::before,
-.field--radio:checked:hover + label::before {
-  box-shadow: inset 0 0 0 1px #bababa, inset 0 0 0 9px $color-white;
-  background: $color-primary;
+.field--radio:focus-visible + label::before {
+  @include set-radio-btn-shadow($color-text-400);
+}
 
-  @media (min-width: $width-table) {
-    box-shadow: inset 0 0 0 1px #bababa, inset 0 0 0 11px $color-white;
-  }
+.field--radio:hover + label::before {
+  @include set-radio-btn-shadow($color-border-700);
 }
 
 .field--textarea {
   resize: none;
+  height: inherit;
+  max-height: inherit;
+  padding: 12px 14px;
+
+  @media (min-width: $width-table) {
+    padding: 14px 20px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 12px 19px;
+  }
 }
 
 .field--checkbox {
-  display: none;
-
-  &:hover + label::before,
-  &:focus + label::before {
-    border-color: $color-border-700;
-  }
+  position: absolute;
+  left: -9999px;
+  margin: 0;
+  cursor: pointer;
+  width: 0;
 
   &:disabled + label {
     opacity: 0.3;
@@ -163,4 +160,12 @@
   background-position: center;
   background-size: 59%;
   background-repeat: no-repeat;
+}
+
+.field--checkbox:focus-visible + label::before {
+  border-color: $color-text-400;
+}
+
+.field--checkbox:hover + label::before {
+  border-color: $color-border-700;
 }

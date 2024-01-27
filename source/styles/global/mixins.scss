@@ -92,3 +92,11 @@
     @include set-item-border(0,0,35%,0);
   }
 }
+
+@mixin set-radio-btn-shadow($color-border, $sizeM: 9px, $sizeD: 11px) {
+  box-shadow: inset 0 0 0 1px $color-border, inset 0 0 0 $sizeM $color-white;
+
+  @media (min-width: $width-table) {
+    box-shadow: inset 0 0 0 1px $color-border, inset 0 0 0 $sizeD $color-white;
+  }
+}
