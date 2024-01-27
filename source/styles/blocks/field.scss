@@ -5,6 +5,7 @@
   border: 1px solid $color-border-100;
   width: 100%;
   position: relative;
+  max-height: 45px;
 
   &::placeholder {
     color: $color-text-400;
@@ -26,9 +27,10 @@
   }
 
   @media (min-width: $width-table) {
-    padding: 13px 18px 14px;
+    padding: 14px 19px;
     height: auto;
     line-height: 22px;
+    max-height: 52px;
 
     @include set-typography(20px, 22px, $color-text-400);
   }
@@ -110,6 +112,18 @@
 
 .field--textarea {
   resize: none;
+  height: inherit;
+  max-height: inherit;
+
+  padding: 12px 14px;
+
+  @media (min-width: $width-table) {
+    padding: 14px 20px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 12px 19px;
+  }
 }
 
 .field--checkbox {

@@ -18,7 +18,7 @@
     grid-template-rows: minmax(200px, 1fr);
     padding-top: 81px;
     padding-bottom: 84px;
-    gap: 80px;
+    gap: 82px;
   }
 }
 
@@ -55,14 +55,15 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding: 12px 0 11px;
-    grid-template-columns: 285px 150px 1fr 244px;
+    padding: 14px 0 17px;
+    grid-template-columns: 326px 242px 1fr 243px;
     grid-template-rows: auto;
-    column-gap: 40px;
+    column-gap: 0;
     border-left: 0;
     border-right: 0;
     border-top: 0;
     border-bottom: 1px solid $color-border;
+    align-items: baseline;
   }
 }
 
@@ -103,6 +104,10 @@
 
 .advanced__text--price {
   text-align: right;
+
+  @media (min-width: $width-desktop) {
+    text-align: left;
+  }
 }
 
 .advanced__button {
@@ -116,6 +121,7 @@
   }
 
   @media (min-width: $width-desktop) {
+    height: 40px;
     grid-column: -1/4;
     grid-row: inherit;
   }

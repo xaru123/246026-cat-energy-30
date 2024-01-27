@@ -11,22 +11,7 @@
   height: 150px;
 
   @media (min-width: $width-table) {
-    height: 200px;
-  }
-}
-
-.form-group--comment .form-group__field {
-  padding: 12px 14px;
-  height: 150px;
-
-  @media (min-width: $width-table) {
-    padding: 14px 20px;
-    height: calc(100% - 28px);
-  }
-
-  @media (min-width: $width-desktop) {
-    padding: 12px 19px;
-    height: calc(100% - 26px);
+    height: 175px;
   }
 }
 
@@ -35,10 +20,7 @@
 }
 
 .form-group--radio .form-group__field {
-  padding-top: 6px;
-  padding-left: 14px;
-  padding-bottom: 6px;
-  padding-right: 14px;
+  padding: 6px 14px;
   height: calc(100% - 26px);
 }
 
